@@ -11,6 +11,7 @@
     "nouislider": "^11.1.0",
     "vue": "^2.5.16",
     "vue-clickaway": "^2.2.2",
+    "vue-lazyload": "^1.2.6",
     "vue-router": "^3.0.1",
     "vue2-transitions": "^0.2.3"
   },
