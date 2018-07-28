@@ -3,12 +3,13 @@
                :type="tag === 'button' ? nativeType: ''"
                class="btn"
                :class="classes">
-    <span class="btn-inner--icon" v-if="$slots.icon || icon">
+    <span class="btn-inner--icon" v-if="$slots.icon || icon && $slots.default">
       <slot name="icon">
         <i :class="icon"></i>
       </slot>
     </span>
-        <span class="btn-inner--text" v-if="$slots.icon || icon">
+        <i v-if="!$slots.default" :class="icon"></i>
+        <span class="btn-inner--text" v-if="$slots.icon || icon && $slots.default">
           <slot>
             {{text}}
           </slot>
@@ -27,6 +28,14 @@
       type: {
         type: String,
         default: 'default'
+      },
+      size: {
+        type: String,
+        default: ''
+      },
+      textColor: {
+        type: String,
+        default: ''
       },
       nativeType: {
         type: String,
@@ -63,6 +72,7 @@
           { 'btn-block': this.block },
           { 'rounded-circle': this.rounded },
           { 'btn-icon-only': this.iconOnly },
+          { 'btn-icon': this.icon },
           this.type && !this.outline ? `btn-${this.type}` : '',
           this.outline ? `btn-outline-${this.type}` : '',
         ];

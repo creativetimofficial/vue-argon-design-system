@@ -1,6 +1,9 @@
 <template>
     <div>
         <hero></hero>
+        <basic-elements></basic-elements>
+        <inputs></inputs>
+        <custom-controls></custom-controls>
     </div>
 </template>
 <script>

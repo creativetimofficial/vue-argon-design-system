@@ -3,9 +3,12 @@
          :class="[
        {'input-group': hasIcon},
        {'has-danger': error},
-       {'input-group-focus': focused},
+       {'focused': focused},
+       {'input-group-alternative': alternative},
        {'has-label': label || $slots.label},
-       {'has-success': hasSuccess}]">
+       {'has-success': valid === true},
+       {'has-danger': valid === false}
+       ]">
         <slot name="label">
             <label v-if="label" :class="labelClasses">
                 {{label}}
@@ -27,7 +30,7 @@
                     v-on="listeners"
                     v-bind="$attrs"
                     class="form-control"
-                    :class="[{valid: value && !error}, inputClasses, error ? 'form-control-danger' : '']"
+                    :class="[{'is-valid': valid === true}, {'is-invalid': valid === false}, inputClasses]"
                     aria-describedby="addon-right addon-left">
         </slot>
         <div v-if="addonRightIcon || $slots.addonRight" class="input-group-append">
@@ -53,6 +56,15 @@
       required: {
         type: Boolean,
         description: 'Whether input is required (adds an asterix *)'
+      },
+      valid: {
+        type: Boolean,
+        description: 'Whether is valid',
+        default: undefined
+      },
+      alternative: {
+        type: Boolean,
+        description: 'Whether input is of alternative layout'
       },
       label: {
         type: String,
@@ -85,9 +97,7 @@
     },
     data() {
       return {
-        touched: false,
-        focused: false,
-        hadError: false
+        focused: false
       }
     },
     computed: {
@@ -99,9 +109,6 @@
           blur: this.onBlur
         }
       },
-      hasSuccess() {
-        return this.hadError && this.touched && !this.error
-      },
       hasIcon() {
         const { addonRight, addonLeft } = this.$slots
         return addonRight !== undefined || addonLeft !== undefined || this.addonRightIcon !== undefined || this.addonLeftIcon !== undefined
@@ -110,9 +117,6 @@
     methods: {
       updateValue(evt) {
         let value = evt.target.value
-        if (!this.touched && value) {
-          this.touched = true
-        }
         this.$emit('input', value)
       },
       onFocus(value) {
@@ -123,13 +127,6 @@
         this.focused = false;
         this.$emit('blur', value);
       }
-    },
-    created() {
-      this.$watch('error', (newVal) => {
-        if(newVal){
-          this.hadError = true;
-        }
-      }, {immediate: true})
     }
   }
 </script>
