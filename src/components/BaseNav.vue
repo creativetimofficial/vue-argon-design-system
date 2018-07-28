@@ -31,7 +31,7 @@
   import NavbarToggleButton from './NavbarToggleButton';
 
   export default {
-    name: 'base-menu',
+    name: 'base-nav',
     components: {
       FadeTransition,
       NavbarToggleButton

@@ -79,7 +79,7 @@
                             <div class="mb-3">
                                 <small class="text-uppercase font-weight-bold">With text</small>
                             </div>
-                            <base-menu expand effect="dark" type="primary" round title="Menu">
+                            <base-nav expand effect="dark" type="primary" round title="Menu">
                                 <div class="row" slot="content-header" slot-scope="{closeMenu}">
                                     <div class="col-6 collapse-brand">
                                         <a href="./index.html">
@@ -115,13 +115,13 @@
                                         </div>
                                     </li>
                                 </ul>
-                            </base-menu>
+                            </base-nav>
                         </div>
                         <div class="col-lg-6 mt-4 mt-lg-0">
                             <div class="mb-3">
                                 <small class="text-uppercase font-weight-bold">With icons</small>
                             </div>
-                            <base-menu expand effect="dark" type="success" round title="Menu">
+                            <base-nav expand effect="dark" type="success" round title="Menu">
                                 <div class="row" slot="content-header" slot-scope="{closeMenu}">
                                     <div class="col-6 collapse-brand">
                                         <a href="./index.html">
@@ -164,7 +164,7 @@
                                         </div>
                                     </li>
                                 </ul>
-                            </base-menu>
+                            </base-nav>
                         </div>
                     </div>
                 </div>
@@ -173,12 +173,12 @@
     </section>
 </template>
 <script>
-  import BaseMenu from '@/components/BaseMenu';
+  import BaseNav from '@/components/BaseNav';
   import CloseButton from '@/components/CloseButton';
 
   export default {
     components: {
-      BaseMenu,
+      BaseNav,
       CloseButton
     },
     data() {

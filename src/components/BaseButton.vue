@@ -72,7 +72,7 @@
           { 'btn-block': this.block },
           { 'rounded-circle': this.rounded },
           { 'btn-icon-only': this.iconOnly },
-          { 'btn-icon': this.icon },
+          { 'btn-icon': this.icon || this.$slots.icon },
           this.type && !this.outline ? `btn-${this.type}` : '',
           this.outline ? `btn-outline-${this.type}` : '',
         ];

@@ -4,6 +4,10 @@
         <basic-elements></basic-elements>
         <inputs></inputs>
         <custom-controls></custom-controls>
+        <navigation></navigation>
+        <icons></icons>
+        <examples></examples>
+        <download-section></download-section>
     </div>
 </template>
 <script>

@@ -8,7 +8,7 @@
                     </h2>
                     <p class="lead">Cause if you do, it can be yours for FREE. Hit the button below to navigate to Creative Tim where you can find the Design System in HTML. Start a new project or give an old Bootstrap project a new look!</p>
                     <div class="btn-wrapper">
-                        <a href="https://www.creative-tim.com/product/argon-design-system" class="btn btn-primary mb-3 mb-sm-0">Download HTML</a>
+                        <a href="https://www.creative-tim.com/product/vue-argon-design-system" class="btn btn-primary mb-3 mb-sm-0">Download Vue</a>
                     </div>
                     <div class="text-center">
                         <h4 class="display-4 mb-5 mt-5">Available on these technologies</h4>
@@ -29,8 +29,8 @@
                                 </a>
                             </div>
                             <div class="col-lg-2 col-4">
-                                <a href="https://vuejs.org/" target="_blank" data-toggle="tooltip" data-original-title="[Coming Soon] Vue.js - The progressive javascript framework">
-                                    <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/vue.jpg" class="img-fluid opacity-5">
+                                <a href="https://vuejs.org/" target="_blank" data-toggle="tooltip" data-original-title="Vue.js - The progressive javascript framework">
+                                    <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/vue.jpg" class="img-fluid">
                                 </a>
                             </div>
                             <div class="col-lg-2 col-4">
