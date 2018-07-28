@@ -27,7 +27,7 @@
       },
       circle: {
         type: Boolean,
-        default: true,
+        default: false,
         description: 'Whether badge is circle'
       },
       icon: {
