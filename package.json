@@ -10,7 +10,9 @@
   "dependencies": {
     "nouislider": "^11.1.0",
     "vue": "^2.5.16",
-    "vue-router": "^3.0.1"
+    "vue-clickaway": "^2.2.2",
+    "vue-router": "^3.0.1",
+    "vue2-transitions": "^0.2.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-rc.8",
