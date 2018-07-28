@@ -60,9 +60,9 @@
                             </a>
                             <div class="dropdown-menu">
                                 <router-link to="/landing" class="dropdown-item">Landing</router-link>
-                                <a href="../examples/profile.html" class="dropdown-item">Profile</a>
-                                <a href="../examples/login.html" class="dropdown-item">Login</a>
-                                <a href="../examples/register.html" class="dropdown-item">Register</a>
+                                <router-link to="/profile" class="dropdown-item">Profile</router-link>
+                                <router-link to="/login" class="dropdown-item">Login</router-link>
+                                <router-link to="/register" class="dropdown-item">Register</router-link>
                             </div>
                         </li>
                     </ul>
