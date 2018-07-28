@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/Home.vue";
+import Landing from "./views/Landing.vue";
+import Components from "./views/Components.vue";
 import AppHeader from './layout/AppHeader';
 import AppFooter from './layout/AppFooter';
 
@@ -10,10 +11,19 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "home",
+      name: "components",
       components: {
         header: AppHeader,
-        default: Home,
+        default: Components,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/landing",
+      name: "landing",
+      components: {
+        header: AppHeader,
+        default: Landing,
         footer: AppFooter
       }
     }

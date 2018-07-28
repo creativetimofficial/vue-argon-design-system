@@ -59,7 +59,7 @@
                                 <span class="nav-link-inner--text">Examples</span>
                             </a>
                             <div class="dropdown-menu">
-                                <a href="../examples/landing.html" class="dropdown-item">Landing</a>
+                                <router-link to="/landing" class="dropdown-item">Landing</router-link>
                                 <a href="../examples/profile.html" class="dropdown-item">Profile</a>
                                 <a href="../examples/login.html" class="dropdown-item">Login</a>
                                 <a href="../examples/register.html" class="dropdown-item">Register</a>
