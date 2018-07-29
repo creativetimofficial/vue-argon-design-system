@@ -9,6 +9,7 @@
               pills ? 'nav-pills': 'nav-tabs',
              {'nav-pills-icons': icons},
              {'nav-fill': fill},
+             {'nav-pills-circle': circle},
              {'justify-content-center': centered},
              tabNavClasses
             ]">
@@ -87,6 +88,11 @@ export default {
       type: Boolean,
       default: true,
       description: "Whether tabs are pills"
+    },
+    circle: {
+      type: Boolean,
+      default: true,
+      description: "Whether tabs are circle"
     },
     fill: {
       type: Boolean,
