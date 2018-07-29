@@ -9,17 +9,17 @@
     </button>
 </template>
 <script>
-  export default {
-    props: {
-      target: {
-        type: [String, Number]
-      },
-      toggled: {
-        type: Boolean,
-        default: false
-      }
+export default {
+  props: {
+    target: {
+      type: [String, Number]
+    },
+    toggled: {
+      type: Boolean,
+      default: false
     }
   }
+};
 </script>
 <style>
 </style>

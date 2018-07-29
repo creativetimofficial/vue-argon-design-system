@@ -60,20 +60,20 @@
 
 </template>
 <script>
-  import BaseNav from '@/components/BaseNav';
-  import CloseButton from '@/components/CloseButton';
+import BaseNav from "@/components/BaseNav";
+import CloseButton from "@/components/CloseButton";
 
-  export default {
-    components: {
-      BaseNav,
-      CloseButton
-    },
-    data() {
-      return {
-        menuTypes: ['default', 'primary', 'success', 'danger', 'warning', 'info']
-      }
-    }
+export default {
+  components: {
+    BaseNav,
+    CloseButton
+  },
+  data() {
+    return {
+      menuTypes: ["default", "primary", "success", "danger", "warning", "info"]
+    };
   }
+};
 </script>
 <style>
 </style>

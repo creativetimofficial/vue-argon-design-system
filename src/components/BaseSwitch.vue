@@ -8,26 +8,26 @@
     </label>
 </template>
 <script>
-  export default {
-    name: 'base-switch',
-    inheritAttrs: false,
-    props: {
-      value: {
-        type: Boolean,
-        default: false
-      }
-    },
-    computed: {
-      model: {
-        get () {
-          return this.value
-        },
-        set (value) {
-          this.$emit('input', value)
-        }
+export default {
+  name: "base-switch",
+  inheritAttrs: false,
+  props: {
+    value: {
+      type: Boolean,
+      default: false
+    }
+  },
+  computed: {
+    model: {
+      get() {
+        return this.value;
+      },
+      set(value) {
+        this.$emit("input", value);
       }
     }
   }
+};
 </script>
 <style>
 </style>
