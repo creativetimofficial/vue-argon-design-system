@@ -137,11 +137,11 @@ export default {
     layoutComponent() {
       return this.pills ? "pills-layout" : "tabs-layout";
     },
-    slotData(){
+    slotData() {
       return {
         activeTabIndex: this.activeTabIndex,
         tabs: this.tabs
-      }
+      };
     }
   },
   methods: {
@@ -168,7 +168,7 @@ export default {
       if (this.activeTab === tab.name) {
         tab.active = true;
       }
-      this.tabs.push(tab)
+      this.tabs.push(tab);
     },
     removeTab(tab) {
       const tabs = this.tabs;

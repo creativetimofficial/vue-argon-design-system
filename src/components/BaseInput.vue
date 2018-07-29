@@ -113,7 +113,7 @@ export default {
       return {
         focused: this.focused,
         ...this.listeners
-      }
+      };
     },
     hasIcon() {
       const { addonRight, addonLeft } = this.$slots;

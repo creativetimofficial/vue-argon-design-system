@@ -53,7 +53,7 @@ export default {
       return [
         { "progress-bar-striped": this.striped },
         { "progress-bar-animated": this.animated },
-        {[`bg-${this.type}`]: this.type}
+        { [`bg-${this.type}`]: this.type }
       ];
     }
   }
