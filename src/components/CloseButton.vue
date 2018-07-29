@@ -11,20 +11,20 @@
     </button>
 </template>
 <script>
-  export default {
-    name: 'close-button',
-    props: {
-      target: {
-        type: [String, Number]
-      },
-      expanded: Boolean
+export default {
+  name: "close-button",
+  props: {
+    target: {
+      type: [String, Number]
     },
-    methods: {
-      handleClick(evt) {
-        this.$emit('click', evt);
-      }
+    expanded: Boolean
+  },
+  methods: {
+    handleClick(evt) {
+      this.$emit("click", evt);
     }
   }
+};
 </script>
 <style>
 </style>

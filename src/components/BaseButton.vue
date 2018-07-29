@@ -18,71 +18,71 @@
     </component>
 </template>
 <script>
-  export default {
-    name: 'base-button',
-    props: {
-      tag: {
-        type: String,
-        default: 'button'
-      },
-      type: {
-        type: String,
-        default: 'default'
-      },
-      size: {
-        type: String,
-        default: ''
-      },
-      textColor: {
-        type: String,
-        default: ''
-      },
-      nativeType: {
-        type: String,
-        default: 'button'
-      },
-      icon: {
-        type: String,
-        default: ''
-      },
-      text: {
-        type: String,
-        default: ''
-      },
-      outline: {
-        type: Boolean,
-        default: false
-      },
-      rounded: {
-        type: Boolean,
-        default: false
-      },
-      iconOnly: {
-        type: Boolean,
-        default: false
-      },
-      block: {
-        type: Boolean,
-        default: false
-      },
+export default {
+  name: "base-button",
+  props: {
+    tag: {
+      type: String,
+      default: "button"
     },
-    computed: {
-      classes() {
-        let btnClasses = [
-          { 'btn-block': this.block },
-          { 'rounded-circle': this.rounded },
-          { 'btn-icon-only': this.iconOnly },
-          { 'btn-icon': this.icon || this.$slots.icon },
-          this.type && !this.outline ? `btn-${this.type}` : '',
-          this.outline ? `btn-outline-${this.type}` : '',
-        ];
-        if (this.size) {
-          btnClasses.push(`btn-${this.size}`)
-        }
-        return btnClasses
+    type: {
+      type: String,
+      default: "default"
+    },
+    size: {
+      type: String,
+      default: ""
+    },
+    textColor: {
+      type: String,
+      default: ""
+    },
+    nativeType: {
+      type: String,
+      default: "button"
+    },
+    icon: {
+      type: String,
+      default: ""
+    },
+    text: {
+      type: String,
+      default: ""
+    },
+    outline: {
+      type: Boolean,
+      default: false
+    },
+    rounded: {
+      type: Boolean,
+      default: false
+    },
+    iconOnly: {
+      type: Boolean,
+      default: false
+    },
+    block: {
+      type: Boolean,
+      default: false
+    }
+  },
+  computed: {
+    classes() {
+      let btnClasses = [
+        { "btn-block": this.block },
+        { "rounded-circle": this.rounded },
+        { "btn-icon-only": this.iconOnly },
+        { "btn-icon": this.icon || this.$slots.icon },
+        this.type && !this.outline ? `btn-${this.type}` : "",
+        this.outline ? `btn-outline-${this.type}` : ""
+      ];
+      if (this.size) {
+        btnClasses.push(`btn-${this.size}`);
       }
+      return btnClasses;
     }
   }
+};
 </script>
 <style>
 </style>

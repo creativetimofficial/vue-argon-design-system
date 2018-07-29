@@ -27,55 +27,55 @@
     </nav>
 </template>
 <script>
-  import { FadeTransition } from 'vue2-transitions';
-  import NavbarToggleButton from './NavbarToggleButton';
+import { FadeTransition } from "vue2-transitions";
+import NavbarToggleButton from "./NavbarToggleButton";
 
-  export default {
-    name: 'base-nav',
-    components: {
-      FadeTransition,
-      NavbarToggleButton
+export default {
+  name: "base-nav",
+  components: {
+    FadeTransition,
+    NavbarToggleButton
+  },
+  props: {
+    type: {
+      type: String,
+      default: "primary"
     },
-    props: {
-      type: {
-        type: String,
-        default: 'primary'
-      },
-      title: {
-        type: String,
-        default: ''
-      },
-      contentId: {
-        type: [String, Number],
-        default: Math.random()
-      },
-      effect: {
-        type: String,
-        default: 'dark'
-      },
-      round: {
-        type: Boolean,
-        default: false
-      },
-      expand: {
-        type: Boolean,
-        default: false
-      }
+    title: {
+      type: String,
+      default: ""
     },
-    data() {
-      return {
-        toggled: false
-      }
+    contentId: {
+      type: [String, Number],
+      default: Math.random()
     },
-    methods: {
-      onTitleClick(evt) {
-        this.$emit('title-click', evt)
-      },
-      closeMenu(){
-        this.toggled = false;
-      }
+    effect: {
+      type: String,
+      default: "dark"
+    },
+    round: {
+      type: Boolean,
+      default: false
+    },
+    expand: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data() {
+    return {
+      toggled: false
+    };
+  },
+  methods: {
+    onTitleClick(evt) {
+      this.$emit("title-click", evt);
+    },
+    closeMenu() {
+      this.toggled = false;
     }
   }
+};
 </script>
 <style>
 </style>
