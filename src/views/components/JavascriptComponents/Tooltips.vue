@@ -3,7 +3,7 @@
         <div class="col-lg-6">
             <small class="d-block text-uppercase font-weight-bold mb-3">Tooltips</small>
             <base-button size="sm" type="primary" class="btn-tooltip"
-                    v-b-tooltip.hover.left title="Tooltip on left">On left
+                         v-b-tooltip.hover.left title="Tooltip on left">On left
             </base-button>
             <base-button size="sm" type="primary" class="btn-tooltip"
                          v-b-tooltip.hover.top title="Tooltip on top">On top
@@ -45,6 +45,7 @@
 <script>
   import BTooltip from 'bootstrap-vue/es/directives/tooltip/tooltip';
   import BPopover from 'bootstrap-vue/es/directives/popover/popover';
+
   export default {
     directives: {
       BTooltip,
@@ -52,5 +53,3 @@
     }
   }
 </script>
-<style>
-</style>
