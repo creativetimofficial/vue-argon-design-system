@@ -1,8 +1,8 @@
 <template>
-  <div class="tab-pane"
-       v-show="active"
+  <div class="tab-pane fade"
        :id="id || label"
-       :class="{active: active}"
+       :class="{'active show': active}"
+       v-show="active"
        :aria-expanded="active">
     <slot></slot>
   </div>

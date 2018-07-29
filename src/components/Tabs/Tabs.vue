@@ -36,7 +36,7 @@
     </template>
     <div slot="content" class="tab-content"
          :class="[tabContentClasses]">
-      <slot></slot>
+      <slot v-bind="slotData"></slot>
     </div>
   </component>
 </template>
@@ -54,17 +54,6 @@ export default {
       render(h) {
         return h("div", [this.tab.$slots.title || this.tab.title]);
       }
-    }
-  },
-  provide() {
-    return {
-      addTab: this.addTab,
-      removeTab: this.removeTab
-    };
-  },
-  computed: {
-    layoutComponent() {
-      return this.pills ? "pills-layout" : "tabs-layout";
     }
   },
   props: {
@@ -132,10 +121,28 @@ export default {
       description: "Initial value (active tab)"
     }
   },
+  provide() {
+    return {
+      addTab: this.addTab,
+      removeTab: this.removeTab
+    };
+  },
   data() {
     return {
-      tabs: []
+      tabs: [],
+      activeTabIndex: 0
     };
+  },
+  computed: {
+    layoutComponent() {
+      return this.pills ? "pills-layout" : "tabs-layout";
+    },
+    slotData(){
+      return {
+        activeTabIndex: this.activeTabIndex,
+        tabs: this.tabs
+      }
+    }
   },
   methods: {
     findAndActivateTab(title) {
@@ -150,6 +157,7 @@ export default {
       }
       this.deactivateTabs();
       tab.active = true;
+      this.activeTabIndex = this.tabs.findIndex(t => t.active);
     },
     deactivateTabs() {
       this.tabs.forEach(tab => {
@@ -157,14 +165,10 @@ export default {
       });
     },
     addTab(tab) {
-      const index = this.$slots.default.indexOf(tab.$vnode);
-      if (!this.activeTab && index === 0) {
-        tab.active = true;
-      }
       if (this.activeTab === tab.name) {
         tab.active = true;
       }
-      this.tabs.splice(index, 0, tab);
+      this.tabs.push(tab)
     },
     removeTab(tab) {
       const tabs = this.tabs;

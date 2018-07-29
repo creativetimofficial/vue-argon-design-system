@@ -6,8 +6,8 @@
                 <small class="text-uppercase font-weight-bold">With icons</small>
             </div>
             <tabs fill class="flex-column flex-md-row">
-                <card shadow>
-                    <tab-pane>
+                <card shadow slot-scope="{activeTabIndex}">
+                    <tab-pane key="tab1">
                         <template slot="title">
                             <i class="ni ni-cloud-upload-96 mr-2"></i>Home
                         </template>
@@ -20,7 +20,7 @@
                             Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse.</p>
                     </tab-pane>
 
-                    <tab-pane>
+                    <tab-pane key="tab2">
                         <template slot="title">
                             <i class="ni ni-bell-55 mr-2"></i>Profile
                         </template>
@@ -30,7 +30,7 @@
                             american apparel, butcher voluptate nisi qui.</p>
                     </tab-pane>
 
-                    <tab-pane>
+                    <tab-pane key="tab3">
                         <template slot="title">
                             <i class="ni ni-calendar-grid-58 mr-2"></i>Messages
                         </template>
@@ -79,10 +79,13 @@
 <script>
   import Tabs from "@/components/Tabs/Tabs.vue";
   import TabPane from "@/components/Tabs/TabPane.vue";
+  import { FadeTransition } from 'vue2-transitions'
+
   export default {
     components: {
       Tabs,
-      TabPane
+      TabPane,
+      FadeTransition
     }
   }
 </script>
