@@ -8,458 +8,133 @@
                     <div class="mb-3">
                         <small class="text-uppercase font-weight-bold">With icons</small>
                     </div>
-                    <div class="nav-wrapper">
-                        <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icons-text" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-icons-text-1-tab" data-toggle="tab"
-                                   href="#tabs-icons-text-1" role="tab" aria-controls="tabs-icons-text-1"
-                                   aria-selected="true"><i class="ni ni-cloud-upload-96 mr-2"></i>Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-2-tab" data-toggle="tab"
-                                   href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2"
-                                   aria-selected="false"><i class="ni ni-bell-55 mr-2"></i>Profile</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-3-tab" data-toggle="tab"
-                                   href="#tabs-icons-text-3" role="tab" aria-controls="tabs-icons-text-3"
-                                   aria-selected="false"><i class="ni ni-calendar-grid-58 mr-2"></i>Messages</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card shadow">
-                        <div class="card-body">
-                            <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel"
-                                     aria-labelledby="tabs-icons-text-1-tab">
-                                    <p class="description">Raw denim you probably haven't heard of them jean shorts
-                                        Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
-                                        cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro
-                                        keffiyeh dreamcatcher synth.</p>
-                                    <p class="description">Raw denim you probably haven't heard of them jean shorts
-                                        Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse.</p>
-                                </div>
-                                <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel"
-                                     aria-labelledby="tabs-icons-text-2-tab">
-                                    <p class="description">Cosby sweater eu banh mi, qui irure terry richardson ex
-                                        squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan
-                                        american apparel, butcher voluptate nisi qui.</p>
-                                </div>
-                                <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel"
-                                     aria-labelledby="tabs-icons-text-3-tab">
-                                    <p class="description">Raw denim you probably haven't heard of them jean shorts
-                                        Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
-                                        cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro
-                                        keffiyeh dreamcatcher synth.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <tabs fill class="flex-column flex-md-row">
+                        <card shadow>
+                            <tab-pane>
+                                <template slot="title">
+                                    <i class="ni ni-cloud-upload-96 mr-2"></i>Home
+                                </template>
+
+                                <p class="description">Raw denim you probably haven't heard of them jean shorts
+                                    Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
+                                    cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro
+                                    keffiyeh dreamcatcher synth.</p>
+                                <p class="description">Raw denim you probably haven't heard of them jean shorts
+                                    Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse.</p>
+                            </tab-pane>
+
+                            <tab-pane>
+                                <template slot="title">
+                                    <i class="ni ni-bell-55 mr-2"></i>Profile
+                                </template>
+
+                                <p class="description">Cosby sweater eu banh mi, qui irure terry richardson ex
+                                    squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan
+                                    american apparel, butcher voluptate nisi qui.</p>
+                            </tab-pane>
+
+                            <tab-pane>
+                                <template slot="title">
+                                    <i class="ni ni-calendar-grid-58 mr-2"></i>Messages
+                                </template>
+
+                                <p class="description">Raw denim you probably haven't heard of them jean shorts
+                                    Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
+                                    cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro
+                                    keffiyeh dreamcatcher synth.</p>
+                            </tab-pane>
+                        </card>
+                    </tabs>
                 </div>
                 <div class="col-lg-6 mt-5 mt-lg-0">
                     <!-- Menu -->
                     <div class="mb-3">
                         <small class="text-uppercase font-weight-bold">With text</small>
                     </div>
-                    <div class="nav-wrapper">
-                        <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-text" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-text-1-tab" data-toggle="tab"
-                                   href="#tabs-text-1" role="tab" aria-controls="tabs-text-1"
-                                   aria-selected="true">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link mb-sm-3 mb-md-0" id="tabs-text-2-tab" data-toggle="tab"
-                                   href="#tabs-text-2" role="tab" aria-controls="tabs-text-2" aria-selected="false">Profile</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link mb-sm-3 mb-md-0" id="tabs-text-3-tab" data-toggle="tab"
-                                   href="#tabs-text-3" role="tab" aria-controls="tabs-text-3" aria-selected="false">Messages</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card shadow">
-                        <div class="card-body">
-                            <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="tabs-text-1" role="tabpanel"
-                                     aria-labelledby="tabs-text-1-tab">
-                                    <p class="description">Raw denim you probably haven't heard of them jean shorts
-                                        Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
-                                        cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro
-                                        keffiyeh dreamcatcher synth.</p>
-                                    <p class="description">Raw denim you probably haven't heard of them jean shorts
-                                        Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse.</p>
-                                </div>
-                                <div class="tab-pane fade" id="tabs-text-2" role="tabpanel"
-                                     aria-labelledby="tabs-text-2-tab">
-                                    <p class="description">Cosby sweater eu banh mi, qui irure terry richardson ex
-                                        squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan
-                                        american apparel, butcher voluptate nisi qui.</p>
-                                </div>
-                                <div class="tab-pane fade" id="tabs-text-3" role="tabpanel"
-                                     aria-labelledby="tabs-text-3-tab">
-                                    <p class="description">Raw denim you probably haven't heard of them jean shorts
-                                        Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
-                                        cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro
-                                        keffiyeh dreamcatcher synth.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <tabs fill class="flex-column flex-md-row">
+                        <card shadow>
+                            <tab-pane title="Home">
+                                <p class="description">Raw denim you probably haven't heard of them jean shorts
+                                    Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
+                                    cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro
+                                    keffiyeh dreamcatcher synth.</p>
+                                <p class="description">Raw denim you probably haven't heard of them jean shorts
+                                    Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse.</p>
+                            </tab-pane>
+
+                            <tab-pane title="Profile">
+                                <p class="description">Cosby sweater eu banh mi, qui irure terry richardson ex
+                                    squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan
+                                    american apparel, butcher voluptate nisi qui.</p>
+                            </tab-pane>
+
+                            <tab-pane title="Messages">
+                                <p class="description">Raw denim you probably haven't heard of them jean shorts
+                                    Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
+                                    cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro
+                                    keffiyeh dreamcatcher synth.</p>
+                            </tab-pane>
+                        </card>
+                    </tabs>
                 </div>
             </div>
             <div class="row row-grid justify-content-between align-items-center mt-lg">
                 <div class="col-lg-5">
                     <h3 class="h4 text-success font-weight-bold mb-4">Progress bars</h3>
-                    <div class="progress-wrapper">
-                        <div class="progress-info">
-                            <div class="progress-label">
-                                <span>Task completed</span>
-                            </div>
-                            <div class="progress-percentage">
-                                <span>40%</span>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-default" role="progressbar" aria-valuenow="25" aria-valuemin="0"
-                                 aria-valuemax="100" style="width: 25%;"></div>
-                        </div>
-                    </div>
-                    <div class="progress-wrapper">
-                        <div class="progress-info">
-                            <div class="progress-label">
-                                <span>Task completed</span>
-                            </div>
-                            <div class="progress-percentage">
-                                <span>60%</span>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                                 aria-valuemax="100" style="width: 60%;"></div>
-                        </div>
-                    </div>
+                    <base-progress :value="40" label="Task completed"></base-progress>
+                    <base-progress type="primary" :value="60" label="Task completed"></base-progress>
                 </div>
                 <div class="col-lg-5">
                     <h3 class="h4 text-success font-weight-bold mb-5">Pagination</h3>
-                    <nav aria-label="Page navigation example" class="mb-4">
-                        <ul class="pagination">
-                            <li class="page-item">
-                                <a class="page-link" href="#">1</a>
-                            </li>
-                            <li class="page-item active">
-                                <a class="page-link" href="#">2</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">3</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">4</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">5</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                            <li class="page-item">
-                                <a class="page-link" href="#"><i class="fa fa-angle-left"></i></a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">1</a>
-                            </li>
-                            <li class="page-item active">
-                                <a class="page-link" href="#">2</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">3</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">4</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">5</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#"><i class="fa fa-angle-right"></i></a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <base-pagination :page-count="10" v-model="pagination.default"></base-pagination>
+                    <base-pagination :page-count="10" v-model="pagination.danger"></base-pagination>
                 </div>
             </div>
             <div class="row row-grid justify-content-between">
                 <div class="col-lg-5">
                     <h3 class="h4 text-success font-weight-bold mb-5">Navigation Pills</h3>
-                    <ul class="nav nav-pills nav-pills-circle mb-3" id="tabs_2" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link rounded-circle active" id="home-tab" data-toggle="tab" href="#tabs_2_1"
-                               role="tab" aria-controls="home" aria-selected="true">
-                                <span class="nav-link-icon d-block"><i class="ni ni-atom"></i></span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#tabs_2_2" role="tab"
-                               aria-controls="profile" aria-selected="false">
-                                <span class="nav-link-icon d-block"><i class="ni ni-chat-round"></i></span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#tabs_2_3" role="tab"
-                               aria-controls="contact" aria-selected="false">
-                                <span class="nav-link-icon d-block"><i class="ni ni-cloud-download-95"></i></span>
-                            </a>
-                        </li>
-                    </ul>
+                    <tabs :fill="false">
+                        <tab-pane>
+                            <span slot="title" class="nav-link-icon d-block"><i class="ni ni-atom"></i></span>
+                        </tab-pane>
+                        <tab-pane>
+                            <span slot="title" class="nav-link-icon d-block"><i class="ni ni-chat-round"></i></span>
+                        </tab-pane>
+                        <tab-pane>
+                            <span slot="title" class="nav-link-icon d-block"><i
+                                    class="ni ni-cloud-download-95"></i></span>
+                        </tab-pane>
+                    </tabs>
                 </div>
                 <div class="col-lg-5">
                     <h3 class="h4 text-success font-weight-bold mb-5">Labels</h3>
-                    <span class="badge badge-pill badge-primary text-uppercase">Primary</span>
-                    <span class="badge badge-pill badge-success text-uppercase">Success</span>
-                    <span class="badge badge-pill badge-danger text-uppercase">Danger</span>
-                    <span class="badge badge-pill badge-warning text-uppercase">Warning</span>
-                    <span class="badge badge-pill badge-info text-uppercase">Info</span>
+                    <badge type="primary" class="text-uppercase">Primary</badge>
+                    <badge type="success" class="text-uppercase">Success</badge>
+                    <badge type="danger" class="text-uppercase">Danger</badge>
+                    <badge type="warning" class="text-uppercase">Warning</badge>
+                    <badge type="info" class="text-uppercase">Info</badge>
                 </div>
             </div>
             <h3 class="mt-lg mb-4">
                 <span>Alerts</span>
             </h3>
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <span class="alert-inner--icon"><i class="ni ni-like-2"></i></span>
-                <span class="alert-inner--text"><strong>Success!</strong> This is a success alert—check it out!</span>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="alert alert-info alert-dismissible fade show" role="alert">
-                <span class="alert-inner--icon"><i class="ni ni-bell-55"></i></span>
-                <span class="alert-inner--text"><strong>Info!</strong> This is an info alert—check it out!</span>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <span class="alert-inner--icon"><i class="ni ni-bell-55"></i></span>
-                <span class="alert-inner--text"><strong>Warning!</strong> This is a warning alert—check it out!</span>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <span class="alert-inner--icon"><i class="ni ni-support-16"></i></span>
-                <span class="alert-inner--text"><strong>Danger!</strong> This is an error alert—check it out!</span>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <!-- Typography -->
-            <h2 class="mt-lg mb-5">
-                <span>Typography</span>
-            </h2>
-            <h3 class="h4 text-success font-weight-bold">Headings</h3>
-            <div class="row py-3 align-items-center">
-                <div class="col-sm-3">
-                    <small class="text-uppercase text-muted font-weight-bold">Heading 1</small>
-                </div>
-                <div class="col-sm-9">
-                    <h1 class="mb-0">Argon Design System</h1>
-                </div>
-            </div>
-            <div class="row py-3 align-items-center">
-                <div class="col-sm-3">
-                    <small class="text-uppercase text-muted font-weight-bold">Heading 2</small>
-                </div>
-                <div class="col-sm-9">
-                    <h2 class="mb-0">Argon Design System</h2>
-                </div>
-            </div>
-            <div class="row py-3 align-items-center">
-                <div class="col-sm-3">
-                    <small class="text-uppercase text-muted font-weight-bold">Heading 3</small>
-                </div>
-                <div class="col-sm-9">
-                    <h3 class="mb-0">Argon Design System</h3>
-                </div>
-            </div>
-            <div class="row py-3 align-items-center">
-                <div class="col-sm-3">
-                    <small class="text-uppercase text-muted font-weight-bold">Heading 4</small>
-                </div>
-                <div class="col-sm-9">
-                    <h4 class="mb-0">Argon Design System</h4>
-                </div>
-            </div>
-            <div class="row py-3 align-items-center">
-                <div class="col-sm-3">
-                    <small class="text-uppercase text-muted font-weight-bold">Heading 5</small>
-                </div>
-                <div class="col-sm-9">
-                    <h5 class="mb-0">Argon Design System </h5>
-                </div>
-            </div>
-            <div class="row py-3 align-items-center">
-                <div class="col-sm-3">
-                    <small class="text-uppercase text-muted font-weight-bold">Heading 6</small>
-                </div>
-                <div class="col-sm-9">
-                    <h6 class="mb-0">Argon Design System </h6>
-                </div>
-            </div>
-            <!-- Display titles -->
-            <h3 class="h4 text-success font-weight-bold mt-md">Display titles</h3>
-            <div class="row py-3 align-items-center">
-                <div class="col-sm-3">
-                    <small class="text-uppercase text-muted font-weight-bold">Display 1</small>
-                </div>
-                <div class="col-sm-9">
-                    <h1 class="display-1 mb-0">Argon Design System</h1>
-                </div>
-            </div>
-            <div class="row py-3 align-items-center">
-                <div class="col-sm-3">
-                    <small class="text-uppercase text-muted font-weight-bold">Display 2</small>
-                </div>
-                <div class="col-sm-9">
-                    <h2 class="display-2 mb-0">Argon Design System</h2>
-                </div>
-            </div>
-            <div class="row py-3 align-items-center">
-                <div class="col-sm-3">
-                    <small class="text-uppercase text-muted font-weight-bold">Display 3</small>
-                </div>
-                <div class="col-sm-9">
-                    <h3 class="display-3 mb-0">Argon Design System</h3>
-                </div>
-            </div>
-            <div class="row py-3 align-items-center">
-                <div class="col-sm-3">
-                    <small class="text-uppercase text-muted font-weight-bold">Display 4</small>
-                </div>
-                <div class="col-sm-9">
-                    <h4 class="display-4 mb-0">Argon Design System</h4>
-                </div>
-            </div>
-            <!-- Specialized titles -->
-            <h3 class="h4 text-success font-weight-bold mt-md">Specialized titles</h3>
-            <div class="row py-3 align-items-center">
-                <div class="col-sm-3">
-                    <small class="text-uppercase text-muted font-weight-bold">Heading</small>
-                </div>
-                <div class="col-sm-9">
-                    <h3 class="heading mb-0">Argon Design System</h3>
-                </div>
-            </div>
-            <div class="row py-3 align-items-center">
-                <div class="col-sm-3">
-                    <small class="text-uppercase text-muted font-weight-bold">Heading title</small>
-                </div>
-                <div class="col-sm-9">
-                    <h3 class="heading-title text-warning mb-0">Argon Design System</h3>
-                </div>
-            </div>
-            <div class="row py-3 align-items-center">
-                <div class="col-sm-3">
-                    <small class="text-uppercase text-muted font-weight-bold">Heading seaction</small>
-                </div>
-                <div class="col-sm-9">
-                    <div>
-                        <h2 class="display-3">Header with small subtitle </h2>
-                        <p class="lead text-muted">According to the National Oceanic and Atmospheric Administration,
-                            Ted, Scambos, NSIDClead scentist, puts the potentially record maximum.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Paragraphs -->
-            <h3 class="h4 text-success font-weight-bold mt-md">Paragraphs</h3>
-            <div class="row py-3 align-items-center">
-                <div class="col-sm-3">
-                    <small class="text-uppercase text-muted font-weight-bold">Paragraph</small>
-                </div>
-                <div class="col-sm-9">
-                    <p>I will be the leader of a company that ends up being worth billions of dollars, because I got the
-                        answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to
-                        push possibilities, to show people, this is the level that things could be at.</p>
-                </div>
-            </div>
-            <div class="row py-3 align-items-center">
-                <div class="col-sm-3">
-                    <small class="text-uppercase text-muted font-weight-bold">Lead text</small>
-                </div>
-                <div class="col-sm-9">
-                    <p class="lead">I will be the leader of a company that ends up being worth billions of dollars,
-                        because I got the answers. I understand culture. I am the nucleus. I think that’s a
-                        responsibility that I have, to push possibilities, to show people, this is the level that things
-                        could be at.</p>
-                </div>
-            </div>
-            <div class="row py-3 align-items-center">
-                <div class="col-sm-3">
-                    <small class="text-uppercase text-muted font-weight-bold">Quote</small>
-                </div>
-                <div class="col-sm-9">
-                    <blockquote class="blockquote">
-                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
-                            ante.</p>
-                        <footer class="blockquote-footer">Someone famous in
-                            <cite title="Source Title">Source Title</cite>
-                        </footer>
-                    </blockquote>
-                </div>
-            </div>
-            <div class="row py-3 align-items-center">
-                <div class="col-sm-3">
-                    <small class="text-uppercase text-muted font-weight-bold">Muted text</small>
-                </div>
-                <div class="col-sm-9">
-                    <p class="text-muted mb-0">I will be the leader of a company that ends up being worth billions of
-                        dollars, because I got the answers...</p>
-                </div>
-            </div>
-            <div class="row py-3 align-items-center">
-                <div class="col-sm-3">
-                    <small class="text-uppercase text-muted font-weight-bold">Primary text</small>
-                </div>
-                <div class="col-sm-9">
-                    <p class="text-primary">I will be the leader of a company that ends up being worth billions of
-                        dollars, because I got the answers...</p>
-                </div>
-            </div>
-            <div class="row py-3 align-items-center">
-                <div class="col-sm-3">
-                    <small class="text-uppercase text-muted font-weight-bold">Info text</small>
-                </div>
-                <div class="col-sm-9">
-                    <p class="text-info mb-0">I will be the leader of a company that ends up being worth billions of
-                        dollars, because I got the answers...</p>
-                </div>
-            </div>
-            <div class="row py-3 align-items-center">
-                <div class="col-sm-3">
-                    <small class="text-uppercase text-muted font-weight-bold">Success text</small>
-                </div>
-                <div class="col-sm-9">
-                    <p class="text-success mb-0">I will be the leader of a company that ends up being worth billions of
-                        dollars, because I got the answers...</p>
-                </div>
-            </div>
-            <div class="row py-3 align-items-center">
-                <div class="col-sm-3">
-                    <small class="text-uppercase text-muted font-weight-bold">Warning text</small>
-                </div>
-                <div class="col-sm-9">
-                    <p class="text-warning mb-0">I will be the leader of a company that ends up being worth billions of
-                        dollars, because I got the answers...</p>
-                </div>
-            </div>
-            <div class="row py-3 align-items-center">
-                <div class="col-sm-3">
-                    <small class="text-uppercase text-muted font-weight-bold">Danger text</small>
-                </div>
-                <div class="col-sm-9">
-                    <p class="text-danger mb-0">I will be the leader of a company that ends up being worth billions of
-                        dollars, because I got the answers...</p>
-                </div>
-            </div>
+            <base-alert type="success" icon="ni ni-like-2" dismissible>
+                <span slot="text"><strong>Success!</strong> This is a success alert—check it out!</span>
+            </base-alert>
+
+            <base-alert type="info" icon="ni ni-bell-55" dismissible>
+                <span slot="text"><strong>Info!</strong> This is an info alert—check it out!</span>
+            </base-alert>
+
+            <base-alert type="warning" icon="ni ni-bell-55" dismissible>
+                <span slot="text"><strong>Warning!</strong> This is a warning alert—check it out!</span>
+            </base-alert>
+
+            <base-alert type="danger" icon="ni ni-support-16" dismissible>
+                <span slot="text"><strong>Danger!</strong> This is an error alert—check it out!</span>
+            </base-alert>
+
+            <typography></typography>
             <!-- Images -->
             <h2 class="mt-lg mb-5">
                 <span>Images</span>
@@ -715,7 +390,25 @@
     </section>
 </template>
 <script>
-export default {};
+  import Tabs from "@/components/Tabs/Tabs.vue";
+  import TabPane from "@/components/Tabs/TabPane.vue";
+  import Typography from './Typography';
+
+  export default {
+    components: {
+      TabPane,
+      Tabs,
+      Typography
+    },
+    data() {
+      return {
+        pagination: {
+          default: 1,
+          danger: 3
+        }
+      }
+    }
+  };
 </script>
 <style>
 </style>

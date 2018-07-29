@@ -1,11 +1,17 @@
 <template>
-  <div class="progress-container progress-base"
-       :class="`progress-${type}`">
-    <span class="progress-badge">
-      <slot name="label">
-        {{label}}
-      </slot>
-    </span>
+  <div class="progress-wrapper">
+    <div :class="`progress-${type}`">
+      <div class="progress-label">
+        <slot name="label">
+          <span>{{label}}</span>
+        </slot>
+      </div>
+      <div class="progress-percentage">
+        <slot>
+          <span>{{value}}%</span>
+        </slot>
+      </div>
+    </div>
     <div class="progress" :style="`height: ${height}px`">
       <div class="progress-bar"
            :class="computedClasses"
@@ -14,11 +20,6 @@
            aria-valuemin="0"
            aria-valuemax="100"
            :style="`width: ${value}%;`">
-        <slot>
-            <span class="progress-value" v-if="showValue">
-               {{value}}%
-            </span>
-        </slot>
       </div>
     </div>
   </div>
@@ -33,7 +34,7 @@ export default {
     label: String,
     height: {
       type: Number,
-      default: 1
+      default: 8
     },
     type: {
       type: String,
@@ -51,7 +52,8 @@ export default {
     computedClasses() {
       return [
         { "progress-bar-striped": this.striped },
-        { "progress-bar-animated": this.animated }
+        { "progress-bar-animated": this.animated },
+        {[`bg-${this.type}`]: this.type}
       ];
     }
   }
