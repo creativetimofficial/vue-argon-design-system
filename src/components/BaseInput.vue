@@ -24,7 +24,7 @@
           </slot>
         </span>
         </div>
-        <slot>
+        <slot v-bind="slotData">
             <input
                     :value="value"
                     v-on="listeners"
@@ -108,6 +108,12 @@ export default {
         focus: this.onFocus,
         blur: this.onBlur
       };
+    },
+    slotData() {
+      return {
+        focused: this.focused,
+        ...this.listeners
+      }
     },
     hasIcon() {
       const { addonRight, addonLeft } = this.$slots;
