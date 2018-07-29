@@ -1,6 +1,7 @@
 <template>
     <component :is="tag"
                :type="tag === 'button' ? nativeType: ''"
+               @click="handleClick"
                class="btn"
                :class="classes">
     <span class="btn-inner--icon" v-if="$slots.icon || icon && $slots.default">
@@ -72,6 +73,7 @@ export default {
         { "btn-block": this.block },
         { "rounded-circle": this.rounded },
         { "btn-icon-only": this.iconOnly },
+        { [`text-${this.textColor}`]: this.textColor },
         { "btn-icon": this.icon || this.$slots.icon },
         this.type && !this.outline ? `btn-${this.type}` : "",
         this.outline ? `btn-outline-${this.type}` : ""
@@ -80,6 +82,11 @@ export default {
         btnClasses.push(`btn-${this.size}`);
       }
       return btnClasses;
+    }
+  },
+  methods: {
+    handleClick(evt){
+      this.$emit('click', evt)
     }
   }
 };
