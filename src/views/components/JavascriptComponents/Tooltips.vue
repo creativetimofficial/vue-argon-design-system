@@ -2,46 +2,55 @@
     <div class="row">
         <div class="col-lg-6">
             <small class="d-block text-uppercase font-weight-bold mb-3">Tooltips</small>
-            <button type="button" class="btn btn-sm btn-primary btn-tooltip" data-toggle="tooltip"
-                    data-placement="left" title="Tooltip on left" data-container="body" data-animation="true"
-                    data-delay="100">On left
-            </button>
-            <button type="button" class="btn btn-sm btn-primary btn-tooltip" data-toggle="tooltip"
-                    data-placement="top" title="Tooltip on top" data-container="body" data-animation="true">On
-                top
-            </button>
-            <button type="button" class="btn btn-sm btn-primary btn-tooltip" data-toggle="tooltip"
-                    data-placement="bottom" title="Tooltip on bottom" data-container="body"
-                    data-animation="true">On bottom
-            </button>
-            <button type="button" class="btn btn-sm btn-primary btn-tooltip" data-toggle="tooltip"
-                    data-placement="right" title="Tooltip on right" data-container="body" data-animation="true">
-                On right
-            </button>
+            <base-button size="sm" type="primary" class="btn-tooltip"
+                    v-b-tooltip.hover.left title="Tooltip on left">On left
+            </base-button>
+            <base-button size="sm" type="primary" class="btn-tooltip"
+                         v-b-tooltip.hover.top title="Tooltip on top">On top
+            </base-button>
+            <base-button size="sm" type="primary" class="btn-tooltip"
+                         v-b-tooltip.hover.bottom title="Tooltip on bottom">On bottom
+            </base-button>
+            <base-button size="sm" type="primary" class="btn-tooltip"
+                         v-b-tooltip.hover.right title="Tooltip on right">On right
+            </base-button>
         </div>
         <div class="col-lg-6 mt-4 mt-lg-0">
             <small class="d-block text-uppercase font-weight-bold mb-3">Popovers</small>
-            <button type="button" class="btn btn-sm btn-default" data-container="body"
-                    data-original-title="Popover On Left" data-toggle="popover" data-placement="left"
-                    data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">On left
-            </button>
-            <button type="button" class="btn btn-sm btn-default" data-container="body"
-                    data-original-title="Popover on Top" data-toggle="popover" data-placement="top"
-                    data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">On top
-            </button>
-            <button type="button" class="btn btn-sm btn-default" data-container="body"
-                    data-original-title="Popover on Right" data-toggle="popover" data-placement="right"
-                    data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">On right
-            </button>
-            <button type="button" class="btn btn-sm btn-default" data-container="body"
-                    data-original-title="Popover on Bottom" data-toggle="popover" data-placement="bottom"
-                    data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">On bottom
-            </button>
+            <base-button size="sm" type="default"
+                         v-b-popover.hover.left="'Vivamus sagittis lacus vel augue laoreet rutrum faucibus.'"
+                         title="Popover On Left">On left
+            </base-button>
+
+            <base-button size="sm" type="default"
+                         v-b-popover.hover.left="'Vivamus sagittis lacus vel augue laoreet rutrum faucibus.'"
+                         title="Popover On Left">On left
+            </base-button>
+
+            <base-button size="sm" type="default"
+                         v-b-popover.hover.top="'Vivamus sagittis lacus vel augue laoreet rutrum faucibus.'"
+                         title="Popover On Top">On top
+            </base-button>
+            <base-button size="sm" type="default"
+                         v-b-popover.hover.right="'Vivamus sagittis lacus vel augue laoreet rutrum faucibus.'"
+                         title="Popover On right">On right
+            </base-button>
+            <base-button size="sm" type="default"
+                         v-b-popover.hover.bottom="'Vivamus sagittis lacus vel augue laoreet rutrum faucibus.'"
+                         title="Popover On bottom">On bottom
+            </base-button>
         </div>
     </div>
 </template>
 <script>
-  export default {}
+  import BTooltip from 'bootstrap-vue/es/directives/tooltip/tooltip';
+  import BPopover from 'bootstrap-vue/es/directives/popover/popover';
+  export default {
+    directives: {
+      BTooltip,
+      BPopover
+    }
+  }
 </script>
 <style>
 </style>

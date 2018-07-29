@@ -79,13 +79,10 @@
 <script>
   import Tabs from "@/components/Tabs/Tabs.vue";
   import TabPane from "@/components/Tabs/TabPane.vue";
-  import { FadeTransition } from 'vue2-transitions'
-
   export default {
     components: {
       Tabs,
-      TabPane,
-      FadeTransition
+      TabPane
     }
   }
 </script>
