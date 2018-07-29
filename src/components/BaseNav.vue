@@ -3,11 +3,13 @@
          :class="[
             {'navbar-expand-lg': expand},
             {[`navbar-${effect}`]: effect},
+            {'navbar-transparent': transparent},
             {[`bg-${type}`]: type},
             {'rounded': round}
          ]">
         <div class="container">
-            <slot name="title">
+            <slot name="container-pre"></slot>
+            <slot name="brand">
                 <a class="navbar-brand" href="#" @click.prevent="onTitleClick">
                     {{title}}
                 </a>
@@ -16,6 +18,8 @@
                                   :target="contentId"
                                   @click.native="toggled = !toggled">
             </navbar-toggle-button>
+
+            <slot name="container-after"></slot>
 
             <div class="collapse navbar-collapse" :class="{show: toggled}" :id="contentId">
                 <div class="navbar-collapse-header">
@@ -54,6 +58,10 @@ export default {
       default: "dark"
     },
     round: {
+      type: Boolean,
+      default: false
+    },
+    transparent: {
       type: Boolean,
       default: false
     },
