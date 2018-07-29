@@ -12,7 +12,7 @@
 </template>
 
 <script>
-  export default {
-    name: 'tabs-layout'
-  }
+export default {
+  name: "tabs-layout"
+};
 </script>
