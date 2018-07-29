@@ -184,7 +184,6 @@
                 </div>
                 <div class="col-lg-5">
                     <h3 class="h4 text-success font-weight-bold mb-5">Labels</h3>
-                    </h3>
                     <span class="badge badge-pill badge-primary text-uppercase">Primary</span>
                     <span class="badge badge-pill badge-success text-uppercase">Success</span>
                     <span class="badge badge-pill badge-danger text-uppercase">Danger</span>
