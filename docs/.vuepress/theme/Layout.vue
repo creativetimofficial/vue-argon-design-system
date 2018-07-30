@@ -47,12 +47,12 @@
 </template>
 <script>
   import Navbar from './Navbar';
-  import Sidebar from 'vuepress/lib/default-theme/Sidebar';
-  import Home from 'vuepress/lib/default-theme/Home';
-  import Page from 'vuepress/lib/default-theme/Page';
-  import {resolveSidebarItems} from 'vuepress/lib/default-theme/util';
+  import Sidebar from '../../node_modules/vuepress/lib/default-theme/Sidebar';
+  import Home from '../../node_modules/vuepress/lib/default-theme/Home';
+  import Page from '../../node_modules/vuepress/lib/default-theme/Page';
+  import {resolveSidebarItems} from '../../node_modules/vuepress/lib/default-theme/util';
   import 'prismjs/themes/prism-tomorrow.css';
-  import 'vuepress/lib/default-theme/styles/theme.styl';
+  import '../../node_modules/vuepress/lib/default-theme/styles/theme.styl';
 
   export default {
     components: {
