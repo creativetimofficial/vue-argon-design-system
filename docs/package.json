@@ -1,0 +1,28 @@
+{
+  "name": "tagup",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vuepress dev",
+    "deploy": "npm run build && gh-pages -d .vuepress/dist",
+    "build": "vuepress build",
+    "copy:docs": "ncp .vuepress/dist ../dist/documentation",
+    "build:docs": "vuepress build && npm run copy:docs"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "gh-pages": "^1.1.0",
+    "markdown-it-container": "^2.0.0",
+    "ncp": "^2.0.0",
+    "rgb-hex": "^2.1.0",
+    "sass-vars-to-js-loader": "^2.0.2",
+    "vue-docgen-api": "^2.3.11",
+    "vuepress": "^0.13.0"
+  },
+  "author": "tagup@tagup.io",
+  "description": "Tagup component docs",
+  "dependencies": {
+    "element-ui": "^2.4.0",
+    "nprogress": "^0.2.0"
+  }
+}
