@@ -43,6 +43,8 @@ module.exports = {
       children: [
         '/foundation/colors',
         '/foundation/grid',
+        '/foundation/typography',
+        '/foundation/icons',
       ]
     }
     ],

@@ -1,6 +1,6 @@
 <template>
     <base-nav class="main-nav flex-row align-items-md-center" type="" effect="light" expand>
-        <a slot="brand" class="navbar-brand mr-0 mr-md-2" href="../../docs/getting-started/overview.html"
+        <a slot="brand" class="navbar-brand mr-0 mr-md-2" href="/"
            aria-label="Bootstrap">
             <img src="/img/brand/white.png">
             <sup>Docs</sup>
@@ -8,7 +8,7 @@
 
         <div class="row" slot="content-header" slot-scope="{closeMenu}">
             <div class="col-6 collapse-brand">
-                <a href="../index.html">
+                <a href="/">
                     <img src="img/brand/blue.png">
                 </a>
             </div>
@@ -19,10 +19,10 @@
 
         <ul class="navbar-nav flex-row mr-auto ml-4 d-none d-md-flex">
             <li class="nav-item">
-                <a class="nav-link" href="../../index.html">Live Preview</a>
+                <a class="nav-link" href="https://demos.creative-tim.com/vue-argon-design-system/#/">Live Preview</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="https://github.com/creativetimofficial/argon-design-system/issues"
+                <a class="nav-link" href="https://github.com/creativetimofficial/vue-argon-design-system/issues"
                    target="_blank">Support</a>
             </li>
         </ul>
@@ -66,7 +66,7 @@
             </ul>
         </div>
         <SearchBox v-if="$site.themeConfig.search !== false"/>
-        <a href="https://www.creative-tim.com/product/argon-design-system" target="_blank"
+        <a href="https://www.creative-tim.com/product/vue-argon-design-system" target="_blank"
            class="btn btn-neutral btn-icon ml-sm-3 d-none d-md-block">
       <span class="btn-inner--icon">
         <i class="fa fa-cloud-download mr-2"></i>
