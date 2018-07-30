@@ -30,6 +30,13 @@ td {
   width: 12px;
   heigth: 12px;
 }
+
+pre code,
+pre code .token {
+  line-height: 22px;
+  font-size: 14px !important;
+}
+
 h1, h2, h3 {
   padding-left: 1.25rem;
   border-left: 2px solid #5e72e4;

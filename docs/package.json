@@ -14,6 +14,7 @@
     "gh-pages": "^1.1.0",
     "markdown-it-container": "^2.0.0",
     "ncp": "^2.0.0",
+    "prismjs": "^1.15.0",
     "rgb-hex": "^2.1.0",
     "sass-vars-to-js-loader": "^2.0.2",
     "vue-docgen-api": "^2.3.11",

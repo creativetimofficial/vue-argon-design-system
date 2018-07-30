@@ -51,6 +51,7 @@
   import Home from 'vuepress/lib/default-theme/Home';
   import Page from 'vuepress/lib/default-theme/Page';
   import {resolveSidebarItems} from 'vuepress/lib/default-theme/util';
+  import 'prismjs/themes/prism-tomorrow.css';
   import 'vuepress/lib/default-theme/styles/theme.styl';
 
   export default {

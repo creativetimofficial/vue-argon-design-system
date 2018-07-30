@@ -30,7 +30,11 @@ module.exports = {
       title: 'Getting Started',
       collapsable: false,
       children: [
-        '/'
+        '/',
+        '/quick-start',
+        '/licence',
+        '/contents',
+        '/build-tools'
       ]
     }],
     nav: [
