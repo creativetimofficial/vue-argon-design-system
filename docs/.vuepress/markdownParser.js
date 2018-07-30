@@ -21,14 +21,12 @@ module.exports = md => {
         const content = tokens[idx + 1].content;
         const html = convert(striptags.strip(content, ['script', 'style'])).replace(/(<[^>]*)=""(?=.*>)/g, '$1');
         const script = striptags.fetch(content, 'script');
-        const style = striptags.fetch(content, 'style');
-        let jsfiddle = { html: html, script: script, style: style };
+        const style = striptags.fetch(content, 'style');;
         const descriptionHTML = description
           ? md.render(description)
           : '';
 
-        jsfiddle = md.utils.escapeHtml(JSON.stringify(jsfiddle));
-        return `<demo-block class="demo-box" :jsfiddle="${jsfiddle}">
+        return `<demo-block class="demo-box">
                     <div class="source" slot="source">${html}</div>
                     ${descriptionHTML}
                     <div class="highlight" slot="highlight">`;

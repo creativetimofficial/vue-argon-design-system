@@ -36,7 +36,16 @@ module.exports = {
         '/contents',
         '/build-tools'
       ]
-    }],
+    },
+    {
+      title: 'Foundation',
+      collapsable: false,
+      children: [
+        '/foundation/colors',
+        '/foundation/grid',
+      ]
+    }
+    ],
     nav: [
       { text: 'Home', link: '/' },
     ]

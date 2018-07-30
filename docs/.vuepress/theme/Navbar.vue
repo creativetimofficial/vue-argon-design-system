@@ -2,7 +2,7 @@
     <base-nav class="main-nav flex-row align-items-md-center" type="" effect="light" expand>
         <a slot="brand" class="navbar-brand mr-0 mr-md-2" href="../../docs/getting-started/overview.html"
            aria-label="Bootstrap">
-            <img src="img/brand/white.png">
+            <img src="/img/brand/white.png">
             <sup>Docs</sup>
         </a>
 
