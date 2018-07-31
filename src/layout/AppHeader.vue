@@ -1,13 +1,13 @@
 <template>
     <header class="header-global">
         <base-nav class="navbar-main" transparent type="" effect="light" expand>
-            <router-link slot="brand" class="navbar-brand mr-lg-5" to="/">
+            <router-link slot="brand" class="navbar-brand mr-lg-5" to="https://demos.creative-tim.com/vue-argon-design-system/documentation">
                 <img src="img/brand/white.png">
             </router-link>
 
             <div class="row" slot="content-header" slot-scope="{closeMenu}">
                 <div class="col-6 collapse-brand">
-                    <a href="../index.html">
+                    <a href="https://demos.creative-tim.com/vue-argon-design-system/documentation/">
                         <img src="img/brand/blue.png">
                     </a>
                 </div>
@@ -24,7 +24,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-xl">
                         <div class="dropdown-menu-inner">
-                            <a href="https://demos.creative-tim.com/argon-design-system/docs/getting-started/overview.html"
+                            <a href="https://demos.creative-tim.com/vue-argon-design-system/documentation/"
                                class="media d-flex align-items-center">
                                 <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
                                     <i class="ni ni-spaceship"></i>
@@ -35,7 +35,7 @@
                                         world's most popular framework for building responsive sites.</p>
                                 </div>
                             </a>
-                            <a href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html"
+                            <a href="https://demos.creative-tim.com/vue-argon-design-system/documentation/"
                                class="media d-flex align-items-center">
                                 <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
                                     <i class="ni ni-ui-04"></i>
