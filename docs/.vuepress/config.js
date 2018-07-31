@@ -56,6 +56,8 @@ module.exports = {
         '/components/buttons',
         '/components/carousel',
         '/components/dropdowns',
+        '/components/forms',
+        '/components/modal',
       ]
     }
     ],

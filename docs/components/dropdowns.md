@@ -111,3 +111,7 @@ The best part is you can do this with any button variant, too:
 </div>
 ```
 :::
+
+#### Props
+
+<props-table component-name="base-dropdown"></props-table>
