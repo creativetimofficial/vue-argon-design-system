@@ -58,6 +58,8 @@ module.exports = {
         '/components/dropdowns',
         '/components/forms',
         '/components/modal',
+        '/components/tabs',
+        '/components/navbar',
       ]
     }
     ],

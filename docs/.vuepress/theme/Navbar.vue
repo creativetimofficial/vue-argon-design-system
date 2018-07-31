@@ -85,7 +85,8 @@
   }
 </script>
 <style lang="scss">
-    .main-nav {
+    nav.main-nav {
+      z-index: 50;
         &.navbar {
             background-color: #5e72e4;
             box-shadow: rgba(116, 129, 141, .1) 0 1px 1px 0;

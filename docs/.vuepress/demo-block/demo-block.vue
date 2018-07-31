@@ -167,35 +167,6 @@
       overflow: scroll;
     }
 
-    .description {
-      padding: 20px;
-      box-sizing: border-box;
-      border: solid 1px #ebebeb;
-      border-radius: 3px;
-      font-size: 14px;
-      line-height: 22px;
-      color: #666;
-      word-break: break-word;
-      margin: 10px;
-      background-color: #fff;
-
-      p {
-        margin: 0;
-        line-height: 26px;
-      }
-
-      code {
-        color: #5e6d82;
-        background-color: #e6effb;
-        margin: 0 4px;
-        display: inline-block;
-        padding: 1px 5px;
-        font-size: 12px;
-        border-radius: 3px;
-        height: 18px;
-        line-height: 18px;
-      }
-    }
 
     .highlight {
       pre {
