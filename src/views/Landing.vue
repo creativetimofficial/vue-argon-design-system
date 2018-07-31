@@ -156,8 +156,8 @@
                             <blockquote class="card-blockquote">
                                 <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95"
                                      class="svg-bg">
-                                    <polygon points="0,52 583,95 0,95" class="fill-default"/>
-                                    <polygon points="0,42 583,95 683,0 0,95" opacity=".2" class="fill-default"/>
+                                    <polygon points="0,52 583,95 0,95" class="fill-default"></polygon>
+                                    <polygon points="0,42 583,95 683,0 0,95" opacity=".2" class="fill-default"></polygon>
                                 </svg>
                                 <h4 class="display-3 font-weight-bold text-white">Design System</h4>
                                 <p class="lead text-italic text-white">The Arctic Ocean freezes every winter and much of
