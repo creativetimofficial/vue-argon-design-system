@@ -9,6 +9,7 @@
         <icons></icons>
         <examples></examples>
         <download-section></download-section>
+        <carousel></carousel>
     </div>
 </template>
 <script>
