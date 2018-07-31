@@ -2,14 +2,14 @@
     <base-nav class="main-nav flex-row align-items-md-center" type="" effect="light" expand>
         <a slot="brand" class="navbar-brand mr-0 mr-md-2" href="/"
            aria-label="Bootstrap">
-            <img src="/img/brand/white.png">
+            <img src="https://demos.creative-tim.com/vue-argon-design-system/img/brand/white.png">
             <sup>Docs</sup>
         </a>
 
         <div class="row" slot="content-header" slot-scope="{closeMenu}">
             <div class="col-6 collapse-brand">
                 <a href="/">
-                    <img src="img/brand/blue.png">
+                    <img src="https://demos.creative-tim.com/vue-argon-design-system/img/brand/white.png">
                 </a>
             </div>
             <div class="col-6 collapse-close">
