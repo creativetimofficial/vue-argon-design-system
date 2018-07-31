@@ -262,7 +262,7 @@ Make the breaks responsive by mixing the `.w-100` with some responsive display u
 
 Bootstrap’s grid includes five tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit.
 
-### All breakpoints
+#### All breakpoints
 
 For grids that are the same from the smallest of devices to the largest, use the `.col` and `.col-*` classes.
 Specify a numbered class when you need a particularly sized column; otherwise, feel free to stick to `.col`.

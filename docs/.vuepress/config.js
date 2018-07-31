@@ -46,6 +46,15 @@ module.exports = {
         '/foundation/typography',
         '/foundation/icons',
       ]
+    },
+    {
+      title: 'Components',
+      collapsable: false,
+      children: [
+        '/components/alerts',
+        '/components/badges',
+        '/components/buttons',
+      ]
     }
     ],
     nav: [
