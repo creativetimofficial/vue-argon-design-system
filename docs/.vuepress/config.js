@@ -54,6 +54,8 @@ module.exports = {
         '/components/alerts',
         '/components/badges',
         '/components/buttons',
+        '/components/carousel',
+        '/components/dropdowns',
       ]
     }
     ],

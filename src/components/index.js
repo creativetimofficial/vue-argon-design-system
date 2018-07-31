@@ -2,6 +2,7 @@ export {default as Badge} from './Badge';
 export {default as BaseAlert} from './BaseAlert';
 export {default as BaseButton} from './BaseButton';
 export {default as BaseCheckbox} from './BaseCheckbox';
+export {default as BaseDropdown} from './BaseDropdown';
 export {default as BaseInput} from './BaseInput';
 export {default as BaseNav} from './BaseNav';
 export {default as BasePagination} from './BasePagination';
