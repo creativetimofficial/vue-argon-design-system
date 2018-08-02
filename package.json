@@ -12,7 +12,6 @@
     "flatpickr": "^4.5.1",
     "nouislider": "^11.1.0",
     "vue": "^2.5.16",
-    "vue-clickaway": "^2.2.2",
     "vue-flatpickr-component": "^7.0.4",
     "vue-lazyload": "^1.2.6",
     "vue-router": "^3.0.1",
