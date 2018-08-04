@@ -60,6 +60,18 @@ module.exports = {
         '/components/modal',
         '/components/tabs',
         '/components/navbar',
+        '/components/pagination',
+        '/components/popovers',
+        '/components/progress',
+        '/components/tooltips',
+      ]
+    },
+    {
+      title: 'Plugins',
+      collapsable: false,
+      children: [
+        '/components/plugin_datepicker',
+        '/components/plugin_slider',
       ]
     }
     ],

@@ -1,5 +1,5 @@
 <template>
-    <div class="theme-container">
+    <div class="theme-container ct-documentation">
         <Navbar></Navbar>
         <div
                 class="sidebar-mask"

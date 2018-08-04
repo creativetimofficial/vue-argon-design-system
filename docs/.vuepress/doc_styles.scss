@@ -1,49 +1,52 @@
 $box-shadow: 0 10px 20px -8px rgba(0,0,0,.15);
 $border-color: rgba(0,0,0,.05);
 $orange: #fb6340;
-table {
-  width: 100%;
-  box-shadow: $box-shadow;
-  display: table;
-  margin: 0;
-}
-th {
-  padding: 10px;
-  border: 1px solid rgba(0,0,0,.05);
-  background: #fafafa;
-}
-tr {
-  border-top: 1px solid #dfe2e5;
-}
-td {
-  border: 1px solid rgba(0,0,0,.05)
-}
-
-
-.demo-block {
-  margin-top: 30px;
-  box-shadow: $box-shadow;
-  border: 1px solid $border-color;
-}
-
-.icon.outbound {
-  width: 12px;
-  heigth: 12px;
-}
-
-pre code,
-pre code .token {
-  line-height: 22px;
-  font-size: 14px !important;
-}
-
-h1, h2, h3 {
-  padding-left: 1.25rem;
-  border-left: 2px solid #5e72e4;
-  padding-top: 12px !important;
-  padding-bottom: 0 !important;
-  border-bottom: 0;
-  &:hover .header-anchor {
-    opacity: 0;
+.ct-documentation {
+  table {
+    width: 100%;
+    box-shadow: $box-shadow;
+    display: table;
+    margin: 0;
   }
+  th {
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.05);
+    background: #fafafa;
+  }
+  tr {
+    border-top: 1px solid #dfe2e5;
+  }
+  td {
+    border: 1px solid rgba(0,0,0,.05)
+  }
+
+
+  .demo-block {
+    margin-top: 30px;
+    box-shadow: $box-shadow;
+    border: 1px solid $border-color;
+  }
+
+  .icon.outbound {
+    width: 12px;
+    heigth: 12px;
+  }
+
+  pre code,
+  pre code .token {
+    line-height: 22px;
+    font-size: 14px !important;
+  }
+
+  h1, h2, h3 {
+    padding-left: 1.25rem;
+    border-left: 2px solid #5e72e4;
+    padding-top: 12px !important;
+    padding-bottom: 0 !important;
+    border-bottom: 0;
+    &:hover .header-anchor {
+      opacity: 0;
+    }
+  }
+
 }
