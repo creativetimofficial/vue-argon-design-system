@@ -38,17 +38,6 @@ export default {
     type: {
       type: String,
       default: "default",
-      validator: value => {
-        let acceptedValues = [
-          "primary",
-          "info",
-          "success",
-          "warning",
-          "danger",
-          "default"
-        ];
-        return acceptedValues.indexOf(value) !== -1;
-      },
       description: "Badge type (primary|info|danger|default|warning|success)"
     }
   }

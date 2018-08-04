@@ -1,5 +1,5 @@
 <template>
-  <ul class="pagination">
+  <ul class="pagination" :class="[size && `pagination-${size}`, align && `justify-content-${align}`]">
     <li class="page-item prev-page" :class="{disabled: value === 1}">
       <a class="page-link" aria-label="Previous" @click="prevPage">
         <span aria-hidden="true"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
@@ -43,6 +43,16 @@ export default {
       type: Number,
       default: 1,
       description: "Pagination value"
+    },
+    size: {
+      type: String,
+      default: '',
+      description: "Pagination size"
+    },
+    align: {
+      type: String,
+      default: '',
+      description: "Pagination alignment (e.g center|start|end)"
     }
   },
   computed: {
