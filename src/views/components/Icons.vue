@@ -45,18 +45,18 @@
     </section>
 </template>
 <script>
-  export default {
-    data() {
-      return {
-        showIconsAnimation: false
-      }
-    },
-    methods: {
-      onScroll(evt) {
-        console.log(evt)
-      }
+export default {
+  data() {
+    return {
+      showIconsAnimation: false
+    };
+  },
+  methods: {
+    onScroll(evt) {
+      console.log(evt);
     }
-  };
+  }
+};
 </script>
 <style>
 </style>
