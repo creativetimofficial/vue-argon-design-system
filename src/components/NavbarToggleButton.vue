@@ -12,11 +12,13 @@
 export default {
   props: {
     target: {
-      type: [String, Number]
+      type: [String, Number],
+      description: "Button target element"
     },
     toggled: {
       type: Boolean,
-      default: false
+      default: false,
+      description: "Whether button is toggled"
     }
   }
 };

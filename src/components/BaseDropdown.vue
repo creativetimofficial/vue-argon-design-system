@@ -29,14 +29,30 @@ export default {
       type: String,
       default: "down"
     },
-    title: String,
-    icon: String,
-    position: String,
-    menuClasses: [String, Object],
-    hideArrow: Boolean,
+    title: {
+      type: String,
+      description: "Dropdown title"
+    },
+    icon: {
+      type: String,
+      description: "Icon for dropdown title"
+    },
+    position: {
+      type: String,
+      description: "Position of dropdown menu (e.g right|left)"
+    },
+    menuClasses: {
+      type: [String, Object],
+      description: "Dropdown menu classes"
+    },
+    hideArrow: {
+      type: Boolean,
+      description: 'Whether dropdown arrow should be hidden'
+    },
     tag: {
       type: String,
-      default: "li"
+      default: "li",
+      description: "Dropdown html tag (e.g div, li etc)"
     }
   },
   data() {

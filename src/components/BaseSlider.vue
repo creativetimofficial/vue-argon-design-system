@@ -13,11 +13,13 @@ import noUiSlider from "nouislider";
 export default {
   name: "base-slider",
   props: {
-    value: [String, Array, Number],
-    disabled: Boolean,
-    start: {
-      type: [Number, Array],
-      default: 0
+    value: {
+      type: [String, Array, Number],
+      description: "Slider value"
+    },
+    disabled: {
+      type: Boolean,
+      description: "Whether slider is disabled"
     },
     range: {
       type: Object,
@@ -26,17 +28,20 @@ export default {
           min: 0,
           max: 100
         };
-      }
+      },
+      description: "Slider range (defaults to 0-100)"
     },
     type: {
       type: String,
-      default: ""
+      default: "",
+      description: "Slider type (e.g primary, danger etc)"
     },
     options: {
       type: Object,
       default: () => {
         return {};
-      }
+      },
+      description: "noUiSlider options"
     }
   },
   computed: {
@@ -52,7 +57,7 @@ export default {
   methods: {
     createSlider() {
       noUiSlider.create(this.$refs.slider, {
-        start: this.value || this.start,
+        start: this.value,
         connect: this.connect,
         range: this.range,
         ...this.options

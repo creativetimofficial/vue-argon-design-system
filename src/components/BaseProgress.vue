@@ -28,24 +28,35 @@
 export default {
   name: "base-progress",
   props: {
-    striped: Boolean,
-    showValue: Boolean,
-    animated: Boolean,
-    label: String,
+    striped: {
+      type: Boolean,
+      description: "Whether progress is striped"
+    },
+    animated: {
+      type: Boolean,
+      description: "Whether progress is animated (works only with `striped` prop together)"
+    },
+    label: {
+      type: String,
+      description: "Progress label (shown on the left above progress)"
+    },
     height: {
       type: Number,
-      default: 8
+      default: 8,
+      description: "Progress line height"
     },
     type: {
       type: String,
-      default: "default"
+      default: "default",
+      description: "Progress type (e.g danger, primary etc)"
     },
     value: {
       type: Number,
       default: 0,
       validator: value => {
         return value >= 0 && value <= 100;
-      }
+      },
+      description: "Progress value"
     }
   },
   computed: {
