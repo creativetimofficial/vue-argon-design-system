@@ -18,10 +18,10 @@
     "vue2-transitions": "^0.2.3"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.0-rc.8",
-    "@vue/cli-plugin-eslint": "^3.0.0-rc.8",
-    "@vue/cli-service": "^3.0.0-rc.8",
-    "@vue/eslint-config-prettier": "^3.0.0-rc.8",
+    "@vue/cli-plugin-babel": "^3.0.0-rc.10",
+    "@vue/cli-plugin-eslint": "^3.0.0-rc.10",
+    "@vue/cli-service": "^3.0.0-rc.10",
+    "@vue/eslint-config-prettier": "^3.0.0-rc.10",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "vue-template-compiler": "^2.5.16"
