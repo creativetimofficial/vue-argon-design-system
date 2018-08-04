@@ -15,9 +15,13 @@ export default {
   name: "close-button",
   props: {
     target: {
-      type: [String, Number]
+      type: [String, Number],
+      description: "Close button target element"
     },
-    expanded: Boolean
+    expanded: {
+      type: Boolean,
+      description: "Whether button is expanded (aria-expanded attribute)"
+    }
   },
   methods: {
     handleClick(evt) {

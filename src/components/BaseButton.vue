@@ -24,47 +24,58 @@ export default {
   props: {
     tag: {
       type: String,
-      default: "button"
+      default: "button",
+      description: 'Button tag (default -> button)'
     },
     type: {
       type: String,
-      default: "default"
+      default: "default",
+      description: 'Button type (e,g primary, danger etc)'
     },
     size: {
       type: String,
-      default: ""
+      default: "",
+      description: 'Button size lg|sm'
     },
     textColor: {
       type: String,
-      default: ""
+      default: "",
+      description: 'Button text color (e.g primary, danger etc)'
     },
     nativeType: {
       type: String,
-      default: "button"
+      default: "button",
+      description: 'Button native type (e.g submit,button etc)'
     },
     icon: {
       type: String,
-      default: ""
+      default: "",
+      description: 'Button icon'
     },
     text: {
       type: String,
-      default: ""
+      default: "",
+      description: 'Button text in case not provided via default slot'
     },
     outline: {
       type: Boolean,
-      default: false
+      default: false,
+      description: 'Whether button style is outline'
     },
     rounded: {
       type: Boolean,
-      default: false
+      default: false,
+      description: 'Whether button style is rounded'
     },
     iconOnly: {
       type: Boolean,
-      default: false
+      default: false,
+      description: 'Whether button contains only an icon'
     },
     block: {
       type: Boolean,
-      default: false
+      default: false,
+      description: 'Whether button is of block type'
     }
   },
   computed: {

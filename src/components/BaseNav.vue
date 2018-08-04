@@ -43,31 +43,38 @@ export default {
   props: {
     type: {
       type: String,
-      default: "primary"
+      default: "primary",
+      description: "Navbar type (e.g default, primary etc)"
     },
     title: {
       type: String,
-      default: ""
+      default: "",
+      description: "Title of navbar"
     },
     contentId: {
       type: [String, Number],
-      default: Math.random()
+      default: Math.random().toString(),
+      description: "Explicit id for the menu. By default it's a generated random number"
     },
     effect: {
       type: String,
-      default: "dark"
+      default: "dark",
+      description: "Effect of the navbar (light|dark)"
     },
     round: {
       type: Boolean,
-      default: false
+      default: false,
+      description: "Whether nav has rounded corners"
     },
     transparent: {
       type: Boolean,
-      default: false
+      default: false,
+      description: "Whether navbar is transparent"
     },
     expand: {
       type: Boolean,
-      default: false
+      default: false,
+      description: "Whether navbar should contain `navbar-expand-lg` class"
     }
   },
   data() {
