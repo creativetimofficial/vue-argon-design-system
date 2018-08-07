@@ -46,12 +46,12 @@ export default {
     },
     size: {
       type: String,
-      default: '',
+      default: "",
       description: "Pagination size"
     },
     align: {
       type: String,
-      default: '',
+      default: "",
       description: "Pagination alignment (e.g center|start|end)"
     }
   },
