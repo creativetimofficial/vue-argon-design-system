@@ -46,7 +46,7 @@ export default {
   },
   computed: {
     connect() {
-      return Array.isArray(this.value);
+      return Array.isArray(this.value) || [true, false];
     }
   },
   data() {
