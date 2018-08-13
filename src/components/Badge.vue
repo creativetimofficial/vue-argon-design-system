@@ -3,7 +3,7 @@
                class="badge"
                :class="
                [`badge-${type}`,
-                pill ? `badge-pill` : '',
+                rounded ? `badge-pill` : '',
                 circle && 'badge-circle'
                ]">
         <slot>
@@ -20,7 +20,7 @@ export default {
       default: "span",
       description: "Html tag to use for the badge."
     },
-    pill: {
+    rounded: {
       type: Boolean,
       default: false,
       description: "Whether badge is of pill type"

@@ -61,9 +61,9 @@
                                     <p class="description mt-3">Argon is a great free UI package based on Bootstrap 4
                                         that includes the most important components and features.</p>
                                     <div>
-                                        <badge type="primary">design</badge>
-                                        <badge type="primary">system</badge>
-                                        <badge type="primary">creative</badge>
+                                        <badge type="primary" rounded>design</badge>
+                                        <badge type="primary" rounded>system</badge>
+                                        <badge type="primary" rounded>creative</badge>
                                     </div>
                                     <base-button tag="a" href="#" type="primary" class="mt-4">
                                         Learn more
@@ -78,9 +78,9 @@
                                     <p class="description mt-3">Argon is a great free UI package based on Bootstrap
                                         4 that includes the most important components and features.</p>
                                     <div>
-                                        <badge type="success">business</badge>
-                                        <badge type="success">vision</badge>
-                                        <badge type="success">success</badge>
+                                        <badge type="success" rounded>business</badge>
+                                        <badge type="success" rounded>vision</badge>
+                                        <badge type="success" rounded>success</badge>
                                     </div>
                                     <base-button tag="a" href="#" type="success" class="mt-4">
                                         Learn more
@@ -95,9 +95,9 @@
                                     <p class="description mt-3">Argon is a great free UI package based on Bootstrap
                                         4 that includes the most important components and features.</p>
                                     <div>
-                                        <badge type="warning">marketing</badge>
-                                        <badge type="warning">product</badge>
-                                        <badge type="warning">launch</badge>
+                                        <badge type="warning" rounded>marketing</badge>
+                                        <badge type="warning" rounded>product</badge>
+                                        <badge type="warning" rounded>launch</badge>
                                     </div>
                                     <base-button tag="a" href="#" type="warning" class="mt-4">
                                         Learn more
