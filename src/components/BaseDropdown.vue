@@ -47,7 +47,7 @@ export default {
     },
     hideArrow: {
       type: Boolean,
-      description: 'Whether dropdown arrow should be hidden'
+      description: "Whether dropdown arrow should be hidden"
     },
     tag: {
       type: String,

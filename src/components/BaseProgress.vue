@@ -34,7 +34,8 @@ export default {
     },
     animated: {
       type: Boolean,
-      description: "Whether progress is animated (works only with `striped` prop together)"
+      description:
+        "Whether progress is animated (works only with `striped` prop together)"
     },
     label: {
       type: String,

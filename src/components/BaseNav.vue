@@ -54,7 +54,8 @@ export default {
     contentId: {
       type: [String, Number],
       default: Math.random().toString(),
-      description: "Explicit id for the menu. By default it's a generated random number"
+      description:
+        "Explicit id for the menu. By default it's a generated random number"
     },
     effect: {
       type: String,

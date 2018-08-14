@@ -37,9 +37,10 @@
     }
   }
   .flatpickr-day.inRange {
-    background: $datepicker-active-background;
+    background: $datepicker-active-background !important;
     color: $datepicker-active-color;
     box-shadow: -5px 0 0 $datepicker-active-background, 5px 0 0 $datepicker-active-background;
+    border: none !important;
   }
 
   .flatpickr-day.startRange, .flatpickr-day.endRange {
@@ -60,8 +61,9 @@
   .flatpickr-current-month span.cur-month,
   .flatpickr-current-month input.cur-year{
     padding: 0 10px;
-    font-weight: normal;
     color: $gray-700;
+    font-size: $font-size-sm;
+    font-weight: 500;
     &:hover {
       background: $gray-200;
       border-radius: $datepicker-header-cell-border-radius;

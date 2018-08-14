@@ -25,57 +25,57 @@ export default {
     tag: {
       type: String,
       default: "button",
-      description: 'Button tag (default -> button)'
+      description: "Button tag (default -> button)"
     },
     type: {
       type: String,
       default: "default",
-      description: 'Button type (e,g primary, danger etc)'
+      description: "Button type (e,g primary, danger etc)"
     },
     size: {
       type: String,
       default: "",
-      description: 'Button size lg|sm'
+      description: "Button size lg|sm"
     },
     textColor: {
       type: String,
       default: "",
-      description: 'Button text color (e.g primary, danger etc)'
+      description: "Button text color (e.g primary, danger etc)"
     },
     nativeType: {
       type: String,
       default: "button",
-      description: 'Button native type (e.g submit,button etc)'
+      description: "Button native type (e.g submit,button etc)"
     },
     icon: {
       type: String,
       default: "",
-      description: 'Button icon'
+      description: "Button icon"
     },
     text: {
       type: String,
       default: "",
-      description: 'Button text in case not provided via default slot'
+      description: "Button text in case not provided via default slot"
     },
     outline: {
       type: Boolean,
       default: false,
-      description: 'Whether button style is outline'
+      description: "Whether button style is outline"
     },
     rounded: {
       type: Boolean,
       default: false,
-      description: 'Whether button style is rounded'
+      description: "Whether button style is rounded"
     },
     iconOnly: {
       type: Boolean,
       default: false,
-      description: 'Whether button contains only an icon'
+      description: "Whether button contains only an icon"
     },
     block: {
       type: Boolean,
       default: false,
-      description: 'Whether button is of block type'
+      description: "Whether button is of block type"
     }
   },
   computed: {
