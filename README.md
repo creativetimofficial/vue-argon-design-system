@@ -1,6 +1,6 @@
-<h1 id="argon-design-system"><a href="https://www.creative-tim.com/product/argon-design-system">Vue Argon Design System</a></h1>
+<h1 id="argon-design-system"><a href="https://www.creative-tim.com/product/vue-argon-design-system">Vue Argon Design System</a></h1>
 
-<p><img src="https://s3.amazonaws.com/creativetim_bucket/products/90/original/opt_argon_thumbnail.jpg" alt="Product Gif" /></p>
+<p><img src="https://s3.amazonaws.com/creativetim_bucket/products/92/original/opt_argon_vue_thumbnail.jpg?1534236902" alt="Product Gif" /></p>
 
 <p>Start your development with a Design System for Bootstrap 4. It is open source, free and it features many components that can help you create amazing websites.</p>
 
@@ -51,8 +51,8 @@
 
 <ul>
   <li><a href="https://github.com/creativetimofficial/vue-argon-design-system/archive/master.zip">Download from Github</a>.</li>
-  <li><a href="https://www.creative-tim.com/product/argon-design-system">Download from Creative Tim</a>.</li>
-  <li>Clone the repo: <code class="highlighter-rouge">git clone https://github.com/creativetimofficial/argon-design-system.git</code>.</li>
+  <li><a href="https://www.creative-tim.com/product/vue-argon-design-system">Download from Creative Tim</a>.</li>
+  <li>Clone the repo: <code class="highlighter-rouge">git clone https://github.com/creativetimofficial/vue-argon-design-system.git</code>.</li>
 </ul>
 
 <h2 id="documentation">Documentation</h2>
@@ -149,10 +149,10 @@
 
 <ul>
   <li>Demo: <a href="https://demos.creative-tim.com/argon-design-system">https://demos.creative-tim.com/vue-argon-design-system</a></li>
-  <li>Download: <a href="https://www.creative-tim.com/product/argon-design-system">https://www.creative-tim.com/product/vue-argon-design-system</a></li>
+  <li>Download: <a href="https://www.creative-tim.com/product/vue-argon-design-system">https://www.creative-tim.com/product/vue-argon-design-system</a></li>
   <li>License Agreement: <a href="https://www.creative-tim.com/license">https://www.creative-tim.com/license</a></li>
   <li>Support: <a href="https://www.creative-tim.com/contact-us">https://www.creative-tim.com/contact-us</a></li>
-  <li>Issues: <a href="https://github.com/creativetimofficial/argon-design-system/issues">Github Issues Page</a></li>
+  <li>Issues: <a href="https://github.com/creativetimofficial/vue-argon-design-system/issues">Github Issues Page</a></li>
 </ul>
 
 <h2 id="reporting-issues">Reporting Issues</h2>
@@ -176,7 +176,7 @@
     <p>Copyright © 2018 Creative Tim (https://www.creative-tim.com)</p>
   </li>
   <li>
-    <p>Licensed under MIT (https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md)</p>
+    <p>Licensed under MIT (https://github.com/creativetimofficial/vue-argon-design-system/blob/master/LICENSE.md)</p>
   </li>
 </ul>
 
