@@ -57,7 +57,7 @@ export default {
       }
     }
   },
-  created() {
+  mounted() {
     this.cbId = Math.random()
       .toString(16)
       .slice(2);
