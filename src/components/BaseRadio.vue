@@ -12,6 +12,7 @@
   </div>
 </template>
 <script>
+import { randomString } from "./stringUtils";
 export default {
   name: "base-radio",
   props: {
@@ -53,10 +54,8 @@ export default {
       return "";
     }
   },
-  created() {
-    this.cbId = Math.random()
-      .toString(16)
-      .slice(2);
+  mounted() {
+    this.cbId = randomString()
   }
 };
 </script>
