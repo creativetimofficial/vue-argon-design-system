@@ -14,6 +14,8 @@
   </div>
 </template>
 <script>
+import { randomString } from "./stringUtils";
+
 export default {
   name: "base-checkbox",
   model: {
@@ -58,9 +60,7 @@ export default {
     }
   },
   mounted() {
-    this.cbId = Math.random()
-      .toString(16)
-      .slice(2);
+    this.cbId = randomString()
   }
 };
 </script>
