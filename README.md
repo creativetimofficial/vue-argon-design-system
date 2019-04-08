@@ -108,6 +108,7 @@
     |   |-- CloseButton.vue
     |   |-- Icon.vue
     |   |-- NavbarToggleButton.vue
+    |   |-- Spinner.vue
     |-- layout
     |   |-- AppFooter.vue
     |   |-- AppHeader.vue
@@ -131,7 +132,8 @@
             |-- Icons.vue
             |-- Inputs.vue
             |-- JavascriptComponents.vue
-            |-- Navigation.vue
+            |-- Navigation.vue 
+            |-- Spinners.vue
 
 </code></pre></div></div>
 
