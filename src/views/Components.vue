@@ -6,6 +6,7 @@
         <custom-controls></custom-controls>
         <navigation></navigation>
         <javascript-components></javascript-components>
+        <spinners></spinners>
         <icons></icons>
         <examples></examples>
         <download-section></download-section>
@@ -21,6 +22,7 @@ import Navigation from "./components/Navigation";
 import JavascriptComponents from "./components/JavascriptComponents";
 import Carousel from "./components/Carousel";
 import Icons from "./components/Icons";
+import Spinners from "./components/Spinners";
 import Examples from "./components/Examples";
 import DownloadSection from "./components/DownloadSection";
 
@@ -35,6 +37,7 @@ export default {
     JavascriptComponents,
     Carousel,
     Icons,
+    Spinners,
     Examples,
     DownloadSection
   }
