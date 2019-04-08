@@ -15,7 +15,8 @@
       </div>
       <div class="text-center mt-5 mb-3 d-flex justify-content-between">
         <spinner
-          v-for="variant in variants"
+          v-for="(variant, index) in variants"
+          v-bind:key="index"
           label="Spinning"
           size="md"
           :variant="variant"
@@ -25,7 +26,8 @@
       </div>
       <div class="text-center mt-5 mb-1 d-flex justify-content-between">
         <spinner
-          v-for="variant in variants"
+          v-for="(variant, index) in variants"
+          v-bind:key="index"
           label="Spinning"
           :variant="variant"
           type="grow"
