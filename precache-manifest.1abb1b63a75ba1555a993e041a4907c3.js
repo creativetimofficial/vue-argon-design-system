@@ -8,16 +8,16 @@ self.__precacheManifest = [
     "url": "/vue-argon-design-system/img/theme/team-2-800x800.jpg"
   },
   {
-    "revision": "52369ac11f2e9c281323",
-    "url": "/vue-argon-design-system/js/chunk-52e4de86.96d44776.js"
+    "revision": "2b5c51d5b644706e9575",
+    "url": "/vue-argon-design-system/js/chunk-52e4de86.c739d667.js"
   },
   {
     "revision": "54e3f3c414bd8e7234bae3ee3be950e5",
     "url": "/vue-argon-design-system/img/theme/team-3-800x800.jpg"
   },
   {
-    "revision": "7b8f87f357be302e65c2",
-    "url": "/vue-argon-design-system/js/chunk-ebdaf33a.3cf4ae2a.js"
+    "revision": "14a93f3917d0bf66172c",
+    "url": "/vue-argon-design-system/js/chunk-ebdaf33a.3f4aaa2f.js"
   },
   {
     "revision": "a1ffc1af6b99e2d4bb0b",
@@ -32,16 +32,16 @@ self.__precacheManifest = [
     "url": "/vue-argon-design-system/robots.txt"
   },
   {
-    "revision": "3161213a8afd535b3a72",
-    "url": "/vue-argon-design-system/js/app.4e464511.js"
+    "revision": "857614b2d16eafe12fd5",
+    "url": "/vue-argon-design-system/js/app.80682830.js"
   },
   {
-    "revision": "670f3ddac9fe53735e97b0ac2bf5a106",
+    "revision": "06207a9edb88761d9fd5371168b3d703",
     "url": "/vue-argon-design-system/index.html"
   },
   {
-    "revision": "8e55eab46b5fcfc4a7a0b27cb07c8888",
-    "url": "/vue-argon-design-system/img/brand/github-white-slim.png"
+    "revision": "6fafe4baca9d50d61a898c84ade7afa3",
+    "url": "/vue-argon-design-system/img/brand/white.png"
   },
   {
     "revision": "0b8a30b10cbe7708d5f3a4b007c1d665",
@@ -76,12 +76,8 @@ self.__precacheManifest = [
     "url": "/vue-argon-design-system/img/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "185288d13ed8e9d745bd279ea34667bf",
-    "url": "/vue-argon-design-system/img/brand/blue.png"
-  },
-  {
-    "revision": "6fafe4baca9d50d61a898c84ade7afa3",
-    "url": "/vue-argon-design-system/img/brand/white.png"
+    "revision": "c85c75275c0a0a617f9e5accc2700908",
+    "url": "/vue-argon-design-system/img/brand/creativetim-white-slim.png"
   },
   {
     "revision": "b9949387c6179e2dc4c675134a7b7935",
@@ -92,8 +88,16 @@ self.__precacheManifest = [
     "url": "/vue-argon-design-system/img/ill/ill-2.svg"
   },
   {
-    "revision": "c85c75275c0a0a617f9e5accc2700908",
-    "url": "/vue-argon-design-system/img/brand/creativetim-white-slim.png"
+    "revision": "8e55eab46b5fcfc4a7a0b27cb07c8888",
+    "url": "/vue-argon-design-system/img/brand/github-white-slim.png"
+  },
+  {
+    "revision": "426439788ec5ba772cdf94057f6f4659",
+    "url": "/vue-argon-design-system/fonts/nucleo-icons.42643978.woff2"
+  },
+  {
+    "revision": "2569aaea6eaaf8cd210db7f2fa016743",
+    "url": "/vue-argon-design-system/fonts/nucleo-icons.2569aaea.woff"
   },
   {
     "revision": "f82ec6ba2dc4181db2af35c499462840",
@@ -104,12 +108,8 @@ self.__precacheManifest = [
     "url": "/vue-argon-design-system/fonts/nucleo-icons.c1733565.eot"
   },
   {
-    "revision": "426439788ec5ba772cdf94057f6f4659",
-    "url": "/vue-argon-design-system/fonts/nucleo-icons.42643978.woff2"
-  },
-  {
-    "revision": "2569aaea6eaaf8cd210db7f2fa016743",
-    "url": "/vue-argon-design-system/fonts/nucleo-icons.2569aaea.woff"
+    "revision": "185288d13ed8e9d745bd279ea34667bf",
+    "url": "/vue-argon-design-system/img/brand/blue.png"
   },
   {
     "revision": "fee66e712a8a08eef5805a46892932ad",
@@ -128,11 +128,11 @@ self.__precacheManifest = [
     "url": "/vue-argon-design-system/fonts/fontawesome-webfont.674f50d2.eot"
   },
   {
-    "revision": "7b8f87f357be302e65c2",
+    "revision": "14a93f3917d0bf66172c",
     "url": "/vue-argon-design-system/css/chunk-ebdaf33a.47b8dc24.css"
   },
   {
-    "revision": "3161213a8afd535b3a72",
+    "revision": "857614b2d16eafe12fd5",
     "url": "/vue-argon-design-system/css/app.b9e8726e.css"
   }
 ];
