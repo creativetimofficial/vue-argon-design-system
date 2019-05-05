@@ -51,8 +51,8 @@
             <div class="row align-items-center justify-content-md-between">
                 <div class="col-md-6">
                     <div class="copyright">
-                        &copy; 2018
-                        <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+                        &copy; {{year}}
+                        <a href="https://www.creative-tim.com" target="_blank" rel="noopener">Creative Tim</a> & <a href="https://www.binarcode.com" target="_blank" rel="noopener">Binar Code</a>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -78,7 +78,14 @@
     </footer>
 </template>
 <script>
-export default {};
+export default {
+  name: 'starter-footer',
+  data() {
+    return {
+      year: new Date().getFullYear()
+    }
+  }
+};
 </script>
 <style>
 </style>
