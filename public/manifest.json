@@ -1,0 +1,12 @@
+{
+  "short_name": "Vue Argon",
+  "name": "Vue Argon Design System",
+  "icons": [
+    {
+      "src": "/public/img/brand/white.png",
+      "type": "image/png",
+      "sizes": "100X30"
+    }
+  ],
+  "start_url": "/public"
+}
