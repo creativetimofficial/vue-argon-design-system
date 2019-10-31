@@ -33,8 +33,8 @@
     </section>
 </template>
 <script>
-import BCarousel from "bootstrap-vue/es/components/carousel/carousel";
-import BCarouselSlide from "bootstrap-vue/es/components/carousel/carousel-slide";
+import { BCarousel } from "bootstrap-vue/esm/components/carousel/carousel";
+import { BCarouselSlide } from "bootstrap-vue/esm/components/carousel/carousel-slide";
 
 export default {
   components: {
