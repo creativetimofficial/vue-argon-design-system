@@ -19,3 +19,12 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+
+
+# WebdriverIO Specific Files
+errorShots/
+screenshots/
+.reg
+
+report.html
+reg.json
