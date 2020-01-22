@@ -18,7 +18,7 @@
 
             <ul class="navbar-nav navbar-nav-hover">
                 <li class="nav-item">
-                    <router-link role="button" class="nav-link" to="/landing">
+                    <router-link role="button" class="nav-link" to="/about">
                         <span class="nav-link-inner--text">About</span>
                     </router-link>
                 </li>
