@@ -64,7 +64,7 @@
                                 <i class="ni ni-spaceship"></i>
                             </div>
                             <div class="media-body ml-3">
-                                <h6 class="heading text-primary mb-md-1">project location one</h6>
+                                <h6 class="heading text-primary mb-md-1">project type one</h6>
                                 <p class="description d-none d-md-inline-block mb-0">brief description of project location one</p>
                             </div>
                         </a>
@@ -74,7 +74,7 @@
                                 <i class="ni ni-ui-04"></i>
                             </div>
                             <div class="media-body ml-3">
-                                <h6 class="heading text-primary mb-md-1">project location two</h6>
+                                <h6 class="heading text-primary mb-md-1">project type two</h6>
                                 <p class="description d-none d-md-inline-block mb-0">brief description of project location two</p>
                             </div>
                         </a>
@@ -86,7 +86,7 @@
                     </router-link>
                 </li> -->
                 <li class="nav-item">
-                    <router-link role="button" class="nav-link" to="/landing">
+                    <router-link role="button" class="nav-link" to="/contact">
                         <span class="nav-link-inner--text">Contact</span>
                     </router-link>
                 </li>
