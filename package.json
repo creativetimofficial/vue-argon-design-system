@@ -23,8 +23,10 @@
     "@vue/cli-plugin-eslint": "^3.4.0",
     "@vue/cli-plugin-pwa": "^3.4.0",
     "@vue/cli-service": "^3.4.0",
-    "node-sass": "^4.11.0",
+    "jquery": "^1.9.1",
+    "node-sass": "^4.13.1",
     "sass-loader": "^7.1.0",
+    "vue-responsive-video-background-player": "^1.0.6",
     "vue-template-compiler": "^2.6.6"
   }
 }

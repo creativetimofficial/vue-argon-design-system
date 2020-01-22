@@ -10,6 +10,7 @@ import BaseSlider from "../components/BaseSlider";
 import BaseSwitch from "../components/BaseSwitch";
 import Card from "../components/Card";
 import Icon from "../components/Icon";
+import VideoBackground from "vue-responsive-video-background-player";
 
 export default {
   install(Vue) {
@@ -25,5 +26,6 @@ export default {
     Vue.component(BaseSwitch.name, BaseSwitch);
     Vue.component(Card.name, Card);
     Vue.component(Icon.name, Icon);
+    Vue.component('video-background', VideoBackground );
   }
 };

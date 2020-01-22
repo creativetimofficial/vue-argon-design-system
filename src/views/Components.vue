@@ -10,6 +10,7 @@
         <examples></examples>
         <download-section></download-section>
         <carousel></carousel>
+        <video-background></video-background>
     </div>
 </template>
 <script>
@@ -23,6 +24,7 @@ import Carousel from "./components/Carousel";
 import Icons from "./components/Icons";
 import Examples from "./components/Examples";
 import DownloadSection from "./components/DownloadSection";
+import VideoBackground from 'vue-responsive-video-background-player'
 
 export default {
   name: "components",
@@ -36,7 +38,8 @@ export default {
     Carousel,
     Icons,
     Examples,
-    DownloadSection
+    DownloadSection,
+    VideoBackground
   }
 };
 </script>
