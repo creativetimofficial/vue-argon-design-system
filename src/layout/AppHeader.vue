@@ -2,12 +2,12 @@
     <header class="header-global">
         <base-nav class="navbar-main" transparent type="" effect="light" expand>
             <router-link slot="brand" class="navbar-brand mr-lg-5" to="/">
-                <img src="img/brand/white.png" alt="logo">
+                <img src="img/brand/logo.png" alt="logo">
             </router-link>
 
             <div class="row" slot="content-header" slot-scope="{closeMenu}">
                 <div class="col-6 collapse-brand">
-                    <a href="https://demos.creative-tim.com/vue-argon-design-system/documentation/">
+                    <a href="/">
                         <img src="img/brand/blue.png">
                     </a>
                 </div>
@@ -16,16 +16,18 @@
                 </div>
             </div>
 
-            <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+            <ul class="navbar-nav navbar-nav-hover">
                 <li class="nav-item">
                     <router-link role="button" class="nav-link" to="/landing">
                         <span class="nav-link-inner--text">About</span>
                     </router-link>
                 </li>
                 <base-dropdown class="nav-item" menu-classes="dropdown-menu-xl">
-                    <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
+                    <a slot="title" href="#" data-toggle="dropdown" role="button">
                         <i class="ni ni-ui-04 d-lg-none"></i>
-                        <span class="nav-link-inner--text">Services</span>
+                        <router-link role="button" class="nav-link" to="/services">
+                            <span class="nav-link-inner--text">Services</span>
+                        </router-link>
                     </a>
                     <div class="dropdown-menu-inner">
                         <a href="/services/re-roofing"
@@ -78,11 +80,11 @@
                         </a>
                     </div>
                 </base-dropdown>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <router-link role="button" class="nav-link" to="/landing">
                         <span class="nav-link-inner--text">Careers</span>
                     </router-link>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <router-link role="button" class="nav-link" to="/landing">
                         <span class="nav-link-inner--text">Contact</span>

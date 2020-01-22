@@ -4,6 +4,7 @@ import AppHeader from "./layout/AppHeader";
 import AppFooter from "./layout/AppFooter";
 import Components from "./views/Components.vue";
 import Home from "./views/Home.vue";
+import Services from "./views/Services.vue";
 import Landing from "./views/Landing.vue";
 import Login from "./views/Login.vue";
 import Register from "./views/Register.vue";
@@ -13,6 +14,7 @@ Vue.use(Router);
 
 export default new Router({
   linkExactActiveClass: "active",
+  mode: "history",
   routes: [
     {
       path: "/",
@@ -20,6 +22,15 @@ export default new Router({
       components: {
         header: AppHeader,
         default: Home,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/services",
+      name: "services",
+      components: {
+        header: AppHeader,
+        default: Services,
         footer: AppFooter
       }
     },
@@ -69,11 +80,4 @@ export default new Router({
       }
     }
   ],
-  scrollBehavior: to => {
-    if (to.hash) {
-      return { selector: to.hash };
-    } else {
-      return { x: 0, y: 0 };
-    }
-  }
 });

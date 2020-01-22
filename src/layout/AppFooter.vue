@@ -5,28 +5,35 @@
     <div class="footer-base-line"></div>
     <footer class="footer">
         <div class="container">
-            <div class="row align-items-center justify-content-md-between">
-                <div class="col-md-6">
+            <div class="row align-items-center">
+                <div class="col-md-4">
                     <div class="copyright">
                         &copy; {{year}}
-                        <a href="https://www.creative-tim.com" target="_blank" rel="noopener">Creative Tim</a> & <a href="https://www.binarcode.com" target="_blank" rel="noopener">Binar Code</a>
+                        <a href="http://bardi-davisconstruction.com" target="_blank" rel="noopener">Bardi Davis Construction</a>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <ul class="nav nav-footer justify-content-end">
+                <div class="col-md-4 text-center">
+                    <router-link slot="brand" class="navbar-brand" to="/">
+                        <img src="img/brand/logo.png" alt="logo">
+                    </router-link>
+                </div>
+                <div class="col-md-4">
+                    <ul class="nav nav-footer">
                         <li class="nav-item">
-                            <a href="https://www.creative-tim.com" class="nav-link" target="_blank" rel="noopener">Creative Tim</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank" rel="noopener">About
+                            <a href="/about" class="nav-link" target="_blank" rel="noopener">About
                                 Us</a>
                         </li>
                         <li class="nav-item">
-                            <a href="http://blog.creative-tim.com" class="nav-link" target="_blank" rel="noopener">Blog</a>
+                            <a href="/services" class="nav-link" target="_blank" rel="noopener">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a href="https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md"
-                               class="nav-link" target="_blank" rel="noopener">MIT License</a>
+                            <a href="/projects" class="nav-link" target="_blank" rel="noopener">Projects</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a href="/careers" class="nav-link" target="_blank" rel="noopener">Careers</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a href="/contact" class="nav-link" target="_blank" rel="noopener">Contact</a>
                         </li>
                     </ul>
                 </div>
