@@ -16,12 +16,12 @@ $white:    #fff !default;
 $gray-100: #f6f9fc !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
+$gray-400: #cdd2e2 !default;
 $gray-500: #adb5bd !default;
 $gray-600: #8898aa !default;   // Line footer color
-$gray-700: #525f7f !default;   // Line p color
+$gray-700: #4a526d !default;   // Line p color
 $gray-800: #32325d !default;   // Line heading color
-$gray-900: #212529 !default;
+$gray-900: #05164f !default;
 $black:    #000 !default;
 
 $grays: () !default;
@@ -37,16 +37,16 @@ $grays: map-merge((
   "900": $gray-900
 ), $grays);
 
-$blue:    #5e72e4 !default;
-$indigo:  #5603ad !default;
+$blue:    #0b67b7 !default;
+$indigo:  #cdd2e2 !default;
 $purple:  #8965e0 !default;
 $pink:    #f3a4b5 !default;
 $red:     #f5365c !default;
 $orange:  #fb6340 !default;
 $yellow:  #ffd600 !default;
-$green:   #2dce89 !default;
-$teal:    #11cdef !default;
-$cyan:    #2bffc6 !default;
+$green:   #aecc53 !default;
+$teal:    #82cadb!default;
+$cyan:    #90b9de !default;
 
 $colors: () !default;
 $colors: map-merge((
@@ -67,9 +67,9 @@ $colors: map-merge((
   "gray-dark":  $gray-800
 ), $colors);
 
-$default:       #172b4d !default;
-$primary:       #5e72e4 !default;
-$secondary:     #f4f5f7 !default;
+$default:       $blue !default;
+$primary:       $indigo !default;
+$secondary:     $gray-900!default;
 $success:       $green !default;
 $info:          $teal !default;
 $warning:       $orange !default;
@@ -128,14 +128,14 @@ $shape-colors: map-merge((
 
 $shapes-primary-colors: () !default;
 $shapes-primary-colors: map-merge((
-  "step-1-gradient-bg":         #281483,
-  "step-2-gradient-bg":         #8f6ed5,
-  "step-3-gradient-bg":         #d782d9,
-  "span-1-bg":                  #53f,
-  "span-2-bg":                  #4553ff,
-  "span-3-bg":                  #4f40ff,
-  "span-4-bg":                  #25ddf5,
-  "span-5-bg":                  #1fa2ff
+  "step-1-gradient-bg":         $indigo,
+  "step-2-gradient-bg":         $blue,
+  "step-3-gradient-bg":         $green,
+  "span-1-bg":                  $indigo,
+  "span-2-bg":                  $blue,
+  "span-3-bg":                  $indigo,
+  "span-4-bg":                  $green,
+  "span-5-bg":                  $blue
 ), $shapes-primary-colors);
 
 $shapes-default-colors: () !default;

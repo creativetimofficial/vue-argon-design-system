@@ -1,8 +1,11 @@
+.footer-container {
+    position: relative;
+    margin-top: 170px;
+}
 .footer {
     background: $footer-bg;
     padding: 3rem 0;
     //color: $footer-color;
-
     .col-footer {
         .heading {
             color: $footer-heading-color;
@@ -37,6 +40,35 @@
     .copyright {
         font-size: $font-size-sm;
     }
+}
+
+%skew-line {
+    position: absolute;
+    content: '';
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    transform-origin: right top;
+}
+
+.footer-top-line {
+    @extend %skew-line;
+    background: $blue;
+    transform: skewY(-9deg);
+    margin-top: -215px;
+}
+
+.footer-middle-line {
+    @extend %skew-line;
+    background: $cyan;
+    transform: skewY(-7deg);
+    margin-top: -170px;
+}
+.footer-base-line {
+    @extend %skew-line;
+    background: $footer-bg;
+    transform: skewY(-5deg);
+    margin-top: -121px;
 }
 
 .footer-dark {

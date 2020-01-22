@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <div class="position-relative">
             <!-- shape Hero -->
             <section class="section-shaped my-0">
