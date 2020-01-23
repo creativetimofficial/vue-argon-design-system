@@ -154,7 +154,7 @@
     }
 
     .shape-dark {
-        background: linear-gradient(150deg, shapes-dark-color("step-1-gradient-bg") 15%, shapes-dark-color("step-2-gradient-bg") 70%, shapes-dark-color("step-3-gradient-bg") 94%);
+        background: linear-gradient(175deg, shapes-dark-color("step-1-gradient-bg") 15%, shapes-dark-color("step-2-gradient-bg") 70%, shapes-dark-color("step-2-gradient-bg") 100%);
 
          :nth-child(1) {
             background: shapes-dark-color("span-1-bg");

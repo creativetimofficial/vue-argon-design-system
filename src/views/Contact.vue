@@ -15,9 +15,7 @@
             <div class="container">
                 <div class="row justify-content-center mt--300">
                     <div class="col-lg-8">
-                        <card gradient="secondary" shadow body-classes="p-lg-5">
-                            <h4 class="mb-1">Want to work with us?</h4>
-                            <p class="mt-0">Your project is very important to us.</p>
+                        <card type="primary" shadow body-classes="p-lg-5">
                             <base-input class="mt-5"
                                         alternative
                                         placeholder="Your name"

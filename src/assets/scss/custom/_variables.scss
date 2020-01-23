@@ -164,14 +164,14 @@ $shapes-light-colors: map-merge((
 
 $shapes-dark-colors: () !default;
 $shapes-dark-colors: map-merge((
-  "step-1-gradient-bg":         #32325d,
-  "step-2-gradient-bg":         #32325d,
-  "step-3-gradient-bg":         #32325d,
-  "span-1-bg":                  #2e2e57,
-  "span-2-bg":                  #2b2b58,
-  "span-3-bg":                  #25254d,
-  "span-4-bg":                  #d782d9,
-  "span-5-bg":                  #008169
+  "step-1-gradient-bg":         $gray-900,
+  "step-2-gradient-bg":         $gray-900,
+  "step-3-gradient-bg":         $gray-400,
+  "span-1-bg":                  $gray-700,
+  "span-2-bg":                  $gray-700,
+  "span-3-bg":                  $gray-700,
+  "span-4-bg":                  $gray-400,
+  "span-5-bg":                  $indigo,
 ), $shapes-dark-colors);
 
 
