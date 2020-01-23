@@ -4,7 +4,9 @@ import AppHeader from "./layout/AppHeader";
 import AppFooter from "./layout/AppFooter";
 import Home from "./views/Home.vue";
 import About from "./views/About.vue";
-import Services from "./views/Services.vue";
+import Services from "./views/services/Services.vue";
+import Metal from "./views/services/Metal.vue";
+import Projects from "./views/Projects.vue";
 import Contact from "./views/Contact.vue";
 
 Vue.use(Router);
@@ -37,6 +39,24 @@ export default new Router({
       components: {
         header: AppHeader,
         default: Services,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/services/metal",
+      name: "metal",
+      components: {
+        header: AppHeader,
+        default: Metal,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/projects",
+      name: "projects",
+      components: {
+        header: AppHeader,
+        default: Projects,
         footer: AppFooter
       }
     },

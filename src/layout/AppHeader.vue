@@ -2,7 +2,7 @@
     <header class="header-global">
         <base-nav class="navbar-main" transparent type="" effect="light" expand>
             <router-link slot="brand" class="navbar-brand mr-lg-5" to="/">
-                <img src="img/brand/logo.png" alt="logo">
+                <img src="/img/brand/logo.png" alt="logo">
             </router-link>
 
             <div class="row" slot="content-header" slot-scope="{closeMenu}">
@@ -53,9 +53,11 @@
                     </div>
                 </base-dropdown>
                 <base-dropdown class="nav-item" menu-classes="dropdown-menu-xl">
-                    <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
+                    <a slot="title" href="#" data-toggle="dropdown" role="button">
                         <i class="ni ni-ui-04 d-lg-none"></i>
-                        <span class="nav-link-inner--text">Projects</span>
+                        <router-link role="button" class="nav-link" to="/projects">
+                            <span class="nav-link-inner--text">Projects</span>
+                        </router-link>
                     </a>
                     <div class="dropdown-menu-inner">
                         <a href="/services/re-roofing"

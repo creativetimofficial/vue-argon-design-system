@@ -14,26 +14,26 @@
                 </div>
                 <div class="col-md-4 text-center">
                     <router-link slot="brand" class="navbar-brand" to="/">
-                        <img src="img/brand/logo.png" alt="logo">
+                        <img src="/img/brand/logo.png" alt="logo">
                     </router-link>
                 </div>
                 <div class="col-md-4">
                     <ul class="nav nav-footer">
                         <li class="nav-item">
-                            <a href="/about" class="nav-link" target="_blank" rel="noopener">About
+                            <a href="/about" class="nav-link" target="_self" rel="noopener">About
                                 Us</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/services" class="nav-link" target="_blank" rel="noopener">Services</a>
+                            <a href="/services" class="nav-link" target="_self" rel="noopener">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/projects" class="nav-link" target="_blank" rel="noopener">Projects</a>
+                            <a href="/projects" class="nav-link" target="_self" rel="noopener">Projects</a>
                         </li>
                         <!-- <li class="nav-item">
                             <a href="/careers" class="nav-link" target="_blank" rel="noopener">Careers</a>
                         </li> -->
                         <li class="nav-item">
-                            <a href="/contact" class="nav-link" target="_blank" rel="noopener">Contact</a>
+                            <a href="/contact" class="nav-link" target="_self" rel="noopener">Contact</a>
                         </li>
                     </ul>
                 </div>
