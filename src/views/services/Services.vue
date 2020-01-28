@@ -11,7 +11,7 @@
                 </div>
             </div>
         </section>
-        <section class="section section-lg pt-lg-0 mt--300">
+        <section class="section section-lg section-services pt-lg-0 mt--300">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-12">

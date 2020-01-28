@@ -1,7 +1,7 @@
 <template>
 <div>
     <video-background 
-    src="https://avidofood.github.io/vue-responsive-video-background-player/demo/public/videos/roadster-loop-imperial.mp4"
+    src="/vid/Noble.mp4"
     poster="/images/mainfoto.jpg"
     :sources="[
         {src: '<your-tablet-video-path>.mp4', res: 900, autoplay: true}, 

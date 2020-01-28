@@ -3,6 +3,7 @@ import Router from "vue-router";
 import AppHeader from "./layout/AppHeader";
 import AppFooter from "./layout/AppFooter";
 import Home from "./views/Home.vue";
+import Components from "./views/Components.vue";
 import About from "./views/About.vue";
 import Services from "./views/services/Services.vue";
 import Metal from "./views/services/Metal.vue";
@@ -15,6 +16,15 @@ export default new Router({
   linkExactActiveClass: "active",
   mode: "history",
   routes: [
+    {
+      path: "/components",
+      name: "components",
+      components: {
+        header: AppHeader,
+        default: Components,
+        footer: AppFooter
+      }
+    },
     {
       path: "/",
       name: "home",

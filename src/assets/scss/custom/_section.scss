@@ -541,6 +541,13 @@
     }
 }
 
+.section-y{
+    transform: rotate(-90deg);
+    & .container-y {
+        transform: rotate(90deg)
+    }
+}
+
 
 .floating-cards {
  -webkit-perspective:1500px;
