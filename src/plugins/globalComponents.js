@@ -11,10 +11,11 @@ import BaseSwitch from "../components/BaseSwitch";
 import Card from "../components/Card";
 import Icon from "../components/Icon";
 import VideoBackground from "vue-responsive-video-background-player";
-import { BListGroup } from 'bootstrap-vue';
+import { BListGroup, BCarouselSlide } from 'bootstrap-vue';
 import { BListGroupItem } from 'bootstrap-vue';
 import { BCard } from 'bootstrap-vue';
 import { BCardBody } from 'bootstrap-vue';
+import { BCarousel } from 'bootstrap-vue';
 
 export default {
   install(Vue) {
@@ -35,5 +36,7 @@ export default {
     Vue.component('b-list-group-item', BListGroupItem);
     Vue.component('b-card', BCard);
     Vue.component('b-card-body', BCardBody);
+    Vue.component('b-carousel', BCarousel);
+    Vue.component('b-carousel-slide', BCarouselSlide);
   }
 };

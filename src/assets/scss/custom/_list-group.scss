@@ -1,5 +1,14 @@
 // Space list items
 
+
+// custom custom classes 
+.list-group-container {
+    &-auto {
+        overflow-y: auto;
+        max-height: 540px;
+    }
+}
+
 .list-group-space {
     .list-group-item {
         margin-bottom: 1.5rem;

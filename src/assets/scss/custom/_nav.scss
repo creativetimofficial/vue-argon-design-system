@@ -75,9 +75,10 @@
 // Nav wrapper 
 .nav-wrapper {
     .section-y & {
-        position: relative;
+        position: fixed;
+        z-index: 1;
+        right: 177px;
         top: -200px;
-        right: 208px;
     }
     padding: 1rem 0;
     @include border-top-radius($card-border-radius);

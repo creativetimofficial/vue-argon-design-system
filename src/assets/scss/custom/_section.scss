@@ -544,7 +544,12 @@
 .section-y{
     transform: rotate(-90deg);
     & .container-y {
-        transform: rotate(90deg)
+        transform: rotate(90deg);
+        background-color: transparent;
+        border: none;
+        & > .card-body {
+            margin-left: 0;
+        }
     }
 }
 

@@ -93,3 +93,10 @@
         @include transition($transition-base);
     }
 }
+
+// Container-Y cards
+
+.container-y > .card-body {
+    min-height: 700px;
+    max-height: 700px;
+}
