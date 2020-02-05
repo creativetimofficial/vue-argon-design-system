@@ -2,8 +2,8 @@
 
 <p>Within the download you’ll find the following directories and files:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>argon/
-|-- vue-argon-design-system
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+|-- gallery-showcase
     |-- App.vue
     |-- main.js
     |-- router.js
@@ -55,6 +55,13 @@
     |   |-- globalComponents.js
     |   |-- globalDirectives.js
     |-- views
+        |-- Home.vue
+        |-- About.vue
+        |-- Projects.vue
+        |-- Contact.vue
+        |-- services
+            |-- Metal.vue
+            |-- Services.vue
         |-- Components.vue
         |-- Landing.vue
         |-- Login.vue
