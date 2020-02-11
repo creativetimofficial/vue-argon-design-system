@@ -25,7 +25,7 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
                         <div class="px-4">
-                            <img v-lazy="''"
+                            <img v-lazy="'https://project-bardi.s3.us-east-2.amazonaws.com/assets/about/ken.png'"
                                  class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
                                  style="width: 200px;">
                             <div class="pt-4 text-center">
@@ -38,7 +38,7 @@
                     </div>
                     <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
                         <div class="px-4">
-                            <img v-lazy="''"
+                            <img v-lazy="'https://project-bardi.s3.us-east-2.amazonaws.com/assets/about/daniel.png'"
                                  class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
                                  style="width: 200px;">
                             <div class="pt-4 text-center">
@@ -51,7 +51,7 @@
                     </div>
                     <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
                         <div class="px-4">
-                            <img v-lazy="''"
+                            <img v-lazy="'https://project-bardi.s3.us-east-2.amazonaws.com/assets/about/melody.png'"
                                  class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
                                  style="width: 200px;">
                             <div class="pt-4 text-center">
@@ -64,7 +64,7 @@
                     </div>
                     <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
                         <div class="px-4">
-                            <img v-lazy="''"
+                            <img v-lazy="'https://project-bardi.s3.us-east-2.amazonaws.com/assets/about/istvan.png'"
                                  class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
                                  style="width: 200px;">
                             <div class="pt-4 text-center">
