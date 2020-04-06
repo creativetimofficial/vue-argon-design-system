@@ -21,12 +21,7 @@
                             <div class="text-muted text-center mb-3">
                                 <small>Sign in with</small>
                             </div>
-                            <div class="btn-wrapper text-center">
-                                <base-button type="neutral">
-                                    <img slot="icon" src="img/icons/common/github.svg">
-                                    Github
-                                </base-button>
-
+                            <div class="btn-wrapper text-center">                                
                                 <base-button type="neutral">
                                     <img slot="icon" src="img/icons/common/google.svg">
                                     Google
