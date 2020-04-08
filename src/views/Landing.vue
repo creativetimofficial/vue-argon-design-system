@@ -18,9 +18,9 @@
                 <div class="container shape-container d-flex pb-5">
                     <div class="col px-0">
                         <div class="row">
-                            <div class="col-lg-6">
-                                <h1 class="display-3  text-white">Digital Lernen
-                                    <span>an der HfG Schwäbisch Gmünd</span>
+                            <div class="col-lg-12">
+                                <h1 class="">Digital Lernen<br>
+                                    an der HfG Schwäbisch Gmünd
                                 </h1>                         
                             </div>
                         </div>
@@ -36,9 +36,9 @@
                         <div class="row row-grid">
                             <div class="col-lg-4">
                                 <card class="border-0" hover shadow body-classes="py-5">
-                                    <icon name="ni ni-check-bold" type="primary" rounded class="mb-4">
+                                    <icon name="ni ni-check-bold" type="default" rounded class="mb-4">
                                     </icon>
-                                    <h6 class="text-primary text-uppercase">Auf hfg.design anmelden</h6>
+                                    <h6 class="text-default">Auf hfg.design anmelden</h6>
                                     <p class="description mt-3">Argon is a great free UI package based on Bootstrap 4
                                         that includes the most important components and features.</p>
                                     <!-- <div>
@@ -46,39 +46,39 @@
                                         <badge type="primary" rounded>system</badge>
                                         <badge type="primary" rounded>creative</badge>
                                     </div> -->
-                                    <base-button tag="a" href="#" type="primary" class="mt-4">
+                                    <base-button tag="a" href="#" type="default" class="mt-4">
                                         Mehr dazu
                                     </base-button>
                                 </card>
                             </div>
                             <div class="col-lg-4">
                                 <card class="border-0" hover shadow body-classes="py-5">
-                                    <icon name="ni ni-istanbul" type="success" rounded class="mb-4">
+                                    <icon name="ni ni-istanbul" type="default" rounded class="mb-4">
                                     </icon>
-                                    <h6 class="text-success text-uppercase">Lehrveranstaltungen</h6>
+                                    <h6 class="text-default">Lehrveranstaltungen</h6>
                                     <p class="description mt-3">Nach der Anmeldung stehen die gewohnten Lehrveranstaltungen zur Verfügung</p>
                                     <!-- <div>
                                         <badge type="success" rounded>business</badge>
                                         <badge type="success" rounded>vision</badge>
                                         <badge type="success" rounded>success</badge>
                                     </div> -->
-                                    <base-button tag="a" href="#" type="success" class="mt-4">
+                                    <base-button tag="a" href="#" type="default" class="mt-4">
                                         Learn more
                                     </base-button>
                                 </card>
                             </div>
                             <div class="col-lg-4">
                                 <card class="border-0" hover shadow body-classes="py-5">
-                                    <icon name="ni ni-planet" type="warning" rounded class="mb-4">
+                                    <icon name="ni ni-planet" type="default" rounded class="mb-4">
                                     </icon>
-                                    <h6 class="text-warning text-uppercase">Für Lehrende</h6>
+                                    <h6 class="text-default">Für Lehrende</h6>
                                     <p class="description mt-3">Hier sind Ressourcen für Lehrende an der HfG zu finden, von Tutorials über Vorlagen und vieles mehr.</p>
                                     <!-- <div>
                                         <badge type="warning" rounded>marketing</badge>
                                         <badge type="warning" rounded>product</badge>
                                         <badge type="warning" rounded>launch</badge>
                                     </div> -->
-                                    <base-button tag="a" href="#" type="warning" class="mt-4">
+                                    <base-button tag="a" href="#" type="default" class="mt-4">
                                         Learn more
                                     </base-button>
                                 </card>
@@ -88,7 +88,25 @@
                 </div>
             </div>
         </section>
-        <!-- <section class="section section-lg">
+        <section class="section section-lg pt-lg-0 mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <h2>Infrastruktur</h2>
+                        <p>One of three columns</p>
+                    </div>
+                    <div class="col-sm">
+                        <h2>Digitale Lehre</h2>
+                        <p>One of three columns</p>
+                    </div>
+                    <div class="col-sm">
+                        <h2>Wiki / HowTo</h2>
+                        <p>One of three columns</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-lg">
             <div class="container">
                 <div class="row row-grid align-items-center">
                     <div class="col-md-6 order-md-2">
@@ -474,7 +492,7 @@
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
 
     </div>
 </template>

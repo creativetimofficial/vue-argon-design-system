@@ -1,3 +1,33 @@
+//
+// Headings
+//
+
+h1,
+.h1 {
+  line-height: $headings-line-height-1;
+  font-weight: $font-weight-extra-bold;
+}
+h2,
+.h2 {
+  line-height: $headings-line-height-2;
+}
+h3,
+.h3 {
+  line-height: $headings-line-height-3;
+}
+h4, 
+.h4 {
+  line-height: $headings-line-height-4;
+}
+h5,
+.h5 {
+  line-height: $headings-line-height-5;
+}
+h6,
+.h6 {
+  line-height: $headings-line-height-6;
+}
+
 // General styles
 
 p {

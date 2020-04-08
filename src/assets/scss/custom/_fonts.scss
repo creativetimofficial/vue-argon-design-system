@@ -1,0 +1,63 @@
+/***** FONTS ******/
+
+/*
+        This font software is the property of Commercial Type.
+
+        You may not modify the font software, use it on another website, or install it on a computer.
+
+        License information is available at http://commercialtype.com/eula
+        For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+        Copyright (C) 2019 Schwartzco Inc.
+        License: 1903-HJDHYX     
+*/
+
+$font_path: '~@/assets/fonts/';
+
+@font-face {
+    font-family: 'Atlas Grotesk Web';
+    src: url($font_path+'AtlasGrotesk-Black-Web.woff2') format('woff2'),
+        url($font_path+'AtlasGrotesk-Black-Web.woff') format('woff');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Atlas Grotesk Web';
+    src: url($font_path+'AtlasGrotesk-Bold-Web.woff2') format('woff2'),
+        url($font_path+'AtlasGrotesk-Bold-Web.woff') format('woff');
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Atlas Grotesk Web';
+    src: url($font_path+'AtlasGrotesk-Medium-Web.woff2') format('woff2'),
+        url($font_path+'AtlasGrotesk-Medium-Web.woff') format('woff');
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Atlas Grotesk Web';
+    src: url($font_path+'AtlasGrotesk-Regular-Web.woff2') format('woff2'),
+        url($font_path+'AtlasGrotesk-Regular-Web.woff') format('woff');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Atlas Grotesk Web';
+    src: url($font_path+'AtlasGrotesk-Light-Web.woff2') format('woff2'),
+        url($font_path+'AtlasGrotesk-Light-Web.woff') format('woff');
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Atlas Grotesk Web';
+    src: url($font_path+'AtlasGrotesk-Thin-Web.woff2') format('woff2'),
+        url($font_path+'AtlasGrotesk-Thin-Web.woff') format('woff');
+    font-style: normal;
+    font-weight: 200;
+}

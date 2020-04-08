@@ -7,6 +7,10 @@
     will-change: transform;
     letter-spacing: $btn-letter-spacing;
     font-size: $input-btn-font-size;
+    border-radius: unset;
+    border: 2px solid #eaeaea;
+    background-color: unset;
+    color: $default;
     
     &:hover {
         @include box-shadow($btn-hover-box-shadow);
@@ -63,7 +67,7 @@
 }
 
 .btn-neutral {
-    color: theme-color("primary");
+    color: theme-color("default");
 }
 
 // Icons
