@@ -12,6 +12,7 @@ html {
 body {
     font-family: $font-family-base;
     font-size: $font-size-base;
+    font-feature-settings: "liga","kern";
     line-height: $line-height-base;
     color: $body-color;
     background-color: $body-bg;

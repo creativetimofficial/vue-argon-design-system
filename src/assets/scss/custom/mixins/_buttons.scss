@@ -2,7 +2,7 @@
     color: color-yiq($background);
     @include gradient-bg($background);
     border-color: $border;
-    @include box-shadow($btn-box-shadow);
+
 
     @include hover {
         color: color-yiq($hover-background);
