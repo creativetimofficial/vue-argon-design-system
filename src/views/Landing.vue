@@ -19,7 +19,7 @@
                     <div class="col px-0">
                         <div class="row">
                             <div class="col-lg-12">
-                                <h1 class="">Digital Lernen<br>
+                                <h1 class="">Digital Lernen,<br>
                                     an der HfG Schwäbisch Gmünd
                                 </h1>                         
                             </div>
