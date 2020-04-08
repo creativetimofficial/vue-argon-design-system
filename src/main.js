@@ -19,10 +19,19 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import Argon from "./plugins/argon-kit";
+import GAuth from 'vue-google-oauth2'
 import './registerServiceWorker'
+
+const gauthOption = {
+  clientId: 'landingpage-273416.apps.googleusercontent.com',
+  scope: 'profile email calendar',
+  prompt: 'select_account'
+}
 
 Vue.config.productionTip = false;
 Vue.use(Argon);
+Vue.use(GAuth, gauthOption)
+
 new Vue({
   router,
   render: h => h(App)

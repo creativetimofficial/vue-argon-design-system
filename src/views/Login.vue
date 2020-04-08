@@ -70,7 +70,64 @@
     </section>
 </template>
 <script>
-export default {};
+export default {
+  name: 'test',
+  data () {
+    return {
+      isInit: false,
+      isSignIn: false
+    }
+  },
+
+  methods: {
+    handleClickGetAuth(){
+      this.$gAuth.getAuthCode()
+      .then(authCode => {
+        // On success
+        console.log(authCode);
+        return this.$http.post('http://your-backend-server.com/auth/google', { code: authCode, redirect_uri: 'postmessage' })
+      })
+      .then(response => {
+        // And then
+      })
+      .catch(error => {
+        // On fail do something
+      })
+    },
+
+    handleClickSignIn(){
+      this.$gAuth.signIn()
+      .then(user => {
+        // On success do something, refer to https://developers.google.com/api-client-library/javascript/reference/referencedocs#googleusergetid
+        console.log('user', GoogleUser)
+        this.isSignIn = this.$gAuth.isAuthorized
+      })
+      .catch(error  => {
+        // On fail do something
+      })
+    },
+
+    handleClickSignOut(){
+      this.$gAuth.signOut()
+      .then(() => {
+        // On success do something
+        this.isSignIn = this.$gAuth.isAuthorized
+      })
+      .catch(error  => {
+        // On fail do something
+      })
+    }
+  },
+  mounted(){
+    let that = this
+    let checkGauthLoad = setInterval(function(){
+      that.isInit = that.$gAuth.isInit
+      that.isSignIn = that.$gAuth.isAuthorized
+      if(that.isInit) clearInterval(checkGauthLoad)
+    }, 1000);
+  }
+  
+}
 </script>
 <style>
 </style>
