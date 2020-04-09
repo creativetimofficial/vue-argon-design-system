@@ -80,51 +80,22 @@ export default {
   },
 
   methods: {
-    handleClickGetAuth(){
-      this.$gAuth.getAuthCode()
-      .then(authCode => {
-        // On success
-        console.log(authCode);
-        return this.$http.post('http://your-backend-server.com/auth/google', { code: authCode, redirect_uri: 'postmessage' })
-      })
-      .then(response => {
-        // And then
-      })
-      .catch(error => {
-        // On fail do something
-      })
-    },
-
-    handleClickSignIn(){
-      this.$gAuth.signIn()
-      .then(user => {
-        // On success do something, refer to https://developers.google.com/api-client-library/javascript/reference/referencedocs#googleusergetid
-        console.log('user', GoogleUser)
-        this.isSignIn = this.$gAuth.isAuthorized
-      })
-      .catch(error  => {
-        // On fail do something
-      })
-    },
-
-    handleClickSignOut(){
-      this.$gAuth.signOut()
-      .then(() => {
-        // On success do something
-        this.isSignIn = this.$gAuth.isAuthorized
-      })
-      .catch(error  => {
-        // On fail do something
-      })
-    }
+    
   },
   mounted(){
-    let that = this
-    let checkGauthLoad = setInterval(function(){
-      that.isInit = that.$gAuth.isInit
-      that.isSignIn = that.$gAuth.isAuthorized
-      if(that.isInit) clearInterval(checkGauthLoad)
-    }, 1000);
+    this.$gapi.isSignedIn()
+    .then(result => {
+        console.log(result ? 'Check: Signed in' : 'Check: Signed out')
+        if(!result) {
+            this.$gapi.signIn()
+            .then(user => {
+                console.log('Signed in as %s', user.name)
+            })
+            .catch(err => {
+                console.error('Not signed in: %s', err.error)
+            })
+        }
+    })
   }
   
 }
