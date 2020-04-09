@@ -7,6 +7,7 @@ import Landing from "./views/Landing.vue";
 import Login from "./views/Login.vue";
 import Register from "./views/Register.vue";
 import Profile from "./views/Profile.vue";
+import KnowledgeBase from "./views/KnowledgeBase.vue";
 
 Vue.use(Router);
 
@@ -55,6 +56,15 @@ export default new Router({
       components: {
         header: AppHeader,
         default: Profile,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/knowledgebase",
+      name: "knowledgebase",
+      components: {
+        header: AppHeader,
+        default: KnowledgeBase,
         footer: AppFooter
       }
     }

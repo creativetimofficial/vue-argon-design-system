@@ -16,11 +16,14 @@
 
 */
 import Vue from "vue";
+import VueMarkdown from 'vue-markdown';
 import App from "./App.vue";
 import router from "./router";
 import Argon from "./plugins/argon-kit";
 import GAuth from 'vue-google-oauth2'
-import './registerServiceWorker'
+import './registerServiceWorker';
+import axios from 'axios';
+import VueAxios from 'vue-axios';
 
 const gauthOption = {
   clientId: 'landingpage-273416.apps.googleusercontent.com',
@@ -30,7 +33,9 @@ const gauthOption = {
 
 Vue.config.productionTip = false;
 Vue.use(Argon);
-Vue.use(GAuth, gauthOption)
+//Vue.use(GAuth, gauthOption);
+Vue.use(VueMarkdown);
+Vue.use(VueAxios, axios)
 
 new Vue({
   router,
