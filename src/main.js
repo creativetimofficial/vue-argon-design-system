@@ -20,24 +20,25 @@ import VueMarkdown from 'vue-markdown';
 import App from "./App.vue";
 import router from "./router";
 import Argon from "./plugins/argon-kit";
-import GAuth from 'vue-google-oauth2'
-import './registerServiceWorker';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 import VueSpinners from 'vue-spinners'
+import VueGoogleApi from 'vue-google-api'
 
-const gauthOption = {
-  clientId: 'landingpage-273416.apps.googleusercontent.com',
-  scope: 'profile email calendar',
-  prompt: 'select_account'
+import './registerServiceWorker';
+
+const config = {
+  apiKey: 'AIzaSyDLASxmRzFM9QroycxD-MNfP0L1bwWx0Ec',
+  clientId: '678304282895-j9do95s9dt0kvh4no3ng2ll1e82kcvt8.apps.googleusercontent.com',
+  scope: 'profile email https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/drive'
 }
 
 Vue.config.productionTip = false;
 Vue.use(Argon);
-//Vue.use(GAuth, gauthOption);
 Vue.use(VueMarkdown);
 Vue.use(VueAxios, axios);
 Vue.use(VueSpinners);
+Vue.use(VueGoogleApi, config)
 
 new Vue({
   router,

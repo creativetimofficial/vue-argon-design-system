@@ -17,81 +17,32 @@
             </div>
 
             <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
-                <base-dropdown class="nav-item" menu-classes="dropdown-menu-xl">
-                    <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
-                        <i class="ni ni-ui-04 d-lg-none"></i>
-                        <span class="nav-link-inner--text">Willkommen</span>
-                    </a>
-                    <!-- <div class="dropdown-menu-inner">
-                        <a href="https://demos.creative-tim.com/vue-argon-design-system/documentation/"
-                           class="media d-flex align-items-center">
-                            <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
-                                <i class="ni ni-spaceship"></i>
-                            </div>
-                            <div class="media-body ml-3">
-                                <h6 class="heading text-primary mb-md-1">Getting started</h6>
-                                <p class="description d-none d-md-inline-block mb-0">Get started with Bootstrap, the
-                                    world's most popular framework for building responsive sites.</p>
-                            </div>
-                        </a>
-                        <a href="https://demos.creative-tim.com/vue-argon-design-system/documentation/"
-                           class="media d-flex align-items-center">
-                            <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
-                                <i class="ni ni-ui-04"></i>
-                            </div>
-                            <div class="media-body ml-3">
-                                <h5 class="heading text-warning mb-md-1">Components</h5>
-                                <p class="description d-none d-md-inline-block mb-0">Learn how to use Argon
-                                    compiling Scss, change brand colors and more.</p>
-                            </div>
-                        </a>
-                    </div> -->
-                </base-dropdown>
-                <base-dropdown tag="li" class="nav-item">
-                    <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
-                        <i class="ni ni-collection d-lg-none"></i>
-                        <span class="nav-link-inner--text">Loslegen</span>
-                    </a>
-                    <!-- <router-link to="/landing" class="dropdown-item">Landing</router-link>
-                    <router-link to="/profile" class="dropdown-item">Profile</router-link>
-                    <router-link to="/login" class="dropdown-item">Login</router-link>
-                    <router-link to="/register" class="dropdown-item">Register</router-link> -->
-                </base-dropdown>
-            </ul>
-            <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+                <li class="nav-item">
+                    <router-link to="/">Willkommen</router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link to="onboarding">Loslegen</router-link>
+                </li>
                 <li class="nav-item">
                     <router-link to="knowledgebase">Knowledgebase</router-link>
                 </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="https://www.instagram.com/creativetimofficial"
-                       target="_blank" rel="noopener" data-toggle="tooltip" title="Follow us on Instagram">
-                        <i class="fa fa-instagram"></i>
-                        <span class="nav-link-inner--text d-lg-none">Instagram</span>
+            </ul>
+            <ul class="navbar-nav align-items-lg-center ml-lg-auto">                
+                <li class="nav-item d-none d-lg-block ml-lg-4" v-if="!this.isSignedIn">
+                    <a href="#/" rel="noopener"
+                       class="btn btn-neutral btn-icon" v-on:click="triggerSignIn">
+                        <span class="btn-inner--icon">
+                        <i class="fa fa-sign-in mr-2"></i>
+                        Login</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="https://twitter.com/creativetim" target="_blank" rel="noopener"
-                       data-toggle="tooltip" title="Follow us on Twitter">
-                        <i class="fa fa-twitter-square"></i>
-                        <span class="nav-link-inner--text d-lg-none">Twitter</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="https://github.com/creativetimofficial/vue-argon-design-system"
-                       target="_blank" rel="noopener" data-toggle="tooltip" title="Star us on Github">
-                        <i class="fa fa-github"></i>
-                        <span class="nav-link-inner--text d-lg-none">Github</span>
-                    </a>
-                </li>-->
-                <li class="nav-item d-none d-lg-block ml-lg-4">
-                    <a href="/login" target="_blank" rel="noopener"
-                       class="btn btn-neutral btn-icon">
-                <span class="btn-inner--icon">
-                  <i class="fa fa-sign-in mr-2"></i>
-                </span>
-                        <router-link to="/login">Login</router-link>
-                    </a>
-                </li>
+                <base-dropdown class="nav-item" menu-classes="dropdown-menu-xl" :hideArrow="false" v-else>
+                    <div slot="title" class="initialsMenu"><i class="ni ni-circle-08"></i></div>
+                    <a class="dropdown-item">Menu 1</a>
+                    <a class="dropdown-item">Menu 2</a>
+                    <hr/>
+                    <a class="dropdown-item font-weight-bold" v-on:click="triggerSignOut">Abmelden</a>
+                </base-dropdown>
             </ul>
         </base-nav>
     </header>
@@ -106,8 +57,68 @@ export default {
     BaseNav,
     CloseButton,
     BaseDropdown
-  }
-};
+  },  
+  data () {
+    return {
+      isSignedIn: false,
+      currentUser: {},
+    }
+  },
+
+  methods: {
+    triggerSignIn: function () {
+        this.$gapi.signIn()
+            .then(user => {
+                this.currentUser = user;
+                this.isSignedIn = true;
+                console.log('Signed in as %s', user.name)
+            })
+            .catch(err => {
+                this.currentUser = null;
+                this.isSignedIn = false;
+                console.error('Not signed in: %s', err.error)
+            })
+    },
+    triggerSignOut: function () {
+        this.$gapi.signOut()
+            .then(user => {
+                this.currentUser = null;
+                this.isSignedIn = false;
+                console.log('Signed in as %s', user.name)
+            })
+            .catch(err => {
+                console.error('Not signed in: %s', err.error)
+            })
+    }
+  },
+  mounted(){
+    this.$gapi.isSignedIn()
+    .then(result => {
+        this.isSignedIn = result;
+        console.log(result ? 'Check: Signed in' : 'Check: Signed out');
+        if(result) {
+            this.$gapi.currentUser()
+            .then(user => {
+                if (user) {
+                    this.currentUser = user;
+                } else {
+                console.log('No user is connected.')
+                }
+            })
+        }
+    })
+  },
+  computed: {
+    initials: function () {
+      if(this.currentUser.name == undefined) return "";
+      return this.currentUser.name.split(' ')[0][0]+this.currentUser.name.split(' ')[1][0]
+    }
+  },
+}
 </script>
-<style>
+<style scoped>
+ .initialsMenu {
+     font-weight: 100;
+     font-size: 24pt;
+ }
 </style>
