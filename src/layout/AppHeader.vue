@@ -2,7 +2,8 @@
     <header class="header-global">
         <base-nav class="navbar-main" transparent type="" effect="light" expand>
             <router-link slot="brand" class="navbar-brand mr-lg-5" to="/">
-                <img src="img/brand/HfG_Logo.png" alt="logo">
+                <!-- <img src="img/brand/HfG_Logo.png" alt="logo"> -->
+                <h3><span class="wm_hfg">hfg</span><span class="wm_dot">.</span><span class="wm_design">design</span></h3>
             </router-link>
 
             <div class="row" slot="content-header" slot-scope="{closeMenu}">
@@ -120,5 +121,24 @@ export default {
  .initialsMenu {
      font-weight: 100;
      font-size: 24pt;
+ }
+
+ .wm_hfg, .wm_dot, .wm_design {
+     text-transform: lowercase;
+     color:white;
+ }
+
+ .wm_hfg {
+     color:black;
+ }
+
+ .wm_dot {
+     font-weight: 100;
+     color:white;
+ }
+
+ .wm_design {
+     font-weight: 100;
+     color:white;
  }
 </style>
