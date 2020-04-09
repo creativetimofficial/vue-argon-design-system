@@ -8,6 +8,7 @@ import Login from "./views/Login.vue";
 import Register from "./views/Register.vue";
 import Profile from "./views/Profile.vue";
 import KnowledgeBase from "./views/KnowledgeBase.vue";
+import Support from "./views/Support.vue";
 
 Vue.use(Router);
 
@@ -65,6 +66,15 @@ export default new Router({
       components: {
         header: AppHeader,
         default: KnowledgeBase,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/support",
+      name: "support",
+      components: {
+        header: AppHeader,
+        default: Support,
         footer: AppFooter
       }
     }
