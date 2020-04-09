@@ -519,19 +519,19 @@ export default {
   data: function () {
     return {
         passGettingStartedCaptions: [
-            { title: '1. Google-Mail Webseite aufrufen', text: 'Hier sollte der Vorgang beschrieben sein.', index: 1 },
-            { title: '2. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.', index: 2 },
-            { title: '3. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.', index: 3 },
-            { title: '4. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.', index: 4 },
-            { title: '5. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.', index: 5 },
-            { title: '6. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.', index: 6 },
-            { title: '7. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.', index: 7 },
-            { title: '8. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.', index: 8 },
-            { title: '9. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.', index: 9 },
-            { title: '10. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.', index: 10 },
-            { title: '11. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.', index: 11 },
-            { title: '12. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.', index: 12 },
-            { title: '13. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.', index: 13 },
+            { title: '1. Google-Mail Webseite aufrufen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+            { title: '2. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+            { title: '3. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+            { title: '4. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+            { title: '5. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+            { title: '6. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+            { title: '7. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+            { title: '8. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+            { title: '9. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+            { title: '10. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+            { title: '11. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+            { title: '12. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+            { title: '13. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
         ]
     }
   }
