@@ -2,8 +2,8 @@
     <ul id="example-2">        
         <li v-for="(item, index) in list" v-bind:key="index" v-on:click="navigateTo(item)">
             <span v-if="item.mimeType=='application/vnd.google-apps.folder'">📁</span>
-            <span v-else>📄</span>
-            {{ item.name }}
+            <span v-else>📄</span>            
+            <span v-bind:class="[item.mimeType == 'text/plain' ? 'doc' : 'nodoc']">{{ item.name }}</span>
             <GDriveSubnav v-if="item.mimeType=='application/vnd.google-apps.folder'" :folder="item.id"></GDriveSubnav>
         </li>
     </ul>
@@ -65,5 +65,12 @@ export default {
     li {
         list-style-type: none;
         font-weight: 500;
+        cursor: pointer;
+    }
+
+    .nodoc {
+        color:gray;
+        cursor: default;
+        font-weight: 200;
     }
 </style>
