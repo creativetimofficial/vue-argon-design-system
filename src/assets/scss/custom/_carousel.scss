@@ -1,1 +1,12 @@
 // Bootstrap carousel
+.carousel-indicators {
+    bottom: 85px;
+
+    li {
+        background-color: rgba($carousel-indicator-active-bg, .1);
+    }
+
+    .active {
+        background-color: $carousel-indicator-active-bg;
+    }
+}

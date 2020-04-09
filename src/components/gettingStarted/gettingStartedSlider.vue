@@ -1,15 +1,12 @@
 <template>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-wrap="false">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-wrap="false" data-interval="false">
         <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li v-for="(caption, index) in captions" v-bind:key="index" data-target="#carouselExampleIndicators" :class="{ 'active': index === 0 }"></li>
         </ol>
 
         <div class="carousel-inner">
-            <div class="carousel-item" :class="{ 'active': index === 0 }" v-for="(caption, index) in captions"  v-bind:key="index">
-                <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=777&amp;fg=555&amp;text=First slide"
-                    alt="First slide [800x400]"
+            <div class="carousel-item" :class="{ 'active': index === 0 }" v-for="(caption, index) in captions" v-bind:key="index">
+                <img class="d-block w-100"
                     :src="getImgUrl(index)"
            
                     data-holder-rendered="true">
@@ -18,78 +15,6 @@
                     <p>{{caption.text}}</p>
                 </div>
             </div>
-            <!-- <div class="carousel-item">
-                <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=666&amp;fg=444&amp;text=Second slide"
-                    alt="Second slide [800x400]"
-                    src="~@/assets/media/images/getting-started/getting-started-2.jpg"
-                    data-holder-rendered="true">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=555&amp;fg=333&amp;text=Third slide"
-                    alt="Third slide [800x400]"
-                    src="~@/assets/media/images/getting-started/getting-started-3.jpg"
-                    data-holder-rendered="true">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=555&amp;fg=333&amp;text=Third slide"
-                    alt="Third slide [800x400]"
-                    src="~@/assets/media/images/getting-started/getting-started-4.jpg"
-                    data-holder-rendered="true">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=555&amp;fg=333&amp;text=Third slide"
-                    alt="Third slide [800x400]"
-                    src="~@/assets/media/images/getting-started/getting-started-5.jpg"
-                    data-holder-rendered="true">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=555&amp;fg=333&amp;text=Third slide"
-                    alt="Third slide [800x400]"
-                    src="~@/assets/media/images/getting-started/getting-started-6.jpg"
-                    data-holder-rendered="true">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=555&amp;fg=333&amp;text=Third slide"
-                    alt="Third slide [800x400]"
-                    src="~@/assets/media/images/getting-started/getting-started-7.jpg"
-                    data-holder-rendered="true">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=555&amp;fg=333&amp;text=Third slide"
-                    alt="Third slide [800x400]"
-                    src="~@/assets/media/images/getting-started/getting-started-8.jpg"
-                    data-holder-rendered="true">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=555&amp;fg=333&amp;text=Third slide"
-                    alt="Third slide [800x400]"
-                    src="~@/assets/media/images/getting-started/getting-started-9.jpg"
-                    data-holder-rendered="true">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=555&amp;fg=333&amp;text=Third slide"
-                    alt="Third slide [800x400]"
-                    src="~@/assets/media/images/getting-started/getting-started-10.jpg"
-                    data-holder-rendered="true">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=555&amp;fg=333&amp;text=Third slide"
-                    alt="Third slide [800x400]"
-                    src="~@/assets/media/images/getting-started/getting-started-11.jpg"
-                    data-holder-rendered="true">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=555&amp;fg=333&amp;text=Third slide"
-                    alt="Third slide [800x400]"
-                    src="~@/assets/media/images/getting-started/getting-started-12.jpg"
-                    data-holder-rendered="true">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=555&amp;fg=333&amp;text=Third slide"
-                    alt="Third slide [800x400]"
-                    src="~@/assets/media/images/getting-started/getting-started-13.jpg"
-                    data-holder-rendered="true">
-            </div> -->
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -126,12 +51,6 @@ export default {
         }
     }
 };
-
-$('.carousel').carousel({
-  interval: false,
-  wrap: false,
-  keyboard: false
-})
 
 </script>
 <style>
