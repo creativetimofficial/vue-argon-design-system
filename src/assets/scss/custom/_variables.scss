@@ -22,7 +22,9 @@ $gray-600: #8898aa !default;   // Line footer color
 $gray-700: #525f7f !default;   // Line p color
 $gray-800: #32325d !default;   // Line heading color
 $gray-900: #212529 !default;
+
 $black:    #111 !default;
+$gray-hfg: #959595 !default;
 
 $grays: () !default;
 $grays: map-merge((
@@ -322,6 +324,7 @@ $font-size-xs:                ($font-size-base * 1.125);
 
 $font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;
+$font-weight-medium:          500 !default;
 $font-weight-bold:            600 !default;
 $font-weight-extra-bold:      700 !default;
 
@@ -332,8 +335,8 @@ $h1-font-size:                $font-size-base * 3.2 !default;  //2.1875rem
 $h2-font-size:                $font-size-base * 2.25 !default;
 $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base * 1.25 !default;
+$h5-font-size:                $font-size-base * 1.125 !default;
+$h6-font-size:                $font-size-base * 1.125 !default;
 
 $headings-margin-bottom:      ($spacer / 2);
 $headings-font-family:        inherit !default;
@@ -383,7 +386,7 @@ $lead-font-weight:            $font-weight-bold !default;
 
 $small-font-size:             80% !default;
 
-$text-muted:                  $gray-600 !default;
+$text-muted:                  $gray-hfg !default;
 
 $blockquote-small-color:      $gray-600 !default;
 $blockquote-font-size:        ($font-size-base * 1.25);
