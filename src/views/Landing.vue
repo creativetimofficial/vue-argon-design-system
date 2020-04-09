@@ -30,6 +30,16 @@
             <!-- 1st Hero Variation -->
         </div>
         <section class="section section-lg pt-lg-0 mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <GettingStartedSlider :passGettingStartedCaptions="passGettingStartedCaptions" />
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="section section-lg pt-lg-0 mt-5">
             <div class="container ">
                 <div class="row justify-content-center">
                     <div class="col-lg-12">
@@ -254,11 +264,11 @@
                     <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
                         <div class="px-4">
                             <img v-lazy="'img/theme/team-1-800x800.jpg'"
-                                 class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
+                                 class="img-center img-fluid shadow shadow-lg--hover"
                                  style="width: 200px;">
                             <div class="pt-4 text-center">
                                 <h5 class="title">
-                                    <span class="d-block mb-1">Ryan Tompson</span>
+                                    <span class="d-block">Ryan Tompson</span>
                                     <small class="h6 text-muted">Web Developer</small>
                                 </h5>
                                 <div class="mt-3">
@@ -275,11 +285,11 @@
                     <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
                         <div class="px-4">
                             <img v-lazy="'img/theme/team-2-800x800.jpg'"
-                                 class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
+                                 class="img-center img-fluid shadow shadow-lg--hover"
                                  style="width: 200px;">
                             <div class="pt-4 text-center">
                                 <h5 class="title">
-                                    <span class="d-block mb-1">Romina Hadid</span>
+                                    <span class="d-block">Romina Hadid</span>
                                     <small class="h6 text-muted">Marketing Strategist</small>
                                 </h5>
                                 <div class="mt-3">
@@ -296,11 +306,11 @@
                     <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
                         <div class="px-4">
                             <img v-lazy="'img/theme/team-3-800x800.jpg'"
-                                 class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
+                                 class="img-center img-fluid shadow shadow-lg--hover"
                                  style="width: 200px;">
                             <div class="pt-4 text-center">
                                 <h5 class="title">
-                                    <span class="d-block mb-1">Alexander Smith</span>
+                                    <span class="d-block">Alexander Smith</span>
                                     <small class="h6 text-muted">UI/UX Designer</small>
                                 </h5>
                                 <div class="mt-3">
@@ -317,11 +327,11 @@
                     <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
                         <div class="px-4">
                             <img v-lazy="'img/theme/team-4-800x800.jpg'"
-                                 class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
+                                 class="img-center img-fluid shadow shadow-lg--hover"
                                  style="width: 200px;">
                             <div class="pt-4 text-center">
                                 <h5 class="title">
-                                    <span class="d-block mb-1">John Doe</span>
+                                    <span class="d-block">John Doe</span>
                                     <small class="h6 text-muted">Founder and CEO</small>
                                 </h5>
                                 <div class="mt-3">
@@ -498,8 +508,32 @@
 </template>
 
 <script>
+import GettingStartedSlider from "../components/gettingStarted/gettingStartedSlider";
+
 export default {
   name: "home",
-  components: {}
+  components: {
+      GettingStartedSlider
+  },
+
+  data: function () {
+    return {
+        passGettingStartedCaptions: [
+            { title: '1. Google-Mail Webseite aufrufen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+            { title: '2. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+            { title: '3. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+            { title: '4. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+            { title: '5. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+            { title: '6. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+            { title: '7. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+            { title: '8. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+            { title: '9. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+            { title: '10. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+            { title: '11. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+            { title: '12. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+            { title: '13. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+        ]
+    }
+  }
 };
 </script>
