@@ -30,7 +30,7 @@ import './registerServiceWorker';
 const config = {
   apiKey: 'AIzaSyDLASxmRzFM9QroycxD-MNfP0L1bwWx0Ec',
   clientId: '678304282895-j9do95s9dt0kvh4no3ng2ll1e82kcvt8.apps.googleusercontent.com',
-  scope: 'profile email calendar'
+  scope: 'profile email auth/calendar auth/drive'
 }
 
 Vue.config.productionTip = false;
