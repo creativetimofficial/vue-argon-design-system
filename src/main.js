@@ -24,6 +24,7 @@ import GAuth from 'vue-google-oauth2'
 import './registerServiceWorker';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
+import VueSpinners from 'vue-spinners'
 
 const gauthOption = {
   clientId: 'landingpage-273416.apps.googleusercontent.com',
@@ -35,7 +36,8 @@ Vue.config.productionTip = false;
 Vue.use(Argon);
 //Vue.use(GAuth, gauthOption);
 Vue.use(VueMarkdown);
-Vue.use(VueAxios, axios)
+Vue.use(VueAxios, axios);
+Vue.use(VueSpinners);
 
 new Vue({
   router,

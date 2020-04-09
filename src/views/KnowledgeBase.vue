@@ -36,11 +36,8 @@
                     </div>
                     <div class="col-lg-9">
                         <div class="row row-grid">
-                            <MDRenderer :content="info"></MDRenderer>
+                            <MDRenderer :file="currentFile"></MDRenderer>
                         </div>
-                        <hr/>
-                        <!-- <div class="row row-grid" v-html="htmlcontent">
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -59,27 +56,16 @@ export default {
   },
   data () {
     return {
-      info: "null",
-      htmlcontent: null,
+      currentFile: "null",
     }
   },
   methods: {
-      loadFile: function(fileId) {
-          console.log("Loading "+fileId);
-          this.$http
-            .get('https://www.googleapis.com/drive/v3/files/'+fileId+'?key=AIzaSyDLASxmRzFM9QroycxD-MNfP0L1bwWx0Ec&mimeType=text%2Fplain&alt=media')
-            .then(response => {
-                console.log(response);
-                this.info = response.data;
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            })
+      loadFile: function (id) {
+          this.currentFile = id;
       }
   },
   mounted () {
-    this.loadFile("1WkRsvJwwRePQ2R2ksI2z4BOzIVPasBrf");
+    this.currentFile = "1WkRsvJwwRePQ2R2ksI2z4BOzIVPasBrf";
   }
 };
 </script>
