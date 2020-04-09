@@ -1,9 +1,11 @@
 <template>
     <ul id="example-2">        
         <li v-for="(item, index) in list" v-bind:key="index" v-on:click="navigateTo(item)">
-            <span v-if="item.mimeType=='application/vnd.google-apps.folder'">📁</span>
-            <span v-else>📄</span>            
-            <span v-bind:class="[item.mimeType == 'text/plain' ? 'doc' : 'nodoc']">{{ item.name }}</span>
+            <span v-bind:class="[item.mimeType == 'text/plain' ? 'doc' : 'nodoc']">
+                <span v-if="item.mimeType=='application/vnd.google-apps.folder'">📁</span>
+                <span v-else>📄</span>            
+                {{ item.name }}
+            </span>
             <GDriveSubnav v-if="item.mimeType=='application/vnd.google-apps.folder'" :folder="item.id"></GDriveSubnav>
         </li>
     </ul>
