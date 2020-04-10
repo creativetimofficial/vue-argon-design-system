@@ -1,5 +1,5 @@
 <template>
-    <ul id="example-2">        
+    <!-- <ul id="example-2">        
         <li v-for="(item, index) in list" 
             v-bind:key="index" 
             v-on:click="navigateTo(item.id, item.mimeType)" 
@@ -11,19 +11,18 @@
             </span>
             <GDriveSubnav v-if="item.mimeType=='application/vnd.google-apps.folder'" :level="level+1" :folder="item.id" v-on:navigate-to="navigateTo"></GDriveSubnav>
         </li>
-    </ul>-->
-<!--  -->
+    </ul> -->
     <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
         <div class="card" v-for="(item, index) in list" v-bind:key="index">
             <div class="card-header">
                 <a
                     data-toggle="collapse"
                     data-parent="#accordionEx"
-                    :href="getHref(index)"
+                    :href="getHref(item.id)"
                     aria-expanded="false"
     
                 >
-                    <h5 class="mb-0">
+                    <h5 class="mb-0" v-on:click="navigateTo(item.id, item.mimeType)" >
                         {{ item.name }}
                         <i class="fa fa-angle-down rotate-icon" :class="{ 'invisible' : item.mimeType!='application/vnd.google-apps.folder'}"></i>
                     </h5>
@@ -31,13 +30,13 @@
             </div>
 
             <div
-                :id="getIDcollapse(index)"
+                :id="getIDcollapse(item.id)"
                 class="collapse"
                 role="tabpanel"
         
                 data-parent="#accordionEx"
             >
-                <GDriveSubSubnav v-if="item.mimeType=='application/vnd.google-apps.folder'" :folder="item.id"></GDriveSubSubnav>
+            <GDriveSubnav v-if="item.mimeType=='application/vnd.google-apps.folder'" :level="level+1" :folder="item.id" v-on:navigate-to="navigateTo"></GDriveSubnav>
             </div>
         </div>
     </div> 
@@ -48,7 +47,8 @@ import GDriveSubSubnav from "@/components/GDriveSubSubnav";
 
 export default {
 
-  components: {    
+  components: {
+      GDriveSubSubnav
   },
   data () {
     return {
@@ -84,7 +84,7 @@ export default {
                     q: "'"+val+"' in parents",
                 }
             }).then(response => {
-                console.log(response);
+                console.log(response); 
                 this.list = response.result.files;
                 this.list.sort(function(a, b) {
                     var textA = a.name.toUpperCase();
