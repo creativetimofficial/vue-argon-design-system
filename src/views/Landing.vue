@@ -508,7 +508,7 @@
 </template>
 
 <script>
-import GettingStartedSlider from "../components/gettingStarted/gettingStartedSlider";
+import GettingStartedSlider from "../components/GettingStarted/GettingStartedSlider";
 
 export default {
   name: "home",
