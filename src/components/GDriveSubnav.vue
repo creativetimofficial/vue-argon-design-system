@@ -11,13 +11,43 @@
             </span>
             <GDriveSubnav v-if="item.mimeType=='application/vnd.google-apps.folder'" :level="level+1" :folder="item.id" v-on:navigate-to="navigateTo"></GDriveSubnav>
         </li>
-    </ul>
+    </ul>-->
+<!--  -->
+    <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+        <div class="card" v-for="(item, index) in list" v-bind:key="index">
+            <div class="card-header">
+                <a
+                    data-toggle="collapse"
+                    data-parent="#accordionEx"
+                    :href="getHref(index)"
+                    aria-expanded="false"
+    
+                >
+                    <h5 class="mb-0">
+                        {{ item.name }}
+                        <i class="fa fa-angle-down rotate-icon" :class="{ 'invisible' : item.mimeType!='application/vnd.google-apps.folder'}"></i>
+                    </h5>
+                </a>
+            </div>
+
+            <div
+                :id="getIDcollapse(index)"
+                class="collapse"
+                role="tabpanel"
+        
+                data-parent="#accordionEx"
+            >
+                <GDriveSubSubnav v-if="item.mimeType=='application/vnd.google-apps.folder'" :folder="item.id"></GDriveSubSubnav>
+            </div>
+        </div>
+    </div> 
 </template>
 <script>
-
-import VueMarkdown from 'vue-markdown';
+import VueMarkdown from "vue-markdown";
+import GDriveSubSubnav from "@/components/GDriveSubSubnav";
 
 export default {
+
   components: {    
   },
   data () {
@@ -34,6 +64,12 @@ export default {
           if(mimeType=='application/vnd.google-apps.folder') return;
           console.log("Level "+this.level+": nav to "+id);
           this.$emit("navigate-to", id);
+      },
+      getIDcollapse: function(index) {
+            return "collapse" + (index+1)
+      },
+      getHref: function(index) {
+          return "#collapse" + (index+1)
       }
   },
   watch: {
@@ -76,11 +112,11 @@ export default {
 };
 </script>
 <style scoped>
-    li {
-        list-style-type: none;
-        font-weight: 500;
-        cursor: pointer;
-    }
+li {
+    list-style-type: none;
+    font-weight: 500;
+    cursor: pointer;
+}
 
     .doc {
         color:black;        
