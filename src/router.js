@@ -9,6 +9,7 @@ import Register from "./views/Register.vue";
 import Profile from "./views/Profile.vue";
 import KnowledgeBase from "./views/KnowledgeBase.vue";
 import Support from "./views/Support.vue";
+import Datenschutz from "./views/Datenschutz.vue";
 
 Vue.use(Router);
 
@@ -75,6 +76,15 @@ export default new Router({
       components: {
         header: AppHeader,
         default: Support,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/datenschutz",
+      name: "datenschutz",
+      components: {
+        header: AppHeader,
+        default: Datenschutz,
         footer: AppFooter
       }
     }

@@ -27,6 +27,9 @@
                 <li class="nav-item">
                     <router-link to="support">Support</router-link>
                 </li>
+                <li class="nav-item">
+                    <router-link to="datenschutz">Datenschutz</router-link>
+                </li>
             </ul>
             <ul class="navbar-nav align-items-lg-center ml-lg-auto">            
                 <li class="nav-item d-none d-lg-block ml-lg-2" v-if="!this.isSignedIn">
