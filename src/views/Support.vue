@@ -163,7 +163,7 @@ export default {
     methods: {
         sendFeedback: function () {
             this.feedbackWasSent = true;
-            this.$http.post("https://hooks.slack.com/services/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", JSON.stringify({
+            this.$http.post("https://76i3an3137.execute-api.eu-central-1.amazonaws.com/prod/slackbridge/feedback", JSON.stringify({
                 text: this.feedbackMessage,
             }),{
                 headers: {
