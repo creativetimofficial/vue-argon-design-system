@@ -61,6 +61,7 @@ export default {
   },
   methods: {
       loadFile: function (id) {
+          console.log("Loading "+id)
           this.currentFile = id;
       }
   },
