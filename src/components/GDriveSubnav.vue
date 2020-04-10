@@ -1,12 +1,15 @@
 <template>
     <ul id="example-2">        
-        <li v-for="(item, index) in list" v-bind:key="index" v-on:click="navigateTo(item)">
-            <span v-bind:class="[item.mimeType == 'text/plain' ? 'doc' : 'nodoc']">
+        <li v-for="(item, index) in list" 
+            v-bind:key="index" 
+            v-on:click="navigateTo(item.id, item.mimeType)" 
+            v-bind:class="[showMimes.indexOf(item.mimeType) != -1 ? '' : 'd-none']">
+            <span v-bind:class="[item.mimeType == 'application/vnd.google-apps.folder' ? 'folder' : 'doc']">
                 <span v-if="item.mimeType=='application/vnd.google-apps.folder'">📁</span>
                 <span v-else>📄</span>            
                 {{ item.name }}
             </span>
-            <GDriveSubnav v-if="item.mimeType=='application/vnd.google-apps.folder'" :folder="item.id"></GDriveSubnav>
+            <GDriveSubnav v-if="item.mimeType=='application/vnd.google-apps.folder'" :level="level+1" :folder="item.id" v-on:navigate-to="navigateTo"></GDriveSubnav>
         </li>
     </ul>
 </template>
@@ -20,15 +23,17 @@ export default {
   data () {
     return {
       list: null,
+      showMimes: ["text/plain","application/vnd.google-apps.folder"],
     }
   },
   mounted () {
 
   },
   methods: {
-      navigateTo: function(item) {
-          console.log("nav to "+item.id);
-          this.$emit("navigate-to", item.id);
+      navigateTo: function(id, mimeType) {
+          if(mimeType=='application/vnd.google-apps.folder') return;
+          console.log("Level "+this.level+": nav to "+id);
+          this.$emit("navigate-to", id);
       }
   },
   watch: {
@@ -59,6 +64,10 @@ export default {
     folder: {
       type: String,
       default: null,
+    },
+    level: {
+        type:Number,
+        default:0,
     }    
   }
 };
@@ -70,9 +79,14 @@ export default {
         cursor: pointer;
     }
 
-    .nodoc {
-        color:gray;
-        cursor: default;
+    .doc {
+        color:black;        
         font-weight: 200;
+    }
+
+    .folder {
+        cursor: default;
+        color:black;
+        font-weight: 600;
     }
 </style>
