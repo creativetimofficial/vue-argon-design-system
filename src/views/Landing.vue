@@ -33,7 +33,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm">
-                        <GettingStartedSlider :passGettingStartedCaptions="passGettingStartedCaptions" />
+                        <!-- <GettingStartedSlider :passGettingStartedCaptions="passGettingStartedCaptions" /> -->
                     </div>
                 </div>
             </div>
@@ -518,12 +518,12 @@
 
 <script>
 import SlackNews from "../components/SlackNews";
-import GettingStartedSlider from "../components/GettingStarted/GettingStartedSlider";
+//import GettingStartedSlider from "../components/GettingStarted/GettingStartedSlider";
 
 export default {
   name: "home",
   components: {
-      GettingStartedSlider,
+      /*GettingStartedSlider,*/
       SlackNews
   },
 
