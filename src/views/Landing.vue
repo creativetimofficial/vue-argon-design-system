@@ -42,6 +42,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm">
+                        <h2>Mein Kalender</h2>
+                        <Calendar></Calendar>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-lg pt-lg-0 mt-5 card bg-white shadow border-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
                         <h2>Neues zum Portal</h2>
                         <SlackNews></SlackNews>
                     </div>
@@ -518,13 +528,15 @@
 
 <script>
 import SlackNews from "../components/SlackNews";
+import Calendar from "../components/Calendar";
 import gettingStartedSlider from "../components/gettingStarted/gettingStartedSlider";
 
 export default {
   name: "home",
   components: {
       gettingStartedSlider,
-      SlackNews
+      SlackNews,
+      Calendar,
   },
 
   data: function () {
