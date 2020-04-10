@@ -44,8 +44,9 @@
                     <span class="username">{{currentUser.firstname}}</span>
                     <base-dropdown class="nav-item" menu-classes="dropdown-menu-xl" :hideArrow="false">
                         <div slot="title" class="initialsMenu"><i class="ni ni-circle-08 usericon"></i></div>
-                        <a class="dropdown-item">Menu 1</a>
-                        <a class="dropdown-item">Menu 2</a>
+                        <a class="dropdown-item" href="https://hfggmuend.slack.com"><i class="fa fa-slack"></i>Slack <i class="fa fa-external-link-square"></i></a>
+                        <a class="dropdown-item" href="https://hfggmuend.slack.com"><i class="fa fa-calendar"></i>Kalender <i class="fa fa-external-link-square"></i></a>
+                        <a class="dropdown-item" href="https://hfggmuend.slack.com"><i class="fa fa-google-drive"></i>Drive <i class="fa fa-external-link-square"></i></a>
                         <hr/>
                         <a class="dropdown-item font-weight-bold" v-on:click="triggerSignOut">Abmelden</a>
                     </base-dropdown>
