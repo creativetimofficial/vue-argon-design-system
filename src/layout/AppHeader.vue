@@ -19,17 +19,14 @@
 
             <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
                 <li class="nav-item">
-                    <router-link to="/">Willkommen</router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link to="onboarding">Loslegen</router-link>
-                </li>
+                    <router-link to="/">Start</router-link>
+                </li>                
                 <li class="nav-item">
                     <router-link to="knowledgebase">Knowledgebase</router-link>
                 </li>
             </ul>
-            <ul class="navbar-nav align-items-lg-center ml-lg-auto">                
-                <li class="nav-item d-none d-lg-block ml-lg-4" v-if="!this.isSignedIn">
+            <ul class="navbar-nav align-items-lg-center ml-lg-auto">            
+                <li class="nav-item d-none d-lg-block ml-lg-2" v-if="!this.isSignedIn">
                     <a href="#/" rel="noopener"
                        class="btn btn-neutral btn-icon" v-on:click="triggerSignIn">
                         <span class="btn-inner--icon">
@@ -37,13 +34,16 @@
                         Login</span>
                     </a>
                 </li>
-                <base-dropdown class="nav-item" menu-classes="dropdown-menu-xl" :hideArrow="false" v-else>
-                    <div slot="title" class="initialsMenu"><i class="ni ni-circle-08"></i></div>
-                    <a class="dropdown-item">Menu 1</a>
-                    <a class="dropdown-item">Menu 2</a>
-                    <hr/>
-                    <a class="dropdown-item font-weight-bold" v-on:click="triggerSignOut">Abmelden</a>
-                </base-dropdown>
+                <li class="nav-item d-none d-lg-block" v-else>
+                    <span class="username">{{currentUser.firstname}}</span>
+                    <base-dropdown class="nav-item" menu-classes="dropdown-menu-xl" :hideArrow="false">
+                        <div slot="title" class="initialsMenu"><i class="ni ni-circle-08 usericon"></i></div>
+                        <a class="dropdown-item">Menu 1</a>
+                        <a class="dropdown-item">Menu 2</a>
+                        <hr/>
+                        <a class="dropdown-item font-weight-bold" v-on:click="triggerSignOut">Abmelden</a>
+                    </base-dropdown>
+                </li>
             </ul>
         </base-nav>
     </header>
@@ -72,6 +72,7 @@ export default {
             .then(user => {
                 this.currentUser = user;
                 this.isSignedIn = true;
+                console.log(user);
                 console.log('Signed in as %s', user.name)
             })
             .catch(err => {
@@ -112,15 +113,36 @@ export default {
   computed: {
     initials: function () {
       if(this.currentUser.name == undefined) return "";
-      return this.currentUser.name.split(' ')[0][0]+this.currentUser.name.split(' ')[1][0]
+      return this.currentUser.name.split(' ')[0][0]+this.currentUser.name.split(' ')[1][0];
+    },
+    firstname: function() {
+      if(this.currentUser.name == undefined) return "";
+      return this.currentUser.name.split(' ')[0];
     }
   },
 }
 </script>
 <style scoped>
  .initialsMenu {
-     font-weight: 100;
+     font-weight: 500;
      font-size: 24pt;
+ }
+
+ .username {
+     position: relative;
+     top: -10px;
+     right: 10px;
+     display: inline-block;
+     height:32px;
+     font-weight: 400;
+     font-size: 16px;
+     line-height: 32px;
+     color:white;
+ }
+
+ .usericon {
+     margin-top:11px;
+     color:white;
  }
 
  .wm_hfg, .wm_dot, .wm_design {
