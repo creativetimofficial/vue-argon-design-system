@@ -37,7 +37,16 @@
                     </div>
                 </div>
             </div>
-
+        </section>
+        <section class="section section-lg pt-lg-0 mt-5 card bg-white shadow border-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <h2>Neues zum Portal</h2>
+                        <SlackNews></SlackNews>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="section section-lg pt-lg-0 mt-5">
             <div class="container ">
@@ -509,11 +518,13 @@
 
 <script>
 import GettingStartedSlider from "../components/GettingStarted/GettingStartedSlider";
+import SlackNews from "../components/SlackNews";
 
 export default {
   name: "home",
   components: {
-      GettingStartedSlider
+      GettingStartedSlider,
+      SlackNews
   },
 
   data: function () {

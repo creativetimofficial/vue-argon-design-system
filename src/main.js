@@ -22,8 +22,10 @@ import router from "./router";
 import Argon from "./plugins/argon-kit";
 import axios from 'axios';
 import VueAxios from 'vue-axios';
-import VueSpinners from 'vue-spinners'
-import VueGoogleApi from 'vue-google-api'
+import VueSpinners from 'vue-spinners';
+import VueGoogleApi from 'vue-google-api';
+import Emoji from 'emoji-js';
+const { WebClient } = require('@slack/web-api');
 
 import './registerServiceWorker';
 
@@ -38,7 +40,17 @@ Vue.use(Argon);
 Vue.use(VueMarkdown);
 Vue.use(VueAxios, axios);
 Vue.use(VueSpinners);
-Vue.use(VueGoogleApi, config)
+Vue.use(VueGoogleApi, config);
+
+let conv = new Emoji.EmojiConvertor();
+conv.init_env();
+conv.replace_mode = 'unified';
+conv.allow_native = true;
+
+let slack = new WebClient("xoxb-1044770955159-1052490059798-1FtAEnMMYQiDOXu2SVlJQOhW");
+
+Object.defineProperty(Vue.prototype, '$emoji', { value: conv });
+Object.defineProperty(Vue.prototype, '$slack', { value: slack });
 
 new Vue({
   router,

@@ -63,7 +63,7 @@
                         <p>Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien. Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu unorthographisches Leben.</p>
                     </div>
 
-                    <div class="col-lg-8 ml-auto mt-4">
+                    <div class="col-lg-8 ml-auto mt-4" v-if="!feedbackWasSent">
                         <form>
                             <textarea
                                 class="form-control text-default"
@@ -71,11 +71,28 @@
                                 rows="3"
                                 placeholder="200 Zeichen"
                                 maxlength="200"
+                                v-model="feedbackMessage"                                
                             ></textarea>
 
-                            <button type="button" class="btn btn-default float-right mt-3 bg-default text-white">Feedback</button>
+                            <button type="button" class="btn btn-default float-right mt-3 bg-default text-white" v-on:click="sendFeedback()">Feedback</button>
                         </form>
                     </div>
+                    <div class="col-lg-8 ml-auto mt-4" v-if="feedbackWasSent">
+                        <base-alert type="secondary" icon="ni ni-check-bold">
+                            {{feedbackConfirmation}}
+                        </base-alert>
+                    </div>
+                    <modal :show="errorModal">
+                        <template slot="header">
+                            <h5 class="modal-title" id="exampleModalLabel">Fehler beim Versand</h5>
+                        </template>
+                        <div>
+                         {{feedbackConfirmation}}
+                        </div>
+                        <template slot="footer">
+                            <base-button type="secondary" @click="errorModal = false">Close</base-button>
+                        </template>
+                    </modal>
                 </div>
             </div>
         </section>
@@ -84,11 +101,13 @@
 
 <script>
 import ContactCard from "../components/Support/ContactCard";
+import Modal from "../components/Modal";
 
 export default {
     name: "home",
     components: {
-        ContactCard
+        ContactCard,
+        Modal
     },
 
     data: function() {
@@ -134,8 +153,31 @@ export default {
                     reach2: "13:00 – 16:00 Uhr",
                     imgPath: "img/support/team/user-support-2.jpg"
                 }
-            ]
+            ],
+            feedbackMessage: "",
+            feedbackWasSent: false,
+            feedbackConfirmation: "Sende Feedback...",
+            errorModal: false,
         };
+    }, 
+    methods: {
+        sendFeedback: function () {
+            this.feedbackWasSent = true;
+            this.$slack.chat.postMessage({
+                text: this.feedbackMessage,
+                channel: 'G011TKUKM3N',
+            })
+            .then(result => {
+                    this.feedbackConfirmation = "Wir haben dein Feedback erhalten - vielen Dank!";
+            })
+            .catch(error => {
+                    // handle error
+                    this.feedbackConfirmation = "Leider ist etwas beim Versenden deines Feedbacks schief gegangen, bitte wende dich an einen der oben genannten Supportkontakte!";
+                    this.errorModal = true;
+                    this.feedbackWasSent = false;
+                    console.log(error);
+            })                            
+        }
     }
 };
 </script>
