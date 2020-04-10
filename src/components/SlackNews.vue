@@ -35,13 +35,10 @@ export default {
         // the callback will be called immediately after the start of the observation
         immediate: true, 
         handler (val, oldVal) {
-            this.$slack.conversations.history({
-              channel: this.channel,
-              limit: this.limit,
-            })           
+            this.$http.get("https://76i3an3137.execute-api.eu-central-1.amazonaws.com/prod/slackbridge/news")           
             .then(response => {
               console.log(response);
-              this.list = response.messages.filter(function(msg) {                                          
+              this.list = response.data.messages.filter(function(msg) {                                          
                       return msg.subtype == undefined;
               });
               this.isLoaded = true;

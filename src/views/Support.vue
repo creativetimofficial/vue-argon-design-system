@@ -163,9 +163,12 @@ export default {
     methods: {
         sendFeedback: function () {
             this.feedbackWasSent = true;
-            this.$slack.chat.postMessage({
+            this.$http.post("https://hooks.slack.com/services/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", JSON.stringify({
                 text: this.feedbackMessage,
-                channel: 'G011TKUKM3N',
+            }),{
+                headers: {
+                    'Accept': 'application/json, text/plain, */*',
+                },
             })
             .then(result => {
                     this.feedbackConfirmation = "Wir haben dein Feedback erhalten - vielen Dank!";

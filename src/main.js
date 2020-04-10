@@ -47,10 +47,7 @@ conv.init_env();
 conv.replace_mode = 'unified';
 conv.allow_native = true;
 
-let slack = new WebClient("xoxb-1044770955159-1052490059798-1FtAEnMMYQiDOXu2SVlJQOhW");
-
 Object.defineProperty(Vue.prototype, '$emoji', { value: conv });
-Object.defineProperty(Vue.prototype, '$slack', { value: slack });
 
 new Vue({
   router,
