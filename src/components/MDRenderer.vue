@@ -35,14 +35,17 @@ export default {
   methods: {
     loadFile: function(fileId) {
           console.log("Loading "+fileId);
-          this.$http
-            .get('https://www.googleapis.com/drive/v3/files/'+fileId+'?key=AIzaSyDLASxmRzFM9QroycxD-MNfP0L1bwWx0Ec&mimeType=text%2Fplain&alt=media')
-            .then(response => {
-                console.log("File response"+response);
-                this.content = response.data;
+          this.$gapi.request({
+                path: 'https://www.googleapis.com/drive/v3/files/'+fileId,
+                method: 'GET',
+                params: {
+                    mimeType: "text/plain",
+                    alt: "media",
+                }
+            }).then(response => {
+                this.content = response.body;
                 this.isLoaded = true;
-            })
-            .catch(function (error) {
+            }).catch(function (error) {
                 // handle error
                 console.log(error);
             })

@@ -41,21 +41,24 @@ export default {
         // the callback will be called immediately after the start of the observation
         immediate: true, 
         handler (val, oldVal) {
-            this.$http
-                .get("https://www.googleapis.com/drive/v3/files/?key=AIzaSyDLASxmRzFM9QroycxD-MNfP0L1bwWx0Ec&q='"+val+"'%20in%20parents")
-                .then(response => {
-                    console.log(response);
-                    this.list = response.data.files;
-                    this.list.sort(function(a, b) {
-                        var textA = a.name.toUpperCase();
-                        var textB = b.name.toUpperCase();
-                        return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-                    });
-                })
-                .catch(function (error) {
-                    // handle error
-                    console.log(error);
-                })
+            this.$gapi.request({
+                path: 'https://www.googleapis.com/drive/v3/files/',
+                method: 'GET',
+                params: {
+                    q: "'"+val+"' in parents",
+                }
+            }).then(response => {
+                console.log(response);
+                this.list = response.result.files;
+                this.list.sort(function(a, b) {
+                    var textA = a.name.toUpperCase();
+                    var textB = b.name.toUpperCase();
+                    return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+                });
+            }).catch(function (error) {
+                // handle error
+                console.log(error);
+            })
         }
     }
   },
