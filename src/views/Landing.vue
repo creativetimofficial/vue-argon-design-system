@@ -517,8 +517,8 @@
 </template>
 
 <script>
-import GettingStartedSlider from "../components/GettingStarted/GettingStartedSlider";
 import SlackNews from "../components/SlackNews";
+import GettingStartedSlider from "../components/GettingStarted/GettingStartedSlider";
 
 export default {
   name: "home",
