@@ -47,6 +47,9 @@
                         <a class="dropdown-item" href="https://hfggmuend.slack.com"><i class="fa fa-slack"></i>Slack <i class="fa fa-external-link-square"></i></a>
                         <a class="dropdown-item" href="https://hfggmuend.slack.com"><i class="fa fa-calendar"></i>Kalender <i class="fa fa-external-link-square"></i></a>
                         <a class="dropdown-item" href="https://hfggmuend.slack.com"><i class="fa fa-google-drive"></i>Drive <i class="fa fa-external-link-square"></i></a>
+                        <a class="dropdown-item" href="https://hfggmuend.slack.com" v-if="this.$store.state.detailsLoaded && this.$store.state.userDetails.customSchemas['App-Rechte'].ZoomLicense">
+                            <i class="fa fa-video-camera"></i>Zoom <i class="fa fa-external-link-square"></i>
+                        </a>
                         <hr/>
                         <a class="dropdown-item font-weight-bold" v-on:click="triggerSignOut">Abmelden</a>
                     </base-dropdown>
