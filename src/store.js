@@ -108,7 +108,7 @@ export default new Vuex.Store({
             .catch(err => {
                 context.commit('SET_LOGGED_OUT');
                 context.commit('SET_LOGGING_IN_STATUS', false);
-                console.error('Not signed in: %s', err.error)
+                console.error('Not signed in: %s', err)
             })
       },
       triggerLogout(context) {
@@ -118,7 +118,7 @@ export default new Vuex.Store({
                   console.log('Signed out as %s', user.name)
               })
               .catch(err => {
-                  console.error('Sign out error: %s', err.error)
+                  console.error('Sign out error: %s', err)
               })
       }
   },
