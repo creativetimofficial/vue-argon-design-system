@@ -32,7 +32,7 @@
                 </li>
             </ul>
             <ul class="navbar-nav align-items-lg-center ml-lg-auto">            
-                <li class="nav-item d-none d-lg-block ml-lg-2" v-if="!this.isSignedIn">
+                <li class="nav-item d-none d-lg-block ml-lg-2" v-if="!this.$store.state.isLoggedIn">
                     <a href="#/" rel="noopener"
                        class="btn btn-neutral btn-icon" v-on:click="triggerSignIn">
                         <span class="btn-inner--icon">
@@ -41,12 +41,15 @@
                     </a>
                 </li>
                 <li class="nav-item d-none d-lg-block" v-else>
-                    <span class="username">{{currentUser.firstname}}</span>
+                    <span class="username">{{this.$store.state.loggedInUser.firstname}}</span>
                     <base-dropdown class="nav-item" menu-classes="dropdown-menu-xl" :hideArrow="false">
                         <div slot="title" class="initialsMenu"><i class="ni ni-circle-08 usericon"></i></div>
                         <a class="dropdown-item" href="https://hfggmuend.slack.com"><i class="fa fa-slack"></i>Slack <i class="fa fa-external-link-square"></i></a>
                         <a class="dropdown-item" href="https://hfggmuend.slack.com"><i class="fa fa-calendar"></i>Kalender <i class="fa fa-external-link-square"></i></a>
                         <a class="dropdown-item" href="https://hfggmuend.slack.com"><i class="fa fa-google-drive"></i>Drive <i class="fa fa-external-link-square"></i></a>
+                        <a class="dropdown-item" href="https://hfggmuend.slack.com" v-if="this.$store.state.detailsLoaded && this.$store.state.userDetails.customSchemas['App-Rechte'].ZoomLicense">
+                            <i class="fa fa-video-camera"></i>Zoom <i class="fa fa-external-link-square"></i>
+                        </a>
                         <hr/>
                         <a class="dropdown-item font-weight-bold" v-on:click="triggerSignOut">Abmelden</a>
                     </base-dropdown>
@@ -66,66 +69,16 @@ export default {
     CloseButton,
     BaseDropdown
   },  
-  data () {
-    return {
-      isSignedIn: false,
-      currentUser: {},
-    }
-  },
-
   methods: {
     triggerSignIn: function () {
-        this.$gapi.signIn()
-            .then(user => {
-                this.currentUser = user;
-                this.isSignedIn = true;
-                console.log(user);
-                console.log('Signed in as %s', user.name)
-            })
-            .catch(err => {
-                this.currentUser = null;
-                this.isSignedIn = false;
-                console.error('Not signed in: %s', err.error)
-            })
+        this.$store.dispatch('triggerLogin')
     },
     triggerSignOut: function () {
-        this.$gapi.signOut()
-            .then(user => {
-                this.currentUser = null;
-                this.isSignedIn = false;
-                console.log('Signed in as %s', user.name)
-            })
-            .catch(err => {
-                console.error('Not signed in: %s', err.error)
-            })
+        this.$store.dispatch('triggerLogout')
     }
   },
   mounted(){
-    this.$gapi.isSignedIn()
-    .then(result => {
-        this.isSignedIn = result;
-        console.log(result ? 'Check: Signed in' : 'Check: Signed out');
-        if(result) {
-            this.$gapi.currentUser()
-            .then(user => {
-                if (user) {
-                    this.currentUser = user;
-                } else {
-                console.log('No user is connected.')
-                }
-            })
-        }
-    })
-  },
-  computed: {
-    initials: function () {
-      if(this.currentUser.name == undefined) return "";
-      return this.currentUser.name.split(' ')[0][0]+this.currentUser.name.split(' ')[1][0];
-    },
-    firstname: function() {
-      if(this.currentUser.name == undefined) return "";
-      return this.currentUser.name.split(' ')[0];
-    }
+    this.$store.dispatch('triggerUserGAPI');
   },
 }
 </script>

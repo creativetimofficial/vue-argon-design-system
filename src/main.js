@@ -28,11 +28,15 @@ import Emoji from 'emoji-js';
 const { WebClient } = require('@slack/web-api');
 
 import './registerServiceWorker';
+import store from './store'
 
 const config = {
-  apiKey: 'AIzaSyDLASxmRzFM9QroycxD-MNfP0L1bwWx0Ec',
   clientId: '678304282895-j9do95s9dt0kvh4no3ng2ll1e82kcvt8.apps.googleusercontent.com',
-  scope: 'profile email https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/drive'
+  scope: 'profile email '+ 
+          'https://www.googleapis.com/auth/calendar '+
+          'https://www.googleapis.com/auth/admin.directory.user.readonly '+ 
+          'https://www.googleapis.com/auth/drive '+
+          'https://www.googleapis.com/auth/userinfo.profile'
 }
 
 Vue.config.productionTip = false;
@@ -51,5 +55,6 @@ Object.defineProperty(Vue.prototype, '$emoji', { value: conv });
 
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount("#app");
