@@ -2,20 +2,11 @@
     <div>
 
         <div class="">
-            <!-- shape Hero -->
             <section class="section-shaped my-0 mb-200">
                 <div class="shape shape-default">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                   
                 </div>
-                <div class="container shape-container d-flex pb-5">
+                <div class="container shape-container d-flex">
                     <div class="col px-0">
                         <div class="row">
                             <div class="col-lg-12">
@@ -26,15 +17,38 @@
                         </div>
                     </div>
                 </div>
+                <div class="container shape-container d-flex" :class="this.$store.state.isLoggedIn ? '' : 'pb-5'">
+                    <div class="col px-0">
+                        <div class="row">
+                            <div class="col-lg-12 text-right">
+                                <Toolbar v-if="this.$store.state.isLoggedIn"></Toolbar>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <!-- 1st Hero Variation -->
         </div>
-        <section class="section section-lg pt-lg-0 mt-5">
+        <section class="section section-lg pt-lg-0 mt-5" v-if="!this.$store.state.isLoggedIn">
             <div class="container">
                 <div class="row">
                     <div class="col-sm">
                         <gettingStartedSlider :passGettingStartedCaptions="passGettingStartedCaptions" />
                     </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-lg pt-lg-0 mt-5" v-if="this.$store.state.isLoggedIn">
+            <div class="container ">
+                <h2>Next up</h2>
+                <br/>
+                <square v-if="!this.$store.state.eventsLoaded" class="spinner"></square>
+                <div class="row justify-content-center" v-if="this.$store.state.eventList.length > 0 && this.$store.state.eventsLoaded">
+                    <div class="col-lg-12">                        
+                        <Calendar></Calendar>
+                    </div>
+                </div>
+                <div v-else>
+                    <h5>Keine anstehenden Ereignisse</h5>
                 </div>
             </div>
         </section>
@@ -518,13 +532,17 @@
 
 <script>
 import SlackNews from "../components/SlackNews";
+import Calendar from "../components/Calendar";
 import gettingStartedSlider from "../components/gettingStarted/gettingStartedSlider";
+import Toolbar from "../components/Toolbar";
 
 export default {
   name: "home",
   components: {
       gettingStartedSlider,
-      SlackNews
+      SlackNews,
+      Calendar,
+      Toolbar,
   },
 
   data: function () {

@@ -8,8 +8,11 @@ export default new Vuex.Store({
       loggingIn: false,
       isLoggedIn: false,
       detailsLoaded: false,
+      eventsLoaded: false,
       loggedInUser: {},
       userDetails: {},
+      calendarList: [],
+      eventList: [],
   },
   mutations: {
       SET_LOGGED_IN(state, user) {
@@ -26,8 +29,14 @@ export default new Vuex.Store({
       SET_USER_DETAILS_FROM_API(state, details) {
         state.detailsLoaded = true;
         state.userDetails = details;
-      }
-
+      },
+      SET_CAL_LIST_FROM_API(state, list) {
+        state.calendarList = list;
+      },
+      SET_EVENT_LIST_FROM_API(state, list) {
+        state.eventList = list;
+        state.eventsLoaded = true;
+      },
   },
   actions: {
       triggerUserGAPI(context) {
@@ -53,11 +62,34 @@ export default new Vuex.Store({
           })
       },
       triggerUserDetailsUpdate(context) {
+        //Profile info
         this._vm.$gapi.request({
           path: 'https://www.googleapis.com/admin/directory/v1/users/'+this.state.loggedInUser.id+'?projection=full&viewType=domain_public',
           method: 'GET',          
         }).then(response => {
             context.commit('SET_USER_DETAILS_FROM_API', response.result)
+            console.log(response);             
+        }).catch(function (error) {
+            console.log(error);
+        })
+
+        //Calendar list
+        this._vm.$gapi.request({
+          path: 'https://www.googleapis.com/calendar/v3/users/me/calendarList',
+          method: 'GET',          
+        }).then(response => {
+            context.commit('SET_CAL_LIST_FROM_API', response.result.items)
+            console.log(response);             
+        }).catch(function (error) {
+            console.log(error);
+        })
+
+        //Primary calendar events
+        this._vm.$gapi.request({
+          path: 'https://www.googleapis.com/calendar/v3/calendars/'+this.state.loggedInUser.email+'/events?maxResults=10&singleEvents=true',
+          method: 'GET',          
+        }).then(response => {
+            context.commit('SET_EVENT_LIST_FROM_API', response.result.items)
             console.log(response);             
         }).catch(function (error) {
             console.log(error);
@@ -76,7 +108,7 @@ export default new Vuex.Store({
             .catch(err => {
                 context.commit('SET_LOGGED_OUT');
                 context.commit('SET_LOGGING_IN_STATUS', false);
-                console.error('Not signed in: %s', err.error)
+                console.error('Not signed in: %s', err)
             })
       },
       triggerLogout(context) {
@@ -86,7 +118,7 @@ export default new Vuex.Store({
                   console.log('Signed out as %s', user.name)
               })
               .catch(err => {
-                  console.error('Sign out error: %s', err.error)
+                  console.error('Sign out error: %s', err)
               })
       }
   },
