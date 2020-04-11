@@ -1,17 +1,4 @@
 <template>
-    <!-- <ul id="example-2">        
-        <li v-for="(item, index) in list" 
-            v-bind:key="index" 
-            v-on:click="navigateTo(item.id, item.mimeType)" 
-            v-bind:class="[showMimes.indexOf(item.mimeType) != -1 ? '' : 'd-none']">
-            <span v-bind:class="[item.mimeType == 'application/vnd.google-apps.folder' ? 'folder' : 'doc']">
-                <span v-if="item.mimeType=='application/vnd.google-apps.folder'">📁</span>
-                <span v-else>📄</span>            
-                {{ item.name }}
-            </span>
-            <GDriveSubnav v-if="item.mimeType=='application/vnd.google-apps.folder'" :level="level+1" :folder="item.id" v-on:navigate-to="navigateTo"></GDriveSubnav>
-        </li>
-    </ul> -->
     <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
         <div class="card" v-for="(item, index) in list" v-bind:key="index">
             <div class="card-header">
@@ -112,11 +99,11 @@ export default {
 };
 </script>
 <style scoped>
-li {
-    list-style-type: none;
-    font-weight: 500;
-    cursor: pointer;
-}
+    li {
+        list-style-type: none;
+        font-weight: 500;
+        cursor: pointer;
+    }
 
     .doc {
         color:black;        
