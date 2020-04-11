@@ -29,7 +29,7 @@
             </section>
             <!-- 1st Hero Variation -->
         </div>
-        <section class="section section-lg pt-lg-0 mt-5">
+        <section class="section section-lg pt-lg-0 mt-5" v-if="!this.$store.state.isLoggedIn">
             <div class="container">
                 <div class="row">
                     <div class="col-sm">
@@ -38,13 +38,18 @@
                 </div>
             </div>
         </section>
-        <section class="section section-lg pt-lg-0 mt-5 card bg-white shadow border-0">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm">
-                        <h2>Mein Kalender</h2>
+        <section class="section section-lg pt-lg-0 mt-5" v-if="this.$store.state.isLoggedIn">
+            <div class="container ">
+                <h2>Next up</h2>
+                <br/>
+                <square v-if="!this.$store.state.eventsLoaded" class="spinner"></square>
+                <div class="row justify-content-center" v-if="this.$store.state.eventList.length > 0 && this.$store.state.eventsLoaded">
+                    <div class="col-lg-12">                        
                         <Calendar></Calendar>
                     </div>
+                </div>
+                <div v-else>
+                    <h5>Keine anstehenden Ereignisse</h5>
                 </div>
             </div>
         </section>

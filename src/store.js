@@ -8,6 +8,7 @@ export default new Vuex.Store({
       loggingIn: false,
       isLoggedIn: false,
       detailsLoaded: false,
+      eventsLoaded: false,
       loggedInUser: {},
       userDetails: {},
       calendarList: [],
@@ -34,6 +35,7 @@ export default new Vuex.Store({
       },
       SET_EVENT_LIST_FROM_API(state, list) {
         state.eventList = list;
+        state.eventsLoaded = true;
       },
   },
   actions: {
