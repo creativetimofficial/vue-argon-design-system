@@ -7,7 +7,9 @@ export default new Vuex.Store({
   state: {
       loggingIn: false,
       isLoggedIn: false,
+      detailsLoaded: false,
       loggedInUser: {},
+      userDetails: {},
   },
   mutations: {
       SET_LOGGED_IN(state, user) {
@@ -20,7 +22,12 @@ export default new Vuex.Store({
       },
       SET_LOGGING_IN_STATUS(state, loggingIn) {
         state.loggingIn = loggingIn;
+      },
+      SET_USER_DETAILS_FROM_API(state, details) {
+        state.detailsLoaded = true;
+        state.userDetails = details;
       }
+
   },
   actions: {
       triggerUserGAPI(context) {
@@ -32,6 +39,7 @@ export default new Vuex.Store({
                   .then(user => {
                       context.commit('SET_LOGGED_IN', user);
                       context.commit('SET_LOGGING_IN_STATUS', false);
+                      context.dispatch('triggerUserDetailsUpdate');
                   })
               } else {
                 context.commit('SET_LOGGED_OUT');
@@ -44,6 +52,17 @@ export default new Vuex.Store({
              console.error('Not signed in: %s', err.error)
           })
       },
+      triggerUserDetailsUpdate(context) {
+        this._vm.$gapi.request({
+          path: 'https://www.googleapis.com/admin/directory/v1/users/'+this.state.loggedInUser.id+'?projection=full&viewType=domain_public',
+          method: 'GET',          
+        }).then(response => {
+            context.commit('SET_USER_DETAILS_FROM_API', response.result)
+            console.log(response);             
+        }).catch(function (error) {
+            console.log(error);
+        })
+      },
       triggerLogin(context) {
          context.commit('SET_LOGGING_IN_STATUS', true);
          this._vm.$gapi.signIn()
@@ -52,6 +71,7 @@ export default new Vuex.Store({
                 context.commit('SET_LOGGING_IN_STATUS', false);
                 console.log(user);
                 console.log('Signed in as %s', user.name)
+                context.dispatch('triggerUserDetailsUpdate');
             })
             .catch(err => {
                 context.commit('SET_LOGGED_OUT');
