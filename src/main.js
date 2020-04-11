@@ -28,6 +28,7 @@ import Emoji from 'emoji-js';
 const { WebClient } = require('@slack/web-api');
 
 import './registerServiceWorker';
+import store from './store'
 
 const config = {
   apiKey: 'AIzaSyDLASxmRzFM9QroycxD-MNfP0L1bwWx0Ec',
@@ -51,5 +52,6 @@ Object.defineProperty(Vue.prototype, '$emoji', { value: conv });
 
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount("#app");

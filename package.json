@@ -24,7 +24,9 @@
     "vue-markdown": "^2.2.4",
     "vue-router": "^3.0.2",
     "vue-spinners": "^1.0.2",
-    "vue2-transitions": "^0.2.3"
+    "vue2-transitions": "^0.2.3",
+    "vuex": "^3.0.1",
+    "yarn": "^1.22.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",
