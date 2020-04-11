@@ -1,7 +1,20 @@
 <template>
     <div class="container">
-      <square v-if="!isLoaded" class="spinner"></square>
-      <div v-if="isLoaded">{{content}}</div>
+      <square v-if="this.$store.state.eventList.length == 0" class="spinner"></square>
+      <div v-if="this.$store.state.eventList.length > 0">
+        <h4>Nächste Events</h4>
+        <ul>        
+          <li v-for="(item, index) in this.$store.state.eventList" v-bind:key="index">
+              {{item.start.dateTime}}<br/>
+              {{item.summary}}<br/>
+              Organisiert von: {{item.organizer.displayName}}<br/>
+              Teilnehmer:<br/>
+              <div v-for="(att, indexAtt) in item.attendees"  v-bind:key="indexAtt">
+                  {{att.email}}
+              </div>
+          </li>
+        </ul>
+      </div>
     </div>
 </template>
 <script>
@@ -14,38 +27,17 @@ export default {
   props: {
   },
   data () {
-    return {
-      content: "Lade Inhalte",
-      isLoaded: false,
+    return {      
     }
   },
   watch: { 
-    file: function(newVal, oldVal) { // watch it
-        console.log('Prop changed: ', newVal, ' | was: ', oldVal)
-        this.isLoaded = false;
-        this.loadFile(newVal)
-    }
+    
   },
   methods: {
-    loadCals: function(fileId) {
-          console.log("Loading "+fileId);
-          this.$gapi.request({
-                path: 'https://www.googleapis.com/calendar/v3/users/me/calendarList',
-                method: 'GET',
-                params: {                    
-                }
-            }).then(response => {
-                console.log(response);
-                this.content = response.result.items;
-                this.isLoaded = true;
-            }).catch(function (error) {
-                // handle error
-                console.log(error);
-            })
-      }
+    
   },
   mounted() {
-    this.loadCals();
+
   },
 };
 </script>
