@@ -45,6 +45,7 @@
                 <div class="row justify-content-center" v-if="this.$store.state.eventList.length > 0 && this.$store.state.eventsLoaded">
                     <div class="col-lg-12">                        
                         <Calendar></Calendar>
+                        <CalendarAlt></CalendarAlt>
                     </div>
                 </div>
                 <div v-else>
@@ -533,6 +534,7 @@
 <script>
 import SlackNews from "../components/SlackNews";
 import Calendar from "../components/Calendar";
+import CalendarAlt from "../components/CalendarAlt";
 import gettingStartedSlider from "../components/gettingStarted/gettingStartedSlider";
 import Toolbar from "../components/Toolbar";
 
@@ -542,6 +544,7 @@ export default {
       gettingStartedSlider,
       SlackNews,
       Calendar,
+      CalendarAlt,
       Toolbar,
   },
 

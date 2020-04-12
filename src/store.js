@@ -127,5 +127,18 @@ export default new Vuex.Store({
       if(state.loggedInUser.firstname == undefined) return "";
       return state.loggedInUser.firstname;
     },
+    eventListAsVueCal: function(state) {
+      let tempList = [];
+      state.eventList.forEach(element => {
+        tempList.push({
+          start:new Date(element.start.dateTime),
+          end:new Date(element.end.dateTime),
+          title:element.summary,
+          content:element.organizer.displayName,
+        });
+      });
+      console.log(tempList);
+      return tempList;
+    }
   }
 })
