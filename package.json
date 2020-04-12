@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "serve:bs": "vue-cli-service serve:bs"
   },
   "dependencies": {
     "@slack/web-api": "^5.8.0",
@@ -36,6 +37,7 @@
     "@vue/cli-service": "^3.4.0",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
+    "vue-cli-plugin-browser-sync": "~1.0.0-rc5",
     "vue-template-compiler": "^2.6.6"
   }
 }

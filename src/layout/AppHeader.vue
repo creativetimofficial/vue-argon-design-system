@@ -6,13 +6,8 @@
                 <h3><span class="wm_hfg">hfg</span><span class="wm_dot">.</span><span class="wm_design">design</span></h3>
             </router-link>
 
-            <div class="row" slot="content-header" slot-scope="{closeMenu}">
-                <div class="col-6 collapse-brand">
-                    <a href="https://demos.creative-tim.com/vue-argon-design-system/documentation/">
-                        <img src="img/brand/blue.png">
-                    </a>
-                </div>
-                <div class="col-6 collapse-close">
+            <div class="row" slot="content-header" slot-scope="{closeMenu}">                
+                <div class="col-12 collapse-close">
                     <close-button @click="closeMenu"></close-button>
                 </div>
             </div>
@@ -32,7 +27,7 @@
                 </li>
             </ul>
             <ul class="navbar-nav align-items-lg-center ml-lg-auto">            
-                <li class="nav-item d-none d-lg-block ml-lg-2" v-if="!this.$store.state.isLoggedIn">
+                <li class="d-none d-lg-block ml-lg-2" v-if="!this.$store.state.isLoggedIn">
                     <a href="#/" rel="noopener"
                        class="btn btn-neutral btn-icon" v-on:click="triggerSignIn">
                         <span class="btn-inner--icon">
@@ -40,14 +35,14 @@
                         Login</span>
                     </a>
                 </li>
-                <li class="nav-item d-none d-lg-block" v-else>
+                <li class="d-none d-block" v-else>
                     <span class="username">{{this.$store.state.loggedInUser.firstname}}</span>
-                    <base-dropdown class="nav-item" menu-classes="dropdown-menu-xl" :hideArrow="false">
+                    <base-dropdown class="dropdown" :hideArrow="false">
                         <div slot="title" class="initialsMenu"><i class="ni ni-circle-08 usericon"></i></div>
                         <a class="dropdown-item" href="https://hfggmuend.slack.com"><i class="fa fa-slack"></i>Slack <i class="fa fa-external-link-square"></i></a>
                         <a class="dropdown-item" href="https://hfggmuend.slack.com"><i class="fa fa-calendar"></i>Kalender <i class="fa fa-external-link-square"></i></a>
-                        <a class="dropdown-item" href="https://hfggmuend.slack.com"><i class="fab fa-google-drive"></i>Drive <i class="fa fa-external-link-square"></i></a>
-                        <a class="dropdown-item" href="https://hfggmuend.slack.com" v-if="this.$store.state.detailsLoaded && this.$store.state.userDetails.customSchemas['App-Rechte'].ZoomLicense">
+                        <a class="dropdown-item" href="https://hfggmuend.slack.com"><i class="fab fa-hdd-o"></i>Drive <i class="fa fa-external-link-square"></i></a>
+                        <a class="dropdown-item" href="https://hfggmuend.slack.com" v-if="this.$store.state.detailsLoaded && this.$store.getters.appRechte.ZoomLicense">
                             <i class="fa fa-video-camera"></i>Zoom <i class="fa fa-external-link-square"></i>
                         </a>
                         <hr/>
@@ -122,5 +117,12 @@ export default {
  .wm_design {
      font-weight: 100;
      color:white;
+ }
+ .nav-item {
+     font-weight: 200;
+     margin-left:2rem;
+ }
+ .dropdown {
+     /*background-color: white;*/
  }
 </style>

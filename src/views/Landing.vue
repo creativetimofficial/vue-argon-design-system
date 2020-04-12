@@ -1,18 +1,14 @@
 <template>
     <div>
-
         <div class="">
             <section class="section-shaped my-0 mb-200">
-                <div class="shape shape-default">
-                   
+                <div class="shape shape-default">          
                 </div>
                 <div class="container shape-container d-flex">
                     <div class="col px-0">
                         <div class="row">
                             <div class="col-lg-12">
-                                <h2 class="">Digital Lernen<br>
-                                    an der HfG Schwäbisch Gmünd
-                                </h2>                         
+
                             </div>
                         </div>
                     </div>
@@ -20,7 +16,7 @@
                 <div class="container shape-container d-flex" :class="this.$store.state.isLoggedIn ? '' : 'pb-5'">
                     <div class="col px-0">
                         <div class="row">
-                            <div class="col-lg-12 text-right">
+                            <div class="col-sm-12 text-right">
                                 <Toolbar v-if="this.$store.state.isLoggedIn"></Toolbar>
                             </div>
                         </div>
@@ -37,15 +33,21 @@
                 </div>
             </div>
         </section>
-        <section class="section section-lg pt-lg-0 mt-5" v-if="this.$store.state.isLoggedIn">
-            <div class="container ">
-                <h2>Next up</h2>
-                <br/>
-                <square v-if="!this.$store.state.eventsLoaded" class="spinner"></square>
+        <section class="section section-lg pt-0 mt-5" v-if="this.$store.state.isLoggedIn">
+            <div class="container ">               
                 <div class="row justify-content-center" v-if="this.$store.state.eventList.length > 0 && this.$store.state.eventsLoaded">
-                    <div class="col-lg-12">                        
-                        <Calendar></Calendar>
-                        <CalendarAlt></CalendarAlt>
+                    <div class="col-12 col-md-6">
+                        <h3>Next up</h3>
+                        <br/>
+                        <square v-if="!this.$store.state.eventsLoaded" class="spinner"></square>                        
+                        <Calendar :maxItems="3"></Calendar>                        
+                    </div>
+                    <div class="col-md-6">
+                        <h3>News</h3>
+                        <br/>
+                        <card class="border-0" shadow body-classes="">
+                            <SlackNews></SlackNews>
+                        </card>
                     </div>
                 </div>
                 <div v-else>
@@ -53,11 +55,23 @@
                 </div>
             </div>
         </section>
-        <section class="section section-lg pt-lg-0 mt-5 card bg-white shadow border-0">
+        <section class="section section-lg pt-0 mt-5" v-if="this.$store.state.isLoggedIn">
+            <div class="container">
+                <h3>Vorlesungskalender</h3>
+                <br/>
+                <square v-if="!this.$store.state.eventsLoaded" class="spinner"></square>
+                <div class="row justify-content-center ml-1 mr-1">
+                    <div class="col-12">                        
+                        <CalendarAlt></CalendarAlt>
+                    </div>
+                </div>                
+            </div>
+        </section>
+        <section class="section section-lg pt-lg-0 mt-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm">
-                        <h2>Neues zum Portal</h2>
+                    <div class="col-sm-12">
+                        <h2>News</h2>
                         <SlackNews></SlackNews>
                     </div>
                 </div>
@@ -569,3 +583,10 @@ export default {
   }
 };
 </script>
+<style scoped>
+    .motto {
+        color: #dadada;
+        font-weight: 200;
+        font-size: 2rem;
+    }
+</style>

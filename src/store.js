@@ -86,7 +86,7 @@ export default new Vuex.Store({
 
         //Primary calendar events
         this._vm.$gapi.request({
-          path: 'https://www.googleapis.com/calendar/v3/calendars/'+this.state.loggedInUser.email+'/events?maxResults=10&singleEvents=true',
+          path: 'https://www.googleapis.com/calendar/v3/calendars/'+this.state.loggedInUser.email+'/events?singleEvents=true&orderBy=startTime',
           method: 'GET',          
         }).then(response => {
             context.commit('SET_EVENT_LIST_FROM_API', response.result.items)
@@ -127,6 +127,16 @@ export default new Vuex.Store({
       if(state.loggedInUser.firstname == undefined) return "";
       return state.loggedInUser.firstname;
     },
+    appRechte: function(state) {
+      try {
+        return state.userDetails.customSchemas['App-Rechte'];
+      } catch (error) {
+        return { 
+          //Default app rights          
+          ZoomLicense: false 
+        }
+      }
+    },
     eventListAsVueCal: function(state) {
       let tempList = [];
       state.eventList.forEach(element => {
@@ -135,6 +145,8 @@ export default new Vuex.Store({
           end:new Date(element.end.dateTime),
           title:element.summary,
           content:element.organizer.displayName,
+          link:element.htmlLink,
+          location:element.location,
         });
       });
       console.log(tempList);

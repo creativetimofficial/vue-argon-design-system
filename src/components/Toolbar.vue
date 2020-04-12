@@ -4,7 +4,7 @@
       <a class="" href="https://hfggmuend.slack.com"><icon name="fa fa-calendar"></icon></a>
       <a class="" href="https://hfggmuend.slack.com"><icon name="fa fa-envelope"></icon></a>
       <a class="" href="https://hfggmuend.slack.com"><icon name="fa fa-hdd-o"></icon></a>
-      <a class="" href="https://hfggmuend.slack.com" v-if="this.$store.state.detailsLoaded && this.$store.state.userDetails.customSchemas['App-Rechte'].ZoomLicense">
+      <a class="" href="https://hfggmuend.slack.com" v-if="this.$store.state.detailsLoaded && this.$store.getters.appRechte.ZoomLicense">
           <icon name="fa fa-video-camera"></icon>
       </a>
     </div>
