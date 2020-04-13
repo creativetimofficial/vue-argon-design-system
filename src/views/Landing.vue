@@ -36,7 +36,7 @@
                             <a href="https://app.slack.com/client/T011ANNU34P/C011L916GHZ">#announcements</a>
                         </h3>
                         <br/>
-                        <card class="border-0" shadow body-classes="" style="max-height:490px; overflow-y:scroll;">
+                        <card class="border-0" shadow body-classes="" style="max-height:490px; min-height:490px; overflow-y:scroll;">
                             <SlackNews></SlackNews>
                         </card>
                     </div>

@@ -6,7 +6,6 @@
          :time-step="15"
          :time-cell-height="15"
          :disable-views="['years', 'year', 'month']"
-         hide-weekends
          :events="this.$store.getters.eventListAsVueCal"
          :on-event-click="onEventClick"
          locale="de"
