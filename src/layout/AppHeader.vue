@@ -13,10 +13,10 @@
             </div>
 
             <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <router-link to="/">Start</router-link>
-                </li>                
-                <li class="nav-item">
+                </li> -->
+                <li class="nav-item" v-if="this.$store.state.isLoggedIn">
                     <router-link to="knowledgebase">Knowledgebase</router-link>
                 </li>
                 <li class="nav-item">
@@ -25,6 +25,9 @@
                 <li class="nav-item">
                     <router-link to="datenschutz">Datenschutz</router-link>
                 </li>
+                <!-- <li class="nav-item">
+                    <router-link to="datenschutz">Impressum</router-link>
+                </li> -->
             </ul>
             <ul class="navbar-nav align-items-lg-center ml-lg-auto">            
                 <li class="d-none d-lg-block ml-lg-2" v-if="!this.$store.state.isLoggedIn">
@@ -37,20 +40,13 @@
                 </li>
                 <li class="d-none d-block" v-else>
                     <span class="username">{{this.$store.state.loggedInUser.firstname}}</span>
-                    <base-dropdown class="dropdown" :hideArrow="false">
-                        <div slot="title" class="initialsMenu"><i class="ni ni-circle-08 usericon"></i></div>
-                        <a class="dropdown-item" href="https://hfggmuend.slack.com"><i class="fa fa-slack"></i>Slack <i class="fa fa-external-link-square"></i></a>
-                        <a class="dropdown-item" href="https://hfggmuend.slack.com"><i class="fa fa-calendar"></i>Kalender <i class="fa fa-external-link-square"></i></a>
-                        <a class="dropdown-item" href="https://hfggmuend.slack.com"><i class="fab fa-hdd-o"></i>Drive <i class="fa fa-external-link-square"></i></a>
-                        <a class="dropdown-item" href="https://hfggmuend.slack.com" v-if="this.$store.state.detailsLoaded && this.$store.getters.appRechte.ZoomLicense">
-                            <i class="fa fa-video-camera"></i>Zoom <i class="fa fa-external-link-square"></i>
-                        </a>
-                        <hr/>
+                    <base-dropdown class="dropdown" position="right" :hideArrow="false">
+                        <div slot="title" class="initialsMenu"><i class="ni ni-circle-08 usericon"></i></div>                        
                         <a class="dropdown-item font-weight-bold" v-on:click="triggerSignOut">Abmelden</a>
                     </base-dropdown>
                 </li>
             </ul>
-        </base-nav>
+        </base-nav>         
     </header>
 </template>
 <script>
@@ -121,8 +117,5 @@ export default {
  .nav-item {
      font-weight: 200;
      margin-left:2rem;
- }
- .dropdown {
-     /*background-color: white;*/
  }
 </style>

@@ -106,7 +106,7 @@
   }
 
   .vlcal .vuecal .vuecal__event {
-    background-color: white !important;
+    background-color: white;
     text-align: left;
   }
   .vuecal__event {
@@ -140,5 +140,13 @@
   .vuecal__cell {
     padding-right:1px;
     padding-left:1px;
+  }
+
+  .vlcal .vuecal .cal_solo {
+    background-color: rgba(17, 205, 239, 0.45)
+  }
+
+  .vlcal .cal_solo * {
+    color:gray;
   }
 </style>
