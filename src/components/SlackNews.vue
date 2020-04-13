@@ -65,7 +65,7 @@ export default {
 </script>
 <style scoped>
     .slackNewsList {
-      margin-top: 3rem;
+      margin-top: 0rem;
       padding-left: 0;
     }
     .slackNewsList li {

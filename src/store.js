@@ -147,6 +147,7 @@ export default new Vuex.Store({
           content:element.organizer.displayName,
           link:element.htmlLink,
           location:element.location,
+          class:element.attendees != undefined ? 'cal_group' : 'cal_solo' ,
         });
       });
       console.log(tempList);
