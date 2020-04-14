@@ -18,10 +18,11 @@ export default {
   },  
 };
 </script>
-<style scoped>
+<style>
   .toolbar_wrapper, .toolbar_wrapper a {
-    font-size:11pt;
+    font-size:10pt;
     color:white;
+    font-weight: 400;
     margin-bottom: 1rem;
     vertical-align: baseline;
   }
@@ -31,10 +32,13 @@ export default {
   }
 
   .toolbar_wrapper a .icon-shape {
-    font-size:18pt;
     color:white;
     width:1.5rem;
     height:1.4rem;
     padding:0 !important;
+  }
+
+  .toolbar_wrapper .icon i.fa {
+    font-size:13pt !important;
   }
 </style>
