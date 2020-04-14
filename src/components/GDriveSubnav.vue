@@ -23,7 +23,7 @@
         
                 data-parent="#accordionEx"
             >
-            <GDriveSubnav v-if="item.mimeType=='application/vnd.google-apps.folder'" :level="level+1" :folder="item.id" v-on:navigate-to="navigateTo"></GDriveSubnav>
+            <GDriveSubSubnav v-if="item.mimeType=='application/vnd.google-apps.folder'" :level="level+1" :folder="item.id" v-on:navigate-to="navigateTo"></GDriveSubSubnav>
             </div>
         </div>
     </div> 

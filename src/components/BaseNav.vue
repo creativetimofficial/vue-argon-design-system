@@ -14,14 +14,26 @@
                     {{title}}
                 </a>
             </slot>
-            <navbar-toggle-button :toggled="toggled"
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- <navbar-toggle-button :toggled="toggled"
                                   :target="contentId"
                                   @click.native.stop="toggled = !toggled">
-            </navbar-toggle-button>
+            </navbar-toggle-button> -->
 
             <slot name="container-after"></slot>
 
-            <div class="collapse navbar-collapse" :class="{show: toggled}" :id="contentId" v-click-outside="closeMenu">
+            <div class="collapse navbar-collapse" :class="{show: toggled}" id="navbarNav" v-click-outside="closeMenu">
                 <div class="navbar-collapse-header">
                     <slot name="content-header" :close-menu="closeMenu"></slot>
                 </div>
