@@ -5,16 +5,20 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "serve:bs": "vue-cli-service serve:bs"
   },
   "dependencies": {
+    "@slack/web-api": "^5.8.0",
     "axios": "^0.19.2",
     "bootstrap-vue": "^2.0.4",
+    "emoji-js": "^3.5.0",
     "flatpickr": "^4.5.1",
     "nouislider": "^11.1.0",
     "register-service-worker": "^1.5.2",
     "vue": "^2.6.6",
     "vue-axios": "^2.1.5",
+    "vue-cal": "^3.2.0",
     "vue-flatpickr-component": "^8.1.1",
     "vue-google-api": "^0.2.0",
     "vue-google-oauth2": "^1.4.3",
@@ -22,7 +26,9 @@
     "vue-markdown": "^2.2.4",
     "vue-router": "^3.0.2",
     "vue-spinners": "^1.0.2",
-    "vue2-transitions": "^0.2.3"
+    "vue2-transitions": "^0.2.3",
+    "vuex": "^3.1.3",
+    "yarn": "^1.22.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",
@@ -31,6 +37,7 @@
     "@vue/cli-service": "^3.4.0",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
+    "vue-cli-plugin-browser-sync": "~1.0.0-rc5",
     "vue-template-compiler": "^2.6.6"
   }
 }
