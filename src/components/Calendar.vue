@@ -70,6 +70,9 @@
             ds <= d && d <= de :
             NaN
         );
+      },
+      isFuture: function(dateTime) {
+        return new Date(dateTime) > new Date();
       }
     },
     mounted() {
@@ -77,7 +80,10 @@
     },
     computed: {
       nextUpItems: function () {
-        return this.$store.state.eventList.slice(0, this.maxItems);
+        let future = this.$store.state.eventList.filter((event) => {
+          return this.isFuture(event.end.dateTime);
+        }); 
+        return future.slice(0, this.maxItems);
       }
     }
   };
