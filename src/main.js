@@ -34,9 +34,10 @@ const config = {
   key: 'AIzaSyDLASxmRzFM9QroycxD-MNfP0L1bwWx0Ec',
   clientId: '678304282895-j9do95s9dt0kvh4no3ng2ll1e82kcvt8.apps.googleusercontent.com',
   scope: 'profile email '+ 
-          'https://www.googleapis.com/auth/calendar '+
+          'https://www.googleapis.com/auth/calendar.events.readonly '+
+          'https://www.googleapis.com/auth/calendar.readonly '+
           'https://www.googleapis.com/auth/admin.directory.user.readonly '+ 
-          'https://www.googleapis.com/auth/drive '+
+          'https://www.googleapis.com/auth/drive.readonly '+
           'https://www.googleapis.com/auth/userinfo.profile'
 }
 

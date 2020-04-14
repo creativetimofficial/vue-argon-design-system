@@ -3,9 +3,9 @@
       <square v-if="!isLoaded" class="spinner"></square>
       <ul class="slackNewsList" v-if="isLoaded">        
           <li v-for="(item, index) in list" v-bind:key="index" v-on:click="navigateTo(item)">
+              <hr v-if="index !== 0"/>
               <div class="date">{{new Date(parseInt(item.ts.substring(0, item.ts.length - 7))*1000).toLocaleString()}}</div>
-              <div class="message">{{$emoji.replace_colons(item.text)}}</div>
-              <hr/>
+              <div class="message">{{$emoji.replace_colons(item.text)}}</div>              
           </li>
       </ul>
     </div>
