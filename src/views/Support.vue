@@ -4,8 +4,18 @@
         <section class="section section-lg pt-lg-0 mt-5">
             <div class="container">
                 <div class="row mb-lg">
+                    <div class="col-lg-12">
+                        <h2>Support rund um die digitale Lehre</h2>
+                    </div>
+                    <div class="col-lg-8 ml-auto">
+                        <br />
+                        <p>Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien. Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu unorthographisches Leben.</p>
+                    </div>
+                </div>
+
+                <div class="row mb-lg">
                     <div class="col-lg-4">
-                        <h2>Support</h2>
+                        <h2>Technischer Support</h2>
                     </div>
                     <div class="col-lg-8">
                         <p>
@@ -16,7 +26,22 @@
                     </div>
                 </div>
 
-                <ContactCard :passContactCardContent="passContactCardContent" />
+                <ContactCard :passContactCardContent="passTechSupport" />
+
+                <div class="row mb-lg mt-5">
+                    <div class="col-lg-4">
+                        <h2>Organisatorischer Support</h2>
+                    </div>
+                    <div class="col-lg-8">
+                        <p>
+                            <strong>Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans.</strong>
+                        </p>
+                        <br />
+                        <p>Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien. Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu unorthographisches Leben.</p>
+                    </div>
+                </div>
+
+                <ContactCard :passContactCardContent="passOrgaSupport" />
             </div>
         </section>
 
@@ -86,27 +111,7 @@ export default {
 
     data: function() {
         return {
-            passContactCardContent: [
-                {
-                    supportTeam: "AM-Support",
-                    name: "Julia Wittich",
-                    email: "am-support@hfg.design",
-                    slack: "am-support",
-                    tel: "07171 / 609 000",
-                    reach1: "9:00 – 12:00 Uhr",
-                    reach2: "13:00 – 16:00 Uhr",
-                    imgPath: "img/support/team/am-support.jpg"
-                },
-                {
-                    supportTeam: "Technischer Support",
-                    name: "Aiko Scheuvens",
-                    email: "tech-support@hfg.design",
-                    slack: "tech-support",
-                    tel: "07171 / 609 000",
-                    reach1: "9:00 – 12:00 Uhr",
-                    reach2: "13:00 – 16:00 Uhr",
-                    imgPath: "img/support/team/tech-support.jpg"
-                },
+            passTechSupport: [
                 {
                     supportTeam: "User Support",
                     name: "Steffen Mitschelen",
@@ -115,7 +120,8 @@ export default {
                     tel: "07171 / 609 000",
                     reach1: "9:00 – 12:00 Uhr",
                     reach2: "13:00 – 16:00 Uhr",
-                    imgPath: "img/support/team/user-support-1.jpg"
+                    imgPath: "img/support/team/user-support-1.jpg",
+                    question: "Wie melde ich mich mit hfg.design an?"
                 },
                 {
                     supportTeam: "User Support",
@@ -125,7 +131,32 @@ export default {
                     tel: "07171 / 609 000",
                     reach1: "9:00 – 12:00 Uhr",
                     reach2: "13:00 – 16:00 Uhr",
-                    imgPath: "img/support/team/user-support-2.jpg"
+                    imgPath: "img/support/team/user-support-2.jpg",
+                    question: "Wie melde ich mich mit hfg.design an?"
+                },
+                {
+                    supportTeam: "Hardware Support",
+                    name: "Aiko Scheuvens",
+                    email: "tech-support@hfg.design",
+                    slack: "tech-support",
+                    tel: "07171 / 609 000",
+                    reach1: "9:00 – 12:00 Uhr",
+                    reach2: "13:00 – 16:00 Uhr",
+                    imgPath: "img/support/team/tech-support.jpg",
+                    question: "Warum geht meine Webcam nicht?"
+                }
+            ],
+            passOrgaSupport: [
+                {
+                    supportTeam: "AM-Support",
+                    name: "Julia Wittich",
+                    email: "am-support@hfg.design",
+                    slack: "am-support",
+                    tel: "07171 / 609 000",
+                    reach1: "9:00 – 12:00 Uhr",
+                    reach2: "13:00 – 16:00 Uhr",
+                    imgPath: "img/support/team/am-support.jpg",
+                    question: "Hilfe, wann findet mein Kurs statt?"
                 }
             ],
             feedbackMessage: "",
