@@ -72,4 +72,8 @@ export default {
   .mddocument img {
     max-width:100%;
   }
+
+  .mddocument a {
+    text-decoration: underline;
+  }
 </style>
