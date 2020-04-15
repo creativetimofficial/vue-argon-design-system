@@ -161,6 +161,8 @@ export default new Vuex.Store({
               console.log(response);
               if(response.data != "") {
                 context.commit('SET_USER_TOS_VERSION', response.data.toshash);
+              } else {
+                context.commit('SET_USER_TOS_VERSION', "invalid");
               }
               console.log(response);
           }).catch(function (error) {
