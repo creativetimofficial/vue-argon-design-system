@@ -25,7 +25,6 @@ import VueAxios from 'vue-axios';
 import VueSpinners from 'vue-spinners';
 import VueGoogleApi from 'vue-google-api';
 import Emoji from 'emoji-js';
-const { WebClient } = require('@slack/web-api');
 
 import './registerServiceWorker';
 import store from './store'

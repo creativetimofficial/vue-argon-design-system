@@ -1,7 +1,7 @@
 <template>
-    <div class="container">
+    <div class="mdcontainer">
       <square v-if="!isLoaded" class="spinner"></square>
-      <vue-markdown v-if="isLoaded" :source="content"></vue-markdown>
+      <vue-markdown v-if="isLoaded" :source="content" class="mddocument"></vue-markdown>
     </div>
 </template>
 <script>
@@ -26,10 +26,14 @@ export default {
     }
   },
   watch: { 
-    file: function(newVal, oldVal) { // watch it
-        console.log('Prop changed: ', newVal, ' | was: ', oldVal)
-        this.isLoaded = false;
-        this.loadFile(newVal)
+   file: {
+        // the callback will be called immediately after the start of the observation
+        immediate: true,
+        handler (newVal, oldVal) { // watch it
+          console.log('Prop changed: ', newVal, ' | was: ', oldVal)
+          this.isLoaded = false;
+          this.loadFile(newVal)
+        }
     }
   },
   methods: {
@@ -45,6 +49,7 @@ export default {
             }).then(response => {
                 this.content = response.body;
                 this.isLoaded = true;
+                console.log("LOADED!");
             }).catch(function (error) {
                 // handle error
                 console.log(error);
@@ -53,13 +58,18 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style>
   .spinner {
     display: block;
     margin:auto;
   }
 
-  .container {
+  .mdcontainer {
     width:100%;
+    margin-left:5%;
+  }
+
+  .mddocument img {
+    max-width:100%;
   }
 </style>

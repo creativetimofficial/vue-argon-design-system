@@ -3,6 +3,8 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+const tosId = "1vyRnemezQCPbRLmJLyDCieKZNyE_GJrT";
+
 export default new Vuex.Store({
   state: {
       loggingIn: false,
@@ -13,6 +15,8 @@ export default new Vuex.Store({
       userDetails: {},
       calendarList: [],
       eventList: [],
+      tosVersion: "notset",
+      userTosVersion: "notset",
   },
   mutations: {
       SET_LOGGED_IN(state, user) {
@@ -37,6 +41,12 @@ export default new Vuex.Store({
         state.eventList = list;
         state.eventsLoaded = true;
       },
+      SET_TOS_VERSION(state, version) {
+        state.tosVersion = version;
+      },
+      SET_USER_TOS_VERSION(state, version) {
+        state.userTosVersion = version;
+      },
   },
   actions: {
       triggerUserGAPI(context) {
@@ -48,6 +58,8 @@ export default new Vuex.Store({
                   .then(user => {
                       context.commit('SET_LOGGED_IN', user);
                       context.commit('SET_LOGGING_IN_STATUS', false);
+                      context.dispatch('triggerGetTosStatus');
+                      context.dispatch('triggerTosRetrieval');
                       context.dispatch('triggerUserDetailsUpdate');
                   })
               } else {
@@ -103,6 +115,8 @@ export default new Vuex.Store({
                 context.commit('SET_LOGGING_IN_STATUS', false);
                 console.log(user);
                 console.log('Signed in as %s', user.name)
+                context.dispatch('triggerGetTosStatus');
+                context.dispatch('triggerTosRetrieval');
                 context.dispatch('triggerUserDetailsUpdate');
             })
             .catch(err => {
@@ -120,7 +134,40 @@ export default new Vuex.Store({
               .catch(err => {
                   console.error('Sign out error: %s', err)
               })
+      },
+      triggerTosRetrieval(context) {
+          this._vm.$gapi.request({
+              path: 'https://www.googleapis.com/drive/v3/files/'+tosId,
+              method: 'GET',
+              params: {
+                fields: "md5Checksum"
+              },
+          }).then(response => {
+              context.commit('SET_TOS_VERSION', response.result.md5Checksum);
+              console.log("LOADED TOS! Current hash: "+response.result.md5Checksum);
+          }).catch(function (error) {
+              // handle error
+              console.log(error);
+          })
+      },
+      triggerTosOnetimeAccept(context) {
+        context.commit('SET_USER_TOS_VERSION', "accepted");
+        context.commit('SET_TOS_VERSION', "accepted");
+      },
+      triggerGetTosStatus(context) {
+          this._vm.$http.get("https://76i3an3137.execute-api.eu-central-1.amazonaws.com/prod/accept-tos?uid="+this.state.loggedInUser.id).then(response => {
+              //
+              console.log("USERTOS RESPONSE for id "+this.state.loggedInUser.id);
+              console.log(response);
+              if(response.data != "") {
+                context.commit('SET_USER_TOS_VERSION', response.data.toshash);
+              }
+              console.log(response);
+          }).catch(function (error) {
+              console.log(error);
+          })
       }
+
   },
   getters: {
     initials: function (state) {
@@ -152,6 +199,14 @@ export default new Vuex.Store({
       });
       console.log(tempList);
       return tempList;
-    }
+    },
+    currentTosAccepted: function(state) {
+      console.log("Acc check: "+state.userTosVersion+" vs "+state.tosVersion);
+      if(state.tosVersion !== "notset" && state.userTosVersion !== "notset" && (state.tosVersion != state.userTosVersion)) {
+        console.log("Acc check false");
+        return false;
+      }
+      return true;
+    },    
   }
 })
