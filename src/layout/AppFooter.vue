@@ -4,7 +4,7 @@
            <div class="row row-grid align-items-center">
                 <div class="col-lg-6 mt-4">
                     <h3 class="text-info font-weight-light mb-2">Wir freuen uns über euer Feedback!</h3>
-                    <p class="mb-0 font-weight-light">Einfach hier eintippen und absenden - komplett anonym und direkt ans Team</p>
+                    <p class="mb-0 font-weight-light">Einfach hier eintippen und absenden – komplett anonym und direkt ans Team</p>
                 </div>
                 <div class="col-lg-6 mt-5">
                     <div class="" v-if="!feedbackWasSent">
