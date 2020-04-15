@@ -36,7 +36,7 @@
                             Next up
                         </h3>
                         <br/>
-                         <card class="border-0" shadow body-classes="" style="max-height:490px; min-height:490px; overflow-y:scroll;">
+                         <card class="border-0" shadow body-classes="" style="max-height:490px; min-height:490px;">
                             <h5>Keine anstehenden Ereignisse</h5>
                         </card>          
                     </div>
