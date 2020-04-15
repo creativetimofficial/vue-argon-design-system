@@ -45,54 +45,7 @@
             </div>
         </section>
 
-        <section class="section section-lg pt-lg-0">
-            <div class="container">
-                <div class="row mb-lg">
-                    <div class="col-lg-12">
-                        <h2>Feedback rund um das Portal</h2>
-                    </div>
-
-                    <div class="col-lg-8 ml-auto mt-5">
-                        <p>
-                            <strong>Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans.</strong>
-                        </p>
-                        <br />
-                        <p>Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien. Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu unorthographisches Leben.</p>
-                    </div>
-
-                    <div class="col-lg-8 ml-auto mt-4" v-if="!feedbackWasSent">
-                        <form>
-                            <textarea
-                                class="form-control text-default"
-                                id="exampleFormControlTextarea1"
-                                rows="3"
-                                placeholder="200 Zeichen"
-                                maxlength="200"
-                                v-model="feedbackMessage"                                
-                            ></textarea>
-
-                            <button type="button" class="btn btn-default float-right mt-3 bg-default text-white" v-on:click="sendFeedback()">Feedback</button>
-                        </form>
-                    </div>
-                    <div class="col-lg-8 ml-auto mt-4" v-if="feedbackWasSent">
-                        <base-alert type="secondary" icon="ni ni-check-bold">
-                            {{feedbackConfirmation}}
-                        </base-alert>
-                    </div>
-                    <modal :show="errorModal">
-                        <template slot="header">
-                            <h5 class="modal-title" id="exampleModalLabel">Fehler beim Versand</h5>
-                        </template>
-                        <div>
-                         {{feedbackConfirmation}}
-                        </div>
-                        <template slot="footer">
-                            <base-button type="secondary" @click="errorModal = false">Close</base-button>
-                        </template>
-                    </modal>
-                </div>
-            </div>
-        </section>
+      
     </div>
 </template>
 
