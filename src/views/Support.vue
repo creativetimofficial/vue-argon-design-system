@@ -7,8 +7,7 @@
                     <div class="col-lg-12">
                         <h2>Support rund um die digitale Lehre</h2>
                     </div>
-                    <div class="col-lg-8 ml-auto">
-                        <br />
+                    <div class="col-lg-8 ml-auto mt-4">
                         <p>Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien. Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu unorthographisches Leben.</p>
                     </div>
                 </div>
