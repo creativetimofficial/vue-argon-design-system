@@ -6,13 +6,15 @@
 
         <div class="carousel-inner">
             <div class="carousel-item" :class="{ 'active': index === 0 }" v-for="(caption, index) in captions" v-bind:key="index">
-                <img class="d-block w-100"
+                <div class="row">
+                <img class="d-block col-lg-7 width-100"
                     :src="getImgUrl(index)"
            
                     data-holder-rendered="true">
-                <div>
-                    <h5>{{caption.title}}</h5>
+                <div class="col-lg-5" style="margin-top: 30px;">
+                    <h4>{{caption.title}}</h4>
                     <p>{{caption.text}}</p>
+                </div>
                 </div>
             </div>
         </div>
@@ -47,11 +49,13 @@ export default {
     methods: {
         getImgUrl(index) {
             index ++;
-            return 'img/getting-started/getting-started-'+index+'.jpg'
+            return 'img/getting-started/getting-started-'+index+'.gif'
         }
     }
 };
 
 </script>
-<style>
+<style scroped>
+
+
 </style>

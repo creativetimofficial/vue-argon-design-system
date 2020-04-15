@@ -1,55 +1,64 @@
 <template>
     <div class="row">
         <div
-            class="col-md-6 col-lg-3 mb-5"
+            class="col-md-6 col-lg-4 mb-5"
             v-for="(datenschutzCard, index) in datenschutzCardContent"
             v-bind:key="index"
         >
-            <div class>
-                <img class="d-block w-100"
-                    :src="datenschutzCard.imgPath"
-                    data-holder-rendered="true">
-                <div class="pt-4">
-                    <div class="mt-3">
-                        <ul class="list-unstyled">
-                            <li class="py-2">
-                                <div class="d-flex align-items-center">
-                                    <h5 class="title">
-                                        <span class="d-block">{{datenschutzCard.supportTeam}}</span>
-                                        <small class="h6 text-muted">{{datenschutzCard.name}}</small>
-                                    </h5>
-                                </div>
-                            </li>
-                            <li class="py-2">
-                                <div class="d-flex align-items-center">
-                                    <i class="fa fa-envelope mr-2"></i>
-                                    <p class="mb-0">{{datenschutzCard.email}}</p>
-                                </div>
-                                <div class="d-flex align-items-center">
-                                    <i class="fa fa-slack mr-2"></i>
-                                    <p class="mb-0">{{datenschutzCard.slack}}</p>
-                                </div>
-                                <div class="d-flex align-items-center">
-                                    <i class="fa fa-phone mr-2"></i>
-                                    <p class="mb-0">{{datenschutzCard.tel}}</p>
-                                </div>
-                            </li>
-                            <li class="py-2">
-                                <div class="d-flex align-items-center">
-                                    <i class="fa fa-clock-o mr-2"></i>
-                                    <p class="mb-0">Mo. - Fr. {{datenschutzCard.reach1}}</p>
-                                </div>
-                                <div class="d-flex align-items-center">
-                                    <i class="fa fa-clock-o mr-2 text-white"></i>
-                                    <p class="mb-0">
-                                        <span class="text-white" style="margin-left: -7px">Mo. - Fr.</span> {{datenschutzCard.reach2}}
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
+            <!-- Card -->
+            <div class="card promoting-card">
+                <!-- Card content -->
+                <div class="card-body d-flex flex-row">
+                    <!-- Content -->
+                    <div>
+                        <!-- Title -->
+                        <h4 class="card-title font-weight-bold mb-2">{{datenschutzCard.title}}</h4>
+                        <!-- Subtitle -->
+                        <p class="card-text">{{datenschutzCard.desc}}</p>
+                    </div>
+                </div>
+
+                <!-- Card image -->
+                <div class="view overlay">
+                    <img
+                        class="card-img-top rounded-0"
+                        src="https://mdbootstrap.com/img/Photos/Horizontal/Food/full page/2.jpg"
+                        alt="Card image cap"
+                    />
+                    <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                </div>
+
+                <!-- Card content -->
+                <div class="card-body">
+                    <div class="collapse-content">
+                        <!-- Text -->
+                        <p
+                            class="card-text collapse"
+                            :id="'collapseContent'+index"
+                        >{{datenschutzCard.info}}</p>
+                        <!-- Button -->
+
+                        <!-- <a
+                            class="btn btn-flat red-text p-1 my-1 mr-0 mml-1 collapsed"
+                            data-toggle="collapse"
+                            :href="'#collapseContent'+index"
+                            aria-expanded="false"
+                            aria-controls="collapseContent"
+                        ></a> -->
+                        <button
+                            data-toggle="collapse"
+                            :href="'#collapseContent'+index"
+                            aria-expanded="false"
+                            aria-controls="collapseContent"
+                            type="button"
+                            class="btn btn-default mt-3 bg-default text-white"
+                        ></button>
                     </div>
                 </div>
             </div>
+            <!-- Card -->
         </div>
     </div>
 </template>
@@ -80,5 +89,27 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.collapse-content p:not(.show) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 3.65rem;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.collapse-content p {
+    hyphens: auto;
+}
+.collapse-content button {
+    font-size: 0.7rem;
+    border: none;
+}
+.collapse-content button.collapsed:after {
+    content: "Read More";
+}
+.collapse-content button:not(.collapsed):after {
+    content: "Read Less";
+}
 </style>

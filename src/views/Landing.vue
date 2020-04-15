@@ -85,19 +85,15 @@ export default {
   data: function () {
     return {
         passGettingStartedCaptions: [
-            { title: '1. Google-Mail Webseite aufrufen', text: 'Hier sollte der Vorgang beschrieben sein.' },
-            { title: '2. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
-            { title: '3. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
-            { title: '4. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
-            { title: '5. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
-            { title: '6. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
-            { title: '7. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
-            { title: '8. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
-            { title: '9. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
-            { title: '10. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
-            { title: '11. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
-            { title: '12. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
-            { title: '13. Passwort vergessen', text: 'Hier sollte der Vorgang beschrieben sein.' },
+            { title: '1. Webseite hfg.design aufrufen', text: 'Gehe auf die Webseite www.hfg.design und klicke rechts oben auf “Login”.' },
+            { title: '2. HfG.Design E-Mail-Adresse eingeben', text: 'Trage dort deine Adresse vorname.nachname@hfg.design an.' },
+            { title: '3. Passwort zurücksetzen', text: 'Ja, du hast dein Passwort zwar nicht vergessen, aber aktuell wurde dir ein zufälliges zugewiesen, das du und auch wir aber nicht kennen.' },
+            { title: '4. Andere Option wählen', text: 'Bitte wähle diese Option, um einen Code an deine HfG-Gmünd Emailadresse zusenden.' },
+            { title: '5. HfG-Gmuend.de E-Mail-Adresse eingeben', text: 'Gib deine HfG-Gmünd Emailadresse ein: vorname.nachname@hfg-gmuend.de. Klicke danach auf “Senden”.' },
+            { title: '6. Bestätigungs-Code per E-Mail', text: 'Du bekommst nun ein Email mit einem Bestätigungscode an deine vorname.nachname@hfg-gmuend.de Emailadresse zugeschickt. Wenn du dort eine Weiterleitung auf deine private Adresse eingerichtet hast, oder im ersten Semester bist, bekommst du diese auf deine private Emailadresse.' },
+            { title: '7. Bestätigungs-Code eingeben', text: 'Gib diesen Code nun im Browserfenster ein und klicke "Weiter".' },
+            { title: '8. Passwort für hfg.design festlegen', text: 'Bitte verwende kein Passwort, das du auch für andere Services nutzt, schon gar nicht das selbe wie für deinen @hfg-gmuend.de Emailaccount. Das Passwort sollte aus einer Kombination von Groß- und Kleinbbuchstaben, Zahlen und Ziffern bestehen. Du kannst - und solltest - dieses natürlich dann später immer wieder ändern.' },
+            { title: '9. Zugriff auf Google-Dienste', text: 'Bitte bestätige hiermit dem Portal den Zugriff auf deine Google-Dienste.' }
         ]
     }
   }

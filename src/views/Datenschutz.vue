@@ -14,6 +14,12 @@
                         <br />
                         <p>Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien. Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu unorthographisches Leben.</p>
                     </div>
+
+                </div>
+
+                <div class="row mt-5">
+
+                    <DatenschutzCard :passDatenschutzCardContent="passDatenschutzCardContent" />
                 </div>
 
            
@@ -40,44 +46,9 @@ export default {
         return {
             passDatenschutzCardContent: [
                 {
-                    supportTeam: "AM-Support",
-                    name: "Julia Wittich",
-                    email: "am-support@hfg.design",
-                    slack: "am-support",
-                    tel: "07171 / 609 000",
-                    reach1: "9:00 – 12:00 Uhr",
-                    reach2: "13:00 – 16:00 Uhr",
-                    imgPath: "img/support/team/am-support.jpg"
-                },
-                {
-                    supportTeam: "Technischer Support",
-                    name: "Aiko Scheuvens",
-                    email: "tech-support@hfg.design",
-                    slack: "tech-support",
-                    tel: "07171 / 609 000",
-                    reach1: "9:00 – 12:00 Uhr",
-                    reach2: "13:00 – 16:00 Uhr",
-                    imgPath: "img/support/team/tech-support.jpg"
-                },
-                {
-                    supportTeam: "User Support",
-                    name: "Steffen Mitschelen",
-                    email: "user-support@hfg.design",
-                    slack: "user-support",
-                    tel: "07171 / 609 000",
-                    reach1: "9:00 – 12:00 Uhr",
-                    reach2: "13:00 – 16:00 Uhr",
-                    imgPath: "img/support/team/user-support-1.jpg"
-                },
-                {
-                    supportTeam: "User Support",
-                    name: "Martin Schneider",
-                    email: "user-support@hfg.design",
-                    slack: "user-support",
-                    tel: "07171 / 609 000",
-                    reach1: "9:00 – 12:00 Uhr",
-                    reach2: "13:00 – 16:00 Uhr",
-                    imgPath: "img/support/team/user-support-2.jpg"
+                    title: "Personenbezogen",
+                    desc: "Mitarbeiter",
+                    info: "Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans."
                 }
             ],
             feedbackMessage: "",
@@ -110,3 +81,4 @@ export default {
     }
 };
 </script>
+
