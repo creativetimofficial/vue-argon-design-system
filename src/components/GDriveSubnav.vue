@@ -68,7 +68,7 @@ export default {
                 path: 'https://www.googleapis.com/drive/v3/files/',
                 method: 'GET',
                 params: {
-                    q: "'"+val+"' in parents",
+                    q: "'"+val+"' in parents and trashed = false",
                 }
             }).then(response => {
                 console.log(response); 

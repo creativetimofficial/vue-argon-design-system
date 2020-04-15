@@ -1,7 +1,7 @@
 <template>
     <div class="mdcontainer">
       <square v-if="!isLoaded" class="spinner"></square>
-      <vue-markdown v-if="isLoaded" :source="content" class="mddocument"></vue-markdown>
+      <vue-markdown v-if="isLoaded" :source="content" :linkify="false" class="mddocument"></vue-markdown>
     </div>
 </template>
 <script>
@@ -71,5 +71,9 @@ export default {
 
   .mddocument img {
     max-width:100%;
+  }
+
+  .mddocument a {
+    text-decoration: underline;
   }
 </style>
