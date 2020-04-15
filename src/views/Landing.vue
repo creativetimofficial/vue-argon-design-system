@@ -67,7 +67,7 @@
 import SlackNews from "../components/SlackNews";
 import Calendar from "../components/Calendar";
 import CalendarAlt from "../components/CalendarAlt";
-import gettingStartedSlider from "../components/gettingStarted/gettingStartedSlider";
+import gettingStartedSlider from "../components/GettingStarted/GettingStartedSlider";
 import Toolbar from "../components/Toolbar";
 import AppSubheader from "@/layout/AppSubheader"
 
