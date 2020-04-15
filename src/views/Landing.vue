@@ -18,8 +18,8 @@
         </section>
         <section class="section section-lg pt-0 mt-2" v-if="this.$store.state.isLoggedIn">
             <div class="container ">               
-                <div class="row justify-content-center" v-if="this.$store.state.eventList.length > 0 && this.$store.state.eventsLoaded">
-                    <div class="col-12 col-md-6">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-6"   v-if="this.$store.state.eventList.length > 0 && this.$store.state.eventsLoaded">
                         <h3>
                             <icon name="ni ni-button-play" type="default" rounded class="mb-1">
                                     </icon>&nbsp;&nbsp;
@@ -29,7 +29,18 @@
                         <square v-if="!this.$store.state.eventsLoaded" class="spinner"></square>                        
                         <Calendar :maxItems="3"></Calendar>                        
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-12 col-md-6" v-else>
+                        <h3>
+                            <icon name="ni ni-button-play" type="default" rounded class="mb-1">
+                                    </icon>&nbsp;&nbsp;
+                            Next up
+                        </h3>
+                        <br/>
+                         <card class="border-0" shadow body-classes="" style="max-height:490px; min-height:490px; overflow-y:scroll;">
+                            <h5>Keine anstehenden Ereignisse</h5>
+                        </card>          
+                    </div>
+                    <div class="col-12 col-md-6">
                         <h3>
                             <icon name="ni ni-spaceship" type="default" size="s" class="mb-1">
                                     </icon>&nbsp;&nbsp;
@@ -40,9 +51,6 @@
                             <SlackNews></SlackNews>
                         </card>
                     </div>
-                </div>
-                <div v-else>
-                    <h5>Keine anstehenden Ereignisse</h5>
                 </div>
             </div>
         </section>
