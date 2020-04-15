@@ -149,7 +149,11 @@ export default new Vuex.Store({
               // handle error
               console.log(error);
           })
-      },      
+      },
+      triggerTosOnetimeAccept(context) {
+        context.commit('SET_USER_TOS_VERSION', "accepted");
+        context.commit('SET_TOS_VERSION', "accepted");
+      },
       triggerGetTosStatus(context) {
           this._vm.$http.get("https://76i3an3137.execute-api.eu-central-1.amazonaws.com/prod/accept-tos?uid="+this.state.loggedInUser.id).then(response => {
               //
