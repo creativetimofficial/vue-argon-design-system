@@ -52,6 +52,11 @@
                             <a href="https://www.hfg-gmuend.de" class="nav-link" target="_blank" rel="noopener">Hochschul-Website</a>
                         </li>
                         <li class="nav-item">
+                            <router-link to="nutzungsvereinbarung" class="nav-link">
+                                Nutzungsvereinbarung
+                            </router-link>
+                        </li>
+                        <li class="nav-item">
                             <router-link to="impressum" class="nav-link">
                                 Impressum
                             </router-link>
