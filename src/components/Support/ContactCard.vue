@@ -26,11 +26,12 @@
                         <li class="py-2">
                             <div class="d-flex align-items-center">
                                 <i class="fa fa-envelope mr-2"></i>
-                                <p class="mb-0">{{contactCard.email}}</p>
+                                <p class="mb-0"><a :href="'mailto:'+contactCard.email">{{contactCard.email}}</a></p>
                             </div>
                             <div class="d-flex align-items-center">
                                 <i class="fa fa-slack mr-2"></i>
-                                <p class="mb-0">{{contactCard.slack}}</p>
+                                <p class="mb-0"><a :href="'https://hfggmuend.slack.com/app_redirect?channel='+contactCard.slack" target='_blank'>ask-helpdesk</a></p>
+                                <!--</p> -->
                             </div>
                             <div class="d-flex align-items-center">
                                 <i class="fa fa-phone mr-2"></i>

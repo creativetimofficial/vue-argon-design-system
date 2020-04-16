@@ -1,28 +1,54 @@
 <template>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-wrap="false" data-interval="false">
+    <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-ride="carousel"
+        data-wrap="false"
+        data-interval="false"
+    >
         <ol class="carousel-indicators">
-            <li v-for="(caption, index) in captions" v-bind:key="index" data-target="#carouselExampleIndicators" :class="{ 'active': index === 0 }"></li>
+            <li
+                v-for="(caption, index) in captions"
+                v-bind:key="index"
+                data-target="#carouselExampleIndicators"
+                :class="{ 'active': index === 0 }"
+            ></li>
         </ol>
 
         <div class="carousel-inner">
-            <div class="carousel-item" :class="{ 'active': index === 0 }" v-for="(caption, index) in captions" v-bind:key="index">
+            <div
+                class="carousel-item"
+                :class="{ 'active': index === 0 }"
+                v-for="(caption, index) in captions"
+                v-bind:key="index"
+            >
                 <div class="row">
-                <img class="d-block col-lg-7 width-100"
-                    :src="getImgUrl(index)"
-           
-                    data-holder-rendered="true">
-                <div class="col-lg-5" style="margin-top: 30px;">
-                    <h4>{{caption.title}}</h4>
-                    <p>{{caption.text}}</p>
-                </div>
+                    <div class="col-lg-7">
+                        <img class="img-fluid" :src="getImgUrl(index)" data-holder-rendered="true" />
+                    </div>
+                    
+                    <div class="col-lg-5" style="margin-top: 30px;">
+                        <h4>{{caption.title}}</h4>
+                        <p>{{caption.text}}</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <a
+            class="carousel-control-prev"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="prev"
+        >
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <a
+            class="carousel-control-next"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="next"
+        >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
@@ -48,14 +74,11 @@ export default {
     },
     methods: {
         getImgUrl(index) {
-            index ++;
-            return 'img/getting-started/getting-started-'+index+'.gif'
+            index++;
+            return "img/getting-started/getting-started-" + index + ".gif";
         }
     }
 };
-
 </script>
 <style scroped>
-
-
 </style>

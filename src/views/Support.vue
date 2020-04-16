@@ -67,8 +67,8 @@ export default {
                 {
                     supportTeam: "User Support",
                     name: "Steffen Mitschelen",
-                    email: "user-support@hfg.design",
-                    slack: "user-support",
+                    email: "steffen.mitschelen@hfg.design",
+                    slack: "C011RA4JY3C",
                     tel: "07171 / 609 000",
                     reach1: "9:00 – 12:00 Uhr",
                     reach2: "13:00 – 16:00 Uhr",
@@ -78,8 +78,8 @@ export default {
                 {
                     supportTeam: "User Support",
                     name: "Martin Schneider",
-                    email: "user-support@hfg.design",
-                    slack: "user-support",
+                    email: "martin.schneider@hfg.design",
+                    slack: "C011RA4JY3C",
                     tel: "07171 / 609 000",
                     reach1: "9:00 – 12:00 Uhr",
                     reach2: "13:00 – 16:00 Uhr",
@@ -89,8 +89,8 @@ export default {
                 {
                     supportTeam: "Hardware Support",
                     name: "Aiko Scheuvens",
-                    email: "tech-support@hfg.design",
-                    slack: "tech-support",
+                    email: "aiko.scheuvens@hfg.design",
+                    slack: "C011RA4JY3C",
                     tel: "07171 / 609 000",
                     reach1: "9:00 – 12:00 Uhr",
                     reach2: "13:00 – 16:00 Uhr",
@@ -102,8 +102,8 @@ export default {
                 {
                     supportTeam: "AM-Support",
                     name: "Julia Wittich",
-                    email: "am-support@hfg.design",
-                    slack: "am-support",
+                    email: "julia.wittich@hfg.design",
+                    slack: "C011RA4JY3C",
                     tel: "07171 / 609 000",
                     reach1: "9:00 – 12:00 Uhr",
                     reach2: "13:00 – 16:00 Uhr",
