@@ -24,9 +24,13 @@
             >
                 <div class="row">
                     <div class="col-lg-7">
-                        <img class="img-fluid" :src="getImgUrl(index)" data-holder-rendered="true" />
+                        <img
+                            class="img-fluid fit-image"
+                            :src="getImgUrl(index)"
+                            data-holder-rendered="true"
+                        />
                     </div>
-                    
+
                     <div class="col-lg-5" style="margin-top: 30px;">
                         <h4>{{caption.title}}</h4>
                         <p>{{caption.text}}</p>
@@ -81,4 +85,7 @@ export default {
 };
 </script>
 <style scroped>
+.fit-image {
+    object-fit: cover;
+}
 </style>

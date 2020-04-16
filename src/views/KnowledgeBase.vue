@@ -7,7 +7,7 @@
                     <div class="col-lg-4">
                         <GDriveSubnav folder="1gn2Fb9vJNO49cVPtfuKY1lzUCxaVgyUK" v-on:navigate-to="loadFile"></GDriveSubnav>
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 mt-5 mt-lg-0">
                         <div class="row row-grid">
                             <MDRenderer :file="currentFile"></MDRenderer>
                         </div>
