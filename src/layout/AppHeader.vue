@@ -1,38 +1,5 @@
 <template>
     <header class="header-global">
-        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">
-                            Home
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
-                    </li>
-                </ul>
-            </div>
-        </nav> -->
         <base-nav class="navbar-main bg-gradient-info" transparent type effect="light" expand>
             <router-link slot="brand" class="navbar-brand mr-lg-5" to="/">
                 <!-- <img src="img/brand/HfG_Logo.png" alt="logo"> -->
@@ -61,7 +28,7 @@
                 </li>-->
             </ul>
             <ul class="navbar-nav align-items-lg-center ml-lg-auto">
-                <li class="d-none d-lg-block ml-lg-2" v-if="!this.$store.state.isLoggedIn">
+                <li class="d-lg-block ml-lg-2 mt-3" v-if="!this.$store.state.isLoggedIn">
                     <a
                         href="#/"
                         rel="noopener"
@@ -107,6 +74,7 @@ export default {
         },
         triggerSignOut: function() {
             this.$store.dispatch("triggerLogout");
+            this.$router.push({ path: '/' })
         }
     },
     mounted() {

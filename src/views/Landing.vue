@@ -1,7 +1,7 @@
 <template>
     <div>
         <AppSubheader></AppSubheader>                      
-        <section class="section section-lg pt-lg-0 mt-5" v-if="!this.$store.state.isLoggedIn">
+        <section class="section section-sm pt-lg-0 mt-5" v-if="!this.$store.state.isLoggedIn">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 mb-4">
@@ -18,7 +18,7 @@
                     </div>
                 </div>
 
-                <div class="row mt-5">
+                <div class="row mt-lg">
                     <div class="col-sm">
                         <icon style="margin-left: -4rem;" name="ni ni-spaceship" type="default" size="s" class="mb-1 float-left"></icon >
                         <h2>

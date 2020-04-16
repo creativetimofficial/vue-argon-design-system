@@ -1,5 +1,5 @@
 <template>
-    <div class="" style="height:200px;">
+    <div class="" style="height:100px;">
             <section class="section-shaped my-0 mb-0">
                 <div class="shape bg-gradient-info">
                     <span></span>
