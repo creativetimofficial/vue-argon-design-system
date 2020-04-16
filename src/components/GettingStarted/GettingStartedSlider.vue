@@ -33,7 +33,7 @@
 
                     <div class="col-lg-5" style="margin-top: 30px;">
                         <h4>{{caption.title}}</h4>
-                        <p>{{caption.text}}</p>
+                        <p><span v-html="caption.text"></span></p>
                     </div>
                 </div>
             </div>
