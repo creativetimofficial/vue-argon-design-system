@@ -6,6 +6,7 @@ import Landing from "./views/Landing.vue";
 import KnowledgeBase from "./views/KnowledgeBase.vue";
 import Support from "./views/Support.vue";
 import Datenschutz from "./views/Datenschutz.vue";
+import Nutzungsvereinbarung from "./views/Nutzungsvereinbarung.vue";
 
 Vue.use(Router);
 
@@ -45,6 +46,15 @@ export default new Router({
       components: {
         header: AppHeader,
         default: Datenschutz,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/nutzungsvereinbarung",
+      name: "nutzungsvereinbarung",
+      components: {
+        header: AppHeader,
+        default: Nutzungsvereinbarung,
         footer: AppFooter
       }
     }
