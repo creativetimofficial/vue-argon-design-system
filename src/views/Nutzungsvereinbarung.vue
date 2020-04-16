@@ -4,10 +4,10 @@
         <section class="section section-lg pt-lg-0 mt-5">
             <div class="container">
                 <div class="row mb-lg">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 mb-lg">
                         <h2>Nutzungsvereinbarung</h2>
                     </div>
-                    <div class="col-lg-8 ml-auto mt-4">
+                    <div class="col-lg-12">
                         <MDRenderer file="1vyRnemezQCPbRLmJLyDCieKZNyE_GJrT" class="tos_mdrenderer"></MDRenderer>
                     </div>
                 </div>

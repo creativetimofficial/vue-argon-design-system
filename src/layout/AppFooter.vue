@@ -51,7 +51,7 @@
                         <li class="nav-item">
                             <a href="https://www.hfg-gmuend.de" class="nav-link" target="_blank" rel="noopener">Hochschul-Website</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" v-if="this.$store.state.isLoggedIn">
                             <router-link to="nutzungsvereinbarung" class="nav-link">
                                 Nutzungsvereinbarung
                             </router-link>

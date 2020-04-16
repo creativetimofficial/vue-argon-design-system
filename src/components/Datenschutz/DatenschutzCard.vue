@@ -31,10 +31,12 @@
                     <div class="collapse-content">
                         <!-- Text -->
                         <div class="card-text collapse" :id="'collapseContent'+datenschutzCard.id">
-                            <p class="w-100">{{datenschutzCard.info}}</p>
+                            <!-- <p>{{datenschutzCard.info}}</p> -->
                             <ul>
-                                <span v-html="datenschutzCard.bsp"></span>
+                                <li v-for="(bsp, index) in datenschutzCard.bsp" v-bind:key="index" :class="{ 'highlighted' : bsp.high == true}">{{bsp.text}}</li>
                             </ul>
+                            <p class="mt-4"><strong>Technische Lösungen</strong><br>{{datenschutzCard.tech}}</p>
+                            
                         </div>
                         <!-- Button -->
 
@@ -63,6 +65,7 @@
 
 
 <script>
+
 export default {
     data() {
         return {
@@ -93,7 +96,7 @@ export default {
     display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
-    height: 3.65rem;
+    height: 3.3rem;
     overflow: hidden;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -138,5 +141,16 @@ export default {
 }
 .lights.red .top {
     color: #d82c2c;
+}
+li {
+    list-style-type: none;
+}
+li.highlighted {
+    font-weight: 600;
+}
+ul li:before {
+  content: '\2013 ';
+  margin-left: -20px;
+  color: #111;
 }
 </style>
