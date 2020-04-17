@@ -8,7 +8,9 @@
                         <h2>Support rund um die digitale Lehre</h2>
                     </div>
                     <div class="col-lg-8 ml-auto mt-4">
-                        <p>Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien. Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu unorthographisches Leben.</p>
+                        <p>Wir haben euch ein Support-Team für dringende Probleme bereitgestellt. Solltet ihr Probleme haben, die ihr nicht mit Hilfe der <strong style="text-decoration:underline"><router-link to="knowledgebase">Knowledgebase</router-link></strong> lösen könnt, habt ihr die Möglichkeit, unser Support-Team direkt zu kontaktieren.</p>
+                        <p>Da wir den Workload für den Support aktuell noch nicht abschätzen können, ist es wichtig, dass ihr euch im ersten Schritt die Knowledgebase genauer anschaut. Hier haben wir die ersten Schritte, Tools, Infrastruktur, usw. genau beschrieben.</p>
+                        <p><strong>Falls ihr doch noch Fragen habt, bitte weiterlesen.</strong></p>
                     </div>
                 </div>
 
@@ -18,10 +20,11 @@
                     </div>
                     <div class="col-lg-8">
                         <p>
-                            <strong>Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans.</strong>
+                            <strong>Wir haben euch ein Team aus Mitarbeitern für technische Fragen bereitgestellt. Hier unterscheiden wir zwischen dem User- & Hardware-Support.</strong>
                         </p>
                         <br />
-                        <p>Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien. Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu unorthographisches Leben.</p>
+                        <p><strong>User-Support: </strong>Hier geht es um konkrete Fragen rundum die Anmeldung mit dem neuen hfg.design-Account und die grundlegende Verwendung von Zoom, Slack und Google G-Suite.</p>
+                        <p><strong>Hardware-Support: </strong>Sollte Ihr Probleme mit eurer Hard- und Software haben. Eure Webcam, Mikrofon, etc. funktionieren nicht oder euer Betriebsystem entspricht nicht den Voraussetzungen eingesetzer Tools. Dann seid ihr hier genau richtig.</p>
                     </div>
                 </div>
 
@@ -33,10 +36,10 @@
                     </div>
                     <div class="col-lg-8">
                         <p>
-                            <strong>Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans.</strong>
+                            <strong>Natürlich haben wir euch auch einen Support für organisatorische Fragen bereitgestellt.</strong>
                         </p>
                         <br />
-                        <p>Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien. Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu unorthographisches Leben.</p>
+                        <p>Solltet ihr eure Zoom-Vorlesung nicht finden, habt ihr Fragen bezüglich anstehender Portal-Events oder des digitalen Stundenplans, dann nehmt doch einfach Kontakt mit dem Orga-Team auf.</p>
                     </div>
                 </div>
 
@@ -65,7 +68,7 @@ export default {
         return {
             passTechSupport: [
                 {
-                    supportTeam: "User Support",
+                    supportTeam: "User-Support",
                     name: "Steffen Mitschelen",
                     email: "steffen.mitschelen@hfg.design",
                     slack: "C011RA4JY3C",
@@ -73,10 +76,10 @@ export default {
                     reach1: "9:00 – 12:00 Uhr",
                     reach2: "13:00 – 16:00 Uhr",
                     imgPath: "img/support/team/user-support-1.jpg",
-                    question: "Wie melde ich mich mit hfg.design an?"
+                    question: "Warum funktioniert meine Anmeldung @hfg.design nicht?"
                 },
                 {
-                    supportTeam: "User Support",
+                    supportTeam: "User-Support",
                     name: "Martin Schneider",
                     email: "martin.schneider@hfg.design",
                     slack: "C011RA4JY3C",
@@ -84,10 +87,10 @@ export default {
                     reach1: "9:00 – 12:00 Uhr",
                     reach2: "13:00 – 16:00 Uhr",
                     imgPath: "img/support/team/user-support-2.jpg",
-                    question: "Wie melde ich mich mit hfg.design an?"
+                    question: "Hilfe, meine Vorlesung beginnt. Zoom funktioniert nicht!?"
                 },
                 {
-                    supportTeam: "Hardware Support",
+                    supportTeam: "Hardware-Support",
                     name: "Aiko Scheuvens",
                     email: "aiko.scheuvens@hfg.design",
                     slack: "C011RA4JY3C",
@@ -100,7 +103,7 @@ export default {
             ],
             passOrgaSupport: [
                 {
-                    supportTeam: "AM-Support",
+                    supportTeam: "Orga-Support",
                     name: "Julia Wittich",
                     email: "julia.wittich@hfg.design",
                     slack: "C011RA4JY3C",
