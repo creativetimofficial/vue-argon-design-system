@@ -55,7 +55,7 @@ Stay up to date on the development journey and connect with us on:
   <li>Follow
     <a href="https://twitter.com/creativetim">Creative Tim on Twitter</a>.</li>
   <li>Read and subscribe to
-    <a href="http://blog.creative-tim.com">The Official Creative Tim Blog</a>.</li>
+    <a href="https://www.creative-tim.com/blog">The Official Creative Tim Blog</a>.</li>
   <li>Follow
     <a href="https://www.instagram.com/creativetimofficial">Creative Tim on Instagram</a>.</li>
   <li>Follow
