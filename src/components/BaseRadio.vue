@@ -4,7 +4,8 @@
            class="custom-control-input"
            type="radio"
            :disabled="disabled"
-           :value="name"
+           :value="value"
+           :name="name"
            v-model="model" />
     <label :for="cbId" class="custom-control-label">
       <slot></slot>
