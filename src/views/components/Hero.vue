@@ -49,6 +49,17 @@
                         <div class="text-center mt-5">
                             <h3>First Session Form</h3>
                         </div>
+                        <div class="mt-5 py-5 border-top text-center">
+                            <div class="row justify-content-center">
+                                <div>
+                                    <h5>COUNSELLING GOALS</h5>
+                                    <p>List down client’s counselling/ therapy goals (mutually agreed) to be achieved for counselling and/or during the current session.</p>
+                                    <br></br>
+
+                                    <a href="#">Submit</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </card>
             </div>
