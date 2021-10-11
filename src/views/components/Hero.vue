@@ -57,8 +57,25 @@
                                     <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=10 cols=110></textarea>
                                     <br></br>
 
+                                    <h5><u>Details Of Session</u></h5>
+                                    <p>List down client’s counselling/ therapy goals (mutually agreed) to be achieved for counselling and/or during the current session.</p>
+                                    <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=10 cols=110></textarea>
+                                    <br></br>
+
                                     <h5><u>Case Conceptualisation</u></h5>
-                                    <p>Your assessment of the client’s key underlying issues, obstacles that prevent him / her from resolving the issues, factors that have contributed to his / her progress, personal strengths that could be leveraged to help client manage his / her issues better, perceived social support network to help client manage presenting problem(s), any suspected psychological conditions that the client may be presenting, etc.</p>
+                                    <p>Details of the issues discussed during the session. Background information should include
+                                        <ul>
+                                            <li>family/ childhood background and issues, </li>
+                                            <li>educational background,</li>
+                                            <li>employment history and issues,</li>
+                                            <li>interpersonal relationships, </li>
+                                            <li>financial issues, </li>
+                                            <li>history of substance use (e.g., alcohol and drugs), </li>
+                                            <li>lifestyle issues,</li>
+                                            <li>medical history,</li>
+                                            <li>mental health history (incl. self-harm and suicide behaviours)</li>
+                                        </ul>
+                                    </p>
                                     <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=10 cols=110></textarea>
                                     <br></br>
 
@@ -67,7 +84,9 @@
                                     <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=10 cols=110></textarea>
                                     <br></br>
 
-                                    <a href="#">Submit</a>
+                                    <div class="row justify-content-center">
+                                        <a href="#">Submit</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
