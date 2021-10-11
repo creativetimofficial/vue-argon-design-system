@@ -46,6 +46,50 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="text-center mt-5">
+                            <h3>First Session Form</h3>
+                        </div>
+                        <div class="mt-5 py-5 border-top text-left">
+                            <div class="row justify-content-center">
+                                <div>
+                                    <h5><u>Counselling Goals</u></h5>
+                                    <p>List down client’s counselling/ therapy goals (mutually agreed) to be achieved for counselling and/or during the current session.</p>
+                                    <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=10 cols=110></textarea>
+                                    <br></br>
+
+                                    <h5><u>Details Of Session</u></h5>
+                                    <p>List down client’s counselling/ therapy goals (mutually agreed) to be achieved for counselling and/or during the current session.</p>
+                                    <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=10 cols=110></textarea>
+                                    <br></br>
+
+                                    <h5><u>Case Conceptualisation</u></h5>
+                                    <p>Details of the issues discussed during the session. Background information should include
+                                        <ul>
+                                            <li>family/ childhood background and issues, </li>
+                                            <li>educational background,</li>
+                                            <li>employment history and issues,</li>
+                                            <li>interpersonal relationships, </li>
+                                            <li>financial issues, </li>
+                                            <li>history of substance use (e.g., alcohol and drugs), </li>
+                                            <li>lifestyle issues,</li>
+                                            <li>medical history,</li>
+                                            <li>mental health history (incl. self-harm and suicide behaviours)</li>
+                                        </ul>
+                                    </p>
+                                    <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=10 cols=110></textarea>
+                                    <br></br>
+
+                                    <h5><u>Intervention(s) provided</u></h5>
+                                    <p><em>Brief but clear summary of the intervention work that has been undertaken with the client during the session (e.g., what were the proposed plans that were agreed upon, any homework assigned to the client, etc.). If client expressed suicidal ideation, include suicide safety plan.</em></p>
+                                    <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=10 cols=110></textarea>
+                                    <br></br>
+
+                                    <div class="row justify-content-center">
+                                        <a href="#">Submit</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </card>
             </div>
