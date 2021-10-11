@@ -54,6 +54,7 @@
                                 <div>
                                     <h5>COUNSELLING GOALS</h5>
                                     <p>List down client’s counselling/ therapy goals (mutually agreed) to be achieved for counselling and/or during the current session.</p>
+                                    <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=10 cols=110></textarea>
                                     <br></br>
 
                                     <a href="#">Submit</a>
