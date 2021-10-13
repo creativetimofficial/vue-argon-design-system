@@ -42,7 +42,7 @@
                             <div class="col-lg-5 order-lg-3">
                                 <span></span>
                                 <div>
-                                    <br></br>
+                                    <br><br>
                                     <base-button type="info" class="mr-4">First Session</base-button>
                                     <base-button type="default" class="float-right">Subsequent Sessions</base-button> 
                                     <!-- toggle between the sessions -->
@@ -52,7 +52,7 @@
                         <!-- form start -->
                         <div class="text-center mt-5">
                             <h2><strong>First Session Form</strong></h2>
-                            <br></br>
+                            <br><br>
                         </div>
                         <div ref="client-information">
                             <div>
@@ -96,22 +96,46 @@
                                 </div>
                                 <div>
                                     <p>Reason(s) for Referral</p>
-                                    <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=10 cols=110></textarea>
+                                    <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=10 cols=95></textarea>
                                 </div>      
                             </div>
                         </div>
-                        <div class="mt-5 py-5 border-top text-left">
-                            <div class="row justify-content-center">
+                        <br><br>
+                        <div>
+                            <div>
+                                <h5><u>Session Information</u></h5>
+                                <!-- <form class="tr" method="post" action="blah.html"> -->
+                                <div class="row">
+                                    <div class="col-lg-6 col-sm-6">
+                                        <base-input placeholder="Date"></base-input>
+                                        <base-input placeholder="Start Time"></base-input>
+                                        <base-input placeholder="End Time"></base-input>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6">
+                                            <base-input placeholder="Venue"></base-input>
+                                        <base-input placeholder="Counsellor(s)"></base-input>
+                                    </div>
+                                </div>
+                                <br>
+                                <div>
+                                    <h5><u>Observations of Presentation</u></h5>
+                                    <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=100 cols=95></textarea>
+                                </div>      
+                            </div>
+                        </div>
+                        <br><br>
+                        <div>
+                            <div>
                                 <div>
                                     <h5><u>Counselling Goals</u></h5>
                                     <p>List down client’s counselling/ therapy goals (mutually agreed) to be achieved for counselling and/or during the current session.</p>
-                                    <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=10 cols=110></textarea>
-                                    <br>
+                                    <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=10 cols=95></textarea>
+                                    <br><br>
 
                                     <h5><u>Details Of Session</u></h5>
                                     <p>List down client’s counselling/ therapy goals (mutually agreed) to be achieved for counselling and/or during the current session.</p>
-                                    <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=10 cols=110></textarea>
-                                    <br>
+                                    <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=10 cols=95></textarea>
+                                    <br><br>
 
                                     <h5><u>Case Conceptualisation</u></h5>
                                     <p>Details of the issues discussed during the session. Background information should include
@@ -127,12 +151,12 @@
                                             <li>mental health history (incl. self-harm and suicide behaviours)</li>
                                         </ul>
                                     </p>
-                                    <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=10 cols=110></textarea>
-                                    <br>
+                                    <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=10 cols=95></textarea>
+                                    <br><br>
 
                                     <h5><u>Intervention(s) provided</u></h5>
                                     <p><em>Brief but clear summary of the intervention work that has been undertaken with the client during the session (e.g., what were the proposed plans that were agreed upon, any homework assigned to the client, etc.). If client expressed suicidal ideation, include suicide safety plan.</em></p>
-                                    <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=10 cols=110></textarea>
+                                    <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=10 cols=95></textarea>
                                     <br>
 
                                     <div class="row justify-content-center">
@@ -140,6 +164,77 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div>
+                            <h5><u>Suicide Risk Considerations (If Relevant)</u></h5>
+                            <p>Indicate clients’ responses during current session, if applicable.<br>In an event that client presents with active suicidal ideation during the current session, please refer client to a Medical Centre immediately. Please ensure the safety of the client before reaching out to your Parac TL and/or EBSC, if in doubt.</p>
+                            <h5>1. Intent</h5>
+                            <p>Verbalises thoughts of suicide</p>
+                            <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=20 cols=95></textarea>
+                            <p>Ambivalence towards suicide</p>
+                            <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=20 cols=95></textarea>
+                            <br><br>
+                            <h5>2. Plans</h5>
+                            <p>Explore about suicide (e.g., research)</p>
+                            <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=20 cols=95></textarea>
+                            <p>Have concrete plans to attempt suicide</p>
+                            <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=20 cols=95></textarea>
+                            <p>Have access to lethal means for suicide</p>
+                            <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=20 cols=95></textarea>
+                            <br><br>
+                            <h5>3. Resources</h5>
+                            <p>Strength of social support</p>
+                            <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=20 cols=95></textarea>
+                            <p>Problem solving skills</p>
+                            <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=20 cols=95></textarea>
+                            <br><br>
+                            <h5>4. Past Attempt</h5>
+                            <p>History of past suicide attempts</p>
+                            <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=20 cols=95></textarea>
+                            <br><br>
+                            <h5>5. Mental Health</h5>
+                            <p>Presence of mental health illness</p>
+                            <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=20 cols=95></textarea>
+                            <br><br>
+                            <h5>Overall Risk Level</h5>
+                            <div class="col-lg-3 col-md-6">
+                                <base-checkbox class="mb-3">Low</base-checkbox>
+                                <base-checkbox class="mb-3">Moderate</base-checkbox>
+                                <base-checkbox class="mb-3">High</base-checkbox>
+                            </div>
+                            <p>It is recommended that suicide risk is managed during and immediately after the session. If there is a high risk of suicide, attending aracounsellors/ counsellors should inform and discuss with the unit supervisor on the safety plan. <br>The safety plan can include seeking medical attention from the SCDF Medical Centre, conveyance to IMH or the nearest A&E or a restructured hospital. <br>When in doubt, please reach out to EBSC or the SCDF Counselling Helpline (1800 286 6666).
+                            </p>
+                        </div>
+                        <br><br>
+                        <div>
+                            <h5><u>Follow-up Plans</u></h5>
+                            <p>Indicate your follow-up plans for the case.</p>
+                            <h6><u>Case management:</u></h6>
+                            <p><i>To update or reach out to the following:</i></p>
+                            <div>
+                                <base-checkbox class="mb-3">Client’s supervisors</base-checkbox>
+                                <base-checkbox class="mb-3">Unit Paracounsellor to monitor</base-checkbox>
+                                <base-checkbox class="mb-3">Medical Officer</base-checkbox>
+                                <base-checkbox class="mb-3">Other agencies</base-checkbox>
+                            </div>
+                            <p><i>Apart from suicide risk, the following are common areas of update (subjected to client’s consent): </i></p>
+                            <h6> - Mental health condition</h6>
+                            <h6> -  Coping strategies</h6>
+                            <h6> - Recommended work arrangements</h6>
+                            <p>Note: Advocacy for posting is discouraged during counselling sessions. Please contact EBSC for further discussion prior to updating supervisors if a change in posting is recommended. </p>
+                            <h6><u>Follow-Up Plans:</u></h6>
+                            <p><i>Include next date of session, if applicable. <br>If no follow up is required, state reasons for closure. <br>If case is required for handover, please append handover form upon submission of case notes. </i></p>
+                            <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=100 cols=95></textarea>
+                        </div>
+                        <br><br>
+                        <div>
+                            <h5><u>Summary</u></h5>
+                            <h6>Report Prepared By:</h6>
+                            <base-input placeholder="Rank/Name"></base-input>
+                            <base-input placeholder="Date of Report"></base-input>
+                            <base-input placeholder="Signature"></base-input>
+                            <base-checkbox class="mb-3">EBSC staff</base-checkbox>
+                            <base-checkbox class="mb-3">Paracounsellor</base-checkbox>
                         </div>
                     </div>
                 </card>
