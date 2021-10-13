@@ -31,7 +31,8 @@
                     v-bind="$attrs"
                     class="form-control"
                     :class="[{'is-valid': valid === true}, {'is-invalid': valid === false}, inputClasses]"
-                    aria-describedby="addon-right addon-left">
+                    aria-describedby="addon-right addon-left"
+                    >
         </slot>
         <div v-if="addonRightIcon || $slots.addonRight" class="input-group-append">
           <span class="input-group-text">
@@ -105,8 +106,6 @@ export default {
       return {
         ...this.$listeners,
         input: this.updateValue,
-        focus: this.onFocus,
-        blur: this.onBlur
       };
     },
     slotData() {
@@ -129,15 +128,8 @@ export default {
     updateValue(evt) {
       let value = evt.target.value;
       this.$emit("input", value);
-    },
-    onFocus(value) {
-      this.focused = true;
-      this.$emit("focus", value);
-    },
-    onBlur(value) {
-      this.focused = false;
-      this.$emit("blur", value);
     }
+
   }
 };
 </script>
