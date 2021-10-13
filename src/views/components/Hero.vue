@@ -33,37 +33,40 @@
                 <span></span>
             </div>
         </section>
+        
         <section class="section section-skew">
             <div class="container">
                 <card shadow class="card-profile mt--300" no-body>
                     <div class="px-4">
                         <div class="row justify-content-center">
-                            <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center">
+                            <div class="col-lg-5 order-lg-3">
                                 <span></span>
                                 <div>
-                                    <base-button type="info" size="sm" class="mr-4">First Session</base-button>
-                                    <base-button type="default" size="sm" class="float-right">Subsequent Sessions</base-button> 
+                                    <br></br>
+                                    <base-button type="info" class="mr-4">First Session</base-button>
+                                    <base-button type="default" class="float-right">Subsequent Sessions</base-button> 
                                     <!-- toggle between the sessions -->
                                 </div>
                             </div>
                         </div>
                         <!-- form start -->
                         <div class="text-center mt-5">
-                            <h3>First Session Form</h3>
+                            <h2><strong>First Session Form</strong></h2>
+                            <br></br>
                         </div>
                         <div ref="client-information">
                             <div>
                                 <h5><u>Client Information</u></h5>
                                 <!-- <form class="tr" method="post" action="blah.html"> -->
                                 <div class="row">
-                                    <div class="col-lg-4 col-sm-6">
+                                    <div class="col-lg-6 col-sm-6">
                                         <base-input placeholder="Rank/Name"></base-input>
                                         <base-input placeholder="NRIC"></base-input>
                                         <base-input placeholder="Age"></base-input>
                                         <base-input placeholder="Unit"></base-input>
                                         <base-input placeholder="Enlistment Date (for NSFs)"></base-input>
                                     </div>
-                                    <div class="col-lg-4 col-sm-6">
+                                    <div class="col-lg-6 col-sm-6">
                                             <base-input placeholder="Marital Status"></base-input>
                                         <base-input placeholder="Race"></base-input>
                                         <span>Gender:</span>
