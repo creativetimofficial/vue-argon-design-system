@@ -56,7 +56,8 @@
                         </div>
                         <div ref="client-information">
                             <div>
-                                <h5><u>Client Information</u></h5>
+                                <h2 class="heading-title text-warning mb-0">Client Information</h2>
+                                <br>
                                 <!-- <form class="tr" method="post" action="blah.html"> -->
                                 <div class="row">
                                     <div class="col-lg-6 col-sm-6">
@@ -103,11 +104,27 @@
                         <br><br>
                         <div>
                             <div>
-                                <h5><u>Session Information</u></h5>
+                                <h2 class="heading-title text-warning mb-0">Session Information</h2>
+                                <br>
                                 <!-- <form class="tr" method="post" action="blah.html"> -->
                                 <div class="row">
                                     <div class="col-lg-6 col-sm-6">
                                         <base-input placeholder="Date"></base-input>
+                                        <input type="text" data-input="true" class="form-control datepicker flatpickr-input active">
+                                        <div class="col-md-4">
+                                            <small class="d-block text-uppercase font-weight-bold mb-3">Single date</small>
+                                            <div class="form-group input-group">
+                                                <!---->
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="ni ni-calendar-grid-58"></i>
+                                                    </span>
+                                                </div>
+                                            <input type="text" data-input="true" class="form-control datepicker flatpickr-input">
+                                            <!---->
+                                            <!---->
+                                            </div>
+                                        </div>
                                         <base-input placeholder="Start Time"></base-input>
                                         <base-input placeholder="End Time"></base-input>
                                     </div>
