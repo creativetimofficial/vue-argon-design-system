@@ -61,23 +61,23 @@
                                 <!-- <form class="tr" method="post" action="blah.html"> -->
                                 <div class="row">
                                     <div class="col-lg-6 col-sm-6">
-                                        <base-input placeholder="Rank/Name"></base-input>
-                                        <base-input placeholder="NRIC"></base-input>
-                                        <base-input placeholder="Age"></base-input>
-                                        <base-input placeholder="Unit"></base-input>
-                                        <base-input placeholder="Enlistment Date (for NSFs)"></base-input>
+                                        <base-input label="Rank/Name"></base-input>
+                                        <base-input label="NRIC"></base-input>
+                                        <base-input label="Age"></base-input>
+                                        <base-input label="Unit"></base-input>
+                                        <base-input label="Enlistment Date (for NSFs)"><date-pickers></date-pickers></base-input>
                                     </div>
                                     <div class="col-lg-6 col-sm-6">
-                                            <base-input placeholder="Marital Status"></base-input>
-                                        <base-input placeholder="Race"></base-input>
+                                            <base-input label="Marital Status"></base-input>
+                                        <base-input label="Race"></base-input>
                                         <span>Gender:</span>
                                         <div>
                                             <base-radio class="mb-3">Male</base-radio>
                                             <base-radio class="mb-3">Female</base-radio>
                                             <!-- <base-radio name="radio0" class="mb-3" v-model="radio.radio1">Unchecked</base-radio> -->
                                         </div>
-                                        <base-input placeholder="Contact No"></base-input>
-                                        <base-input placeholder="Expected ORD (for NSFs)"></base-input>
+                                        <base-input label="Contact No"></base-input>
+                                        <base-input label="Expected ORD (for NSFs)"><date-pickers></date-pickers></base-input>
                                     </div>
                                 </div>
                                 <div>
@@ -109,34 +109,31 @@
                                 <!-- <form class="tr" method="post" action="blah.html"> -->
                                 <div class="row">
                                     <div class="col-lg-6 col-sm-6">
-                                        <base-input placeholder="Date"></base-input>
-                                        <input type="text" data-input="true" class="form-control datepicker flatpickr-input active">
-                                        <div class="col-md-4">
-                                            <small class="d-block text-uppercase font-weight-bold mb-3">Single date</small>
-                                            <div class="form-group input-group">
-                                                <!---->
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">
-                                                        <i class="ni ni-calendar-grid-58"></i>
-                                                    </span>
-                                                </div>
-                                            <input type="text" data-input="true" class="form-control datepicker flatpickr-input">
-                                            <!---->
-                                            <!---->
-                                            </div>
-                                        </div>
-                                        <base-input placeholder="Start Time"></base-input>
-                                        <base-input placeholder="End Time"></base-input>
+                                        <!-- <base-input placeholder="Date"></base-input> -->
+                                        <!-- <input type="text" data-input="true" class="form-control datepicker flatpickr-input active"> -->
+                                        <base-input label="Session Date"><date-pickers></date-pickers></base-input>
+                                        <base-input label="Start Time"></base-input>
+                                        <base-input label="End Time"></base-input>
                                     </div>
                                     <div class="col-lg-6 col-sm-6">
-                                            <base-input placeholder="Venue"></base-input>
-                                        <base-input placeholder="Counsellor(s)"></base-input>
+                                        <base-input label="Venue"></base-input>
+                                        <!-- <base-input placeholder="Counsellor(s)"></base-input> -->
+                                        <base-input label= "Counsellor">
+                                            <select class="form-control">
+                                                <option>Shichao</option>
+                                                <option>Clara</option>
+                                                <option>Keif</option>
+                                                <option>Wang Zi</option>
+                                                <option>Amanda</option>
+                                            </select>
+                                        </base-input>
                                     </div>
                                 </div>
                                 <br>
                                 <div>
-                                    <h5><u>Observations of Presentation</u></h5>
-                                    <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=100 cols=95></textarea>
+                                    <h2 class="heading-title text-warning mb-0">Observations of Presentation</h2>
+                                    <br>
+                                    <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=100 cols=110></textarea>
                                 </div>      
                             </div>
                         </div>
@@ -144,12 +141,14 @@
                         <div>
                             <div>
                                 <div>
-                                    <h5><u>Counselling Goals</u></h5>
+                                    <h2 class="heading-title text-warning mb-0">Counselling Goals</h2>
+                                    <br>
                                     <p>List down client’s counselling/ therapy goals (mutually agreed) to be achieved for counselling and/or during the current session.</p>
-                                    <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=10 cols=95></textarea>
+                                    <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=10 cols=110></textarea>
                                     <br><br>
 
-                                    <h5><u>Details Of Session</u></h5>
+                                    <h2 class="heading-title text-warning mb-0">Details Of Session</h2>
+                                    <br>
                                     <p>Details of the issues discussed during the session. Background information should include
                                         <ul>
                                             <li>family/ childhood background and issues, </li>
@@ -166,12 +165,14 @@
                                     <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=10 cols=95></textarea>
                                     <br><br>
 
-                                    <h5><u>Case Conceptualisation</u></h5>
+                                    <h2 class="heading-title text-warning mb-0">Case Conceptualisation</h2>
+                                    <br>
                                     <p>Your assessment of the client’s key underlying issues, obstacles that prevent him / her from resolving the issues, factors that have contributed to his / her progress, personal strengths that could be leveraged to help client manage his / her issues better, perceived social support network to help client manage presenting problem(s), any suspected psychological conditions that the client may be presenting, etc.</p>
                                     <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=10 cols=95></textarea>
                                     <br><br>
 
-                                    <h5><u>Intervention(s) provided</u></h5>
+                                    <h2 class="heading-title text-warning mb-0">Intervention(s) provided</h2>
+                                    <br>
                                     <p><em>Brief but clear summary of the intervention work that has been undertaken with the client during the session (e.g., what were the proposed plans that were agreed upon, any homework assigned to the client, etc.). If client expressed suicidal ideation, include suicide safety plan.</em></p>
                                     <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=10 cols=95></textarea>
                                     <br><br>
@@ -180,7 +181,8 @@
                             </div>
                         </div>
                         <div>
-                            <h5><u>Suicide Risk Considerations (If Relevant)</u></h5>
+                            <h2 class="heading-title text-warning mb-0">Suicide Risk Considerations (If Relevant)</h2>
+                            <br>
                             <p>Indicate clients’ responses during current session, if applicable.<br>In an event that client presents with active suicidal ideation during the current session, please refer client to a Medical Centre immediately. Please ensure the safety of the client before reaching out to your Parac TL and/or EBSC, if in doubt.</p>
                             <h5>1. Intent</h5>
                             <p>Verbalises thoughts of suicide</p>
@@ -210,18 +212,21 @@
                             <p>Presence of mental health illness</p>
                             <textarea name="textarea" v-model.lazy.trim="textAreaValue" row=20 cols=95></textarea>
                             <br><br>
-                            <h5>Overall Risk Level</h5>
-                            <div class="col-lg-3 col-md-6">
-                                <base-checkbox class="mb-3">Low</base-checkbox>
-                                <base-checkbox class="mb-3">Moderate</base-checkbox>
-                                <base-checkbox class="mb-3">High</base-checkbox>
-                            </div>
+
+                            <h2 class="heading-title text-warning mb-0">Overall Risk Level</h2>
+                            <br>
+                            <tabs tabNavClasses="nav-fill flex-column flex-sm-row">
+                                <tab-pane title="Low"></tab-pane>
+                                <tab-pane title="Moderate"></tab-pane>
+                                <tab-pane title="High"></tab-pane>
+                            </tabs>
                             <p>It is recommended that suicide risk is managed during and immediately after the session. If there is a high risk of suicide, attending aracounsellors/ counsellors should inform and discuss with the unit supervisor on the safety plan. <br>The safety plan can include seeking medical attention from the SCDF Medical Centre, conveyance to IMH or the nearest A&E or a restructured hospital. <br>When in doubt, please reach out to EBSC or the SCDF Counselling Helpline (1800 286 6666).
                             </p>
                         </div>
                         <br><br>
                         <div>
-                            <h5><u>Follow-up Plans</u></h5>
+                            <h2 class="heading-title text-warning mb-0">Follow-up Plans</h2>
+                            <br>
                             <p>Indicate your follow-up plans for the case.</p>
                             <h6><u>Case management:</u></h6>
                             <p><i>To update or reach out to the following:</i></p>
@@ -242,13 +247,16 @@
                         </div>
                         <br><br>
                         <div>
-                            <h5><u>Summary</u></h5>
-                            <h6>Report Prepared By:</h6>
-                            <base-input placeholder="Rank/Name"></base-input>
-                            <base-input placeholder="Date of Report"></base-input>
-                            <base-input placeholder="Signature"></base-input>
-                            <base-checkbox class="mb-3">EBSC staff</base-checkbox>
-                            <base-checkbox class="mb-3">Paracounsellor</base-checkbox>
+                            <h2 class="heading-title text-warning mb-0">Summary</h2>
+                            <br>
+                            <small>Report Prepared By:</small>
+                            <tabs tabNavClasses="nav-fill flex-column flex-sm-row">
+                                <tab-pane title="EBSC staff"></tab-pane>
+                                <tab-pane title="Paracounsellor"></tab-pane>
+                            </tabs>
+                            <base-input label="Rank/Name"></base-input>
+                            <base-input label="Signature"></base-input>
+                            <base-input label="Date of Report"><date-pickers></date-pickers></base-input>
                         </div>
                     </div>
                     <div class="row justify-content-center">
@@ -262,7 +270,20 @@
     </section>
 </template>
 <script>
-export default {};
+const DatePickers = () => import("./JavascriptComponents/DatePickers");
+import Tabs from "@/components/Tabs/Tabs.vue";
+import TabPane from "@/components/Tabs/TabPane.vue";
+import TabsSection from "./JavascriptComponents/TabsSection";
+export default {
+  components: {
+    DatePickers,
+    TabPane,
+    Tabs,
+    TabsSection
+  },
+};
 </script>
+
 <style>
 </style>
+

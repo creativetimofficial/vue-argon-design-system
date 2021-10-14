@@ -1,7 +1,7 @@
 <template>
     <div class="row">
-        <div class="col-md-4">
-            <small class="d-block text-uppercase font-weight-bold mb-3">Single date</small>
+        <div class="col-md-12">
+            <!-- <small class="d-block text-uppercase font-weight-bold mb-3">Single date</small> -->
             <base-input addon-left-icon="ni ni-calendar-grid-58">
                 <flat-picker slot-scope="{focus, blur}"
                              @on-open="focus"
@@ -12,7 +12,7 @@
                 </flat-picker>
             </base-input>
         </div>
-        <div class="col-md-4 mt-4 mt-md-0">
+        <!-- <div class="col-md-4 mt-4 mt-md-0">
             <small class="d-block text-uppercase font-weight-bold mb-3">Date range</small>
 
             <div class="input-daterange datepicker row align-items-center">
@@ -28,7 +28,7 @@
                     </base-input>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </template>
 <script>
@@ -41,7 +41,7 @@ export default {
   data() {
     return {
       dates: {
-        simple: "2018-07-17",
+        simple: "2021-10-15",
         range: "2018-07-17 to 2018-07-19"
       }
     };
