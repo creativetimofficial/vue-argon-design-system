@@ -39,27 +39,29 @@
   .flatpickr-day.inRange {
     background: $datepicker-active-background !important;
     color: $datepicker-active-color;
-    box-shadow: -5px 0 0 $datepicker-active-background, 5px 0 0 $datepicker-active-background;
+    box-shadow: -5px 0 0 $datepicker-active-background,
+      5px 0 0 $datepicker-active-background;
     border: none !important;
   }
 
-  .flatpickr-day.startRange, .flatpickr-day.endRange {
+  .flatpickr-day.startRange,
+  .flatpickr-day.endRange {
     background: $datepicker-active-background;
   }
 
-  .flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)),
-  .flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)),
-  .flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1)) {
+  .flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n + 1)),
+  .flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n + 1)),
+  .flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n + 1)) {
     box-shadow: -10px 0 0 $datepicker-active-background;
   }
 
   .flatpickr-months .flatpickr-prev-month:hover svg,
-  .flatpickr-months .flatpickr-next-month:hover svg{
+  .flatpickr-months .flatpickr-next-month:hover svg {
     fill: $datepicker-active-background;
   }
 
   .flatpickr-current-month span.cur-month,
-  .flatpickr-current-month input.cur-year{
+  .flatpickr-current-month input.cur-year {
     padding: 0 10px;
     color: $gray-700;
     font-size: $font-size-sm;

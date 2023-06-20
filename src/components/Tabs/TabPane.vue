@@ -1,9 +1,11 @@
 <template>
-  <div class="tab-pane fade"
-       :id="id || label"
-       :class="{'active show': active}"
-       v-show="active"
-       :aria-expanded="active">
+  <div
+    class="tab-pane fade"
+    :id="id || label"
+    :class="{ 'active show': active }"
+    v-show="active"
+    :aria-expanded="active"
+  >
     <slot></slot>
   </div>
 </template>
@@ -14,7 +16,7 @@ export default {
   inject: ["addTab", "removeTab"],
   data() {
     return {
-      active: false
+      active: false,
     };
   },
   mounted() {
@@ -25,8 +27,7 @@ export default {
       this.$el.parentNode.removeChild(this.$el);
     }
     this.removeTab(this);
-  }
+  },
 };
 </script>
-<style>
-</style>
+<style></style>

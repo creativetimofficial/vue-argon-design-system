@@ -1,18 +1,28 @@
 <template>
-  <ul class="pagination" :class="[size && `pagination-${size}`, align && `justify-content-${align}`]">
-    <li class="page-item prev-page" :class="{disabled: value === 1}">
+  <ul
+    class="pagination"
+    :class="[size && `pagination-${size}`, align && `justify-content-${align}`]"
+  >
+    <li class="page-item prev-page" :class="{ disabled: value === 1 }">
       <a class="page-link" aria-label="Previous" @click="prevPage">
-        <span aria-hidden="true"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+        <span aria-hidden="true"
+          ><i class="fa fa-angle-left" aria-hidden="true"></i
+        ></span>
       </a>
     </li>
-    <li class="page-item" :class="{active: value === item}"
-        :key="item"
-        v-for="item in range(minPage, maxPage)">
-      <a class="page-link" @click="changePage(item)">{{item}}</a>
+    <li
+      class="page-item"
+      :class="{ active: value === item }"
+      :key="item"
+      v-for="item in range(minPage, maxPage)"
+    >
+      <a class="page-link" @click="changePage(item)">{{ item }}</a>
     </li>
-    <li class="page-item next-page" :class="{disabled: value === totalPages}">
+    <li class="page-item next-page" :class="{ disabled: value === totalPages }">
       <a class="page-link" aria-label="Next" @click="nextPage">
-        <span aria-hidden="true"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+        <span aria-hidden="true"
+          ><i class="fa fa-angle-right" aria-hidden="true"></i
+        ></span>
       </a>
     </li>
   </ul>
@@ -25,35 +35,35 @@ export default {
       type: Number,
       default: 0,
       description:
-        "Pagination page count. This should be specified in combination with perPage"
+        "Pagination page count. This should be specified in combination with perPage",
     },
     perPage: {
       type: Number,
       default: 10,
       description:
-        "Pagination per page. Should be specified with total or pageCount"
+        "Pagination per page. Should be specified with total or pageCount",
     },
     total: {
       type: Number,
       default: 0,
       description:
-        "Can be specified instead of pageCount. The page count in this case will be total/perPage"
+        "Can be specified instead of pageCount. The page count in this case will be total/perPage",
     },
     value: {
       type: Number,
       default: 1,
-      description: "Pagination value"
+      description: "Pagination value",
     },
     size: {
       type: String,
       default: "",
-      description: "Pagination size"
+      description: "Pagination size",
     },
     align: {
       type: String,
       default: "",
-      description: "Pagination alignment (e.g center|start|end)"
-    }
+      description: "Pagination alignment (e.g center|start|end)",
+    },
   },
   computed: {
     totalPages() {
@@ -93,11 +103,11 @@ export default {
       } else {
         return this.pagesToDisplay;
       }
-    }
+    },
   },
   data() {
     return {
-      defaultPagesToDisplay: 5
+      defaultPagesToDisplay: 5,
     };
   },
   methods: {
@@ -120,7 +130,7 @@ export default {
       if (this.value > 1) {
         this.$emit("input", this.value - 1);
       }
-    }
+    },
   },
   watch: {
     perPage() {
@@ -128,7 +138,7 @@ export default {
     },
     total() {
       this.$emit("input", 1);
-    }
-  }
+    },
+  },
 };
 </script>

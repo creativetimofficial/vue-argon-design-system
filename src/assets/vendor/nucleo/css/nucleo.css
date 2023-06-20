@@ -5,9 +5,13 @@ License - nucleoapp.com/license/
 
 -------------------------------- */
 @font-face {
-  font-family: 'NucleoIcons';
-  src: url('../fonts/nucleo-icons.eot');
-  src: url('../fonts/nucleo-icons.eot') format('embedded-opentype'), url('../fonts/nucleo-icons.woff2') format('woff2'), url('../fonts/nucleo-icons.woff') format('woff'), url('../fonts/nucleo-icons.ttf') format('truetype'), url('../fonts/nucleo-icons.svg') format('svg');
+  font-family: "NucleoIcons";
+  src: url("../fonts/nucleo-icons.eot");
+  src: url("../fonts/nucleo-icons.eot") format("embedded-opentype"),
+    url("../fonts/nucleo-icons.woff2") format("woff2"),
+    url("../fonts/nucleo-icons.woff") format("woff"),
+    url("../fonts/nucleo-icons.ttf") format("truetype"),
+    url("../fonts/nucleo-icons.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -169,404 +173,403 @@ License - nucleoapp.com/license/
 -------------------------*/
 
 .ni-active-40::before {
-    content: "\ea02";
+  content: "\ea02";
 }
 
 .ni-air-baloon::before {
-    content: "\ea03";
+  content: "\ea03";
 }
 
 .ni-album-2::before {
-    content: "\ea04";
+  content: "\ea04";
 }
 
 .ni-align-center::before {
-    content: "\ea05";
+  content: "\ea05";
 }
 
 .ni-align-left-2::before {
-    content: "\ea06";
+  content: "\ea06";
 }
 
 .ni-ambulance::before {
-    content: "\ea07";
+  content: "\ea07";
 }
 
 .ni-app::before {
-    content: "\ea08";
+  content: "\ea08";
 }
 
 .ni-archive-2::before {
-    content: "\ea09";
+  content: "\ea09";
 }
 
 .ni-atom::before {
-    content: "\ea0a";
+  content: "\ea0a";
 }
 
 .ni-badge::before {
-    content: "\ea0b";
+  content: "\ea0b";
 }
 
 .ni-bag-17::before {
-    content: "\ea0c";
+  content: "\ea0c";
 }
 
 .ni-basket::before {
-    content: "\ea0d";
+  content: "\ea0d";
 }
 
 .ni-bell-55::before {
-    content: "\ea0e";
+  content: "\ea0e";
 }
 
 .ni-bold-down::before {
-    content: "\ea0f";
+  content: "\ea0f";
 }
 
 .ni-bold-left::before {
-    content: "\ea10";
+  content: "\ea10";
 }
 
 .ni-bold-right::before {
-    content: "\ea11";
+  content: "\ea11";
 }
 
 .ni-bold-up::before {
-    content: "\ea12";
+  content: "\ea12";
 }
 
 .ni-bold::before {
-    content: "\ea13";
+  content: "\ea13";
 }
 
 .ni-book-bookmark::before {
-    content: "\ea14";
+  content: "\ea14";
 }
 
 .ni-books::before {
-    content: "\ea15";
+  content: "\ea15";
 }
 
 .ni-box-2::before {
-    content: "\ea16";
+  content: "\ea16";
 }
 
 .ni-briefcase-24::before {
-    content: "\ea17";
+  content: "\ea17";
 }
 
 .ni-building::before {
-    content: "\ea18";
+  content: "\ea18";
 }
 
 .ni-bulb-61::before {
-    content: "\ea19";
+  content: "\ea19";
 }
 
 .ni-bullet-list-67::before {
-    content: "\ea1a";
+  content: "\ea1a";
 }
 
 .ni-bus-front-12::before {
-    content: "\ea1b";
+  content: "\ea1b";
 }
 
 .ni-button-pause::before {
-    content: "\ea1c";
+  content: "\ea1c";
 }
 
 .ni-button-play::before {
-    content: "\ea1d";
+  content: "\ea1d";
 }
 
 .ni-button-power::before {
-    content: "\ea1e";
+  content: "\ea1e";
 }
 
 .ni-calendar-grid-58::before {
-    content: "\ea1f";
+  content: "\ea1f";
 }
 
 .ni-camera-compact::before {
-    content: "\ea20";
+  content: "\ea20";
 }
 
 .ni-caps-small::before {
-    content: "\ea21";
+  content: "\ea21";
 }
 
 .ni-cart::before {
-    content: "\ea22";
+  content: "\ea22";
 }
 
 .ni-chart-bar-32::before {
-    content: "\ea23";
+  content: "\ea23";
 }
 
 .ni-chart-pie-35::before {
-    content: "\ea24";
+  content: "\ea24";
 }
 
 .ni-chat-round::before {
-    content: "\ea25";
+  content: "\ea25";
 }
 
 .ni-check-bold::before {
-    content: "\ea26";
+  content: "\ea26";
 }
 
 .ni-circle-08::before {
-    content: "\ea27";
+  content: "\ea27";
 }
 
 .ni-cloud-download-95::before {
-    content: "\ea28";
+  content: "\ea28";
 }
 
 .ni-cloud-upload-96::before {
-    content: "\ea29";
+  content: "\ea29";
 }
 
 .ni-compass-04::before {
-    content: "\ea2a";
+  content: "\ea2a";
 }
 
 .ni-controller::before {
-    content: "\ea2b";
+  content: "\ea2b";
 }
 
 .ni-credit-card::before {
-    content: "\ea2c";
+  content: "\ea2c";
 }
 
 .ni-curved-next::before {
-    content: "\ea2d";
+  content: "\ea2d";
 }
 
 .ni-delivery-fast::before {
-    content: "\ea2e";
+  content: "\ea2e";
 }
 
 .ni-diamond::before {
-    content: "\ea2f";
+  content: "\ea2f";
 }
 
 .ni-email-83::before {
-    content: "\ea30";
+  content: "\ea30";
 }
 
 .ni-fat-add::before {
-    content: "\ea31";
+  content: "\ea31";
 }
 
 .ni-fat-delete::before {
-    content: "\ea32";
+  content: "\ea32";
 }
 
 .ni-fat-remove::before {
-    content: "\ea33";
+  content: "\ea33";
 }
 
 .ni-favourite-28::before {
-    content: "\ea34";
+  content: "\ea34";
 }
 
 .ni-folder-17::before {
-    content: "\ea35";
+  content: "\ea35";
 }
 
 .ni-glasses-2::before {
-    content: "\ea36";
+  content: "\ea36";
 }
 
 .ni-hat-3::before {
-    content: "\ea37";
+  content: "\ea37";
 }
 
 .ni-headphones::before {
-    content: "\ea38";
+  content: "\ea38";
 }
 
 .ni-html5::before {
-    content: "\ea39";
+  content: "\ea39";
 }
 
 .ni-istanbul::before {
-    content: "\ea3a";
+  content: "\ea3a";
 }
 
 .ni-key-25::before {
-    content: "\ea3b";
+  content: "\ea3b";
 }
 
 .ni-laptop::before {
-    content: "\ea3c";
+  content: "\ea3c";
 }
 
 .ni-like-2::before {
-    content: "\ea3d";
+  content: "\ea3d";
 }
 
 .ni-lock-circle-open::before {
-    content: "\ea3e";
+  content: "\ea3e";
 }
 
 .ni-map-big::before {
-    content: "\ea3f";
+  content: "\ea3f";
 }
 
 .ni-mobile-button::before {
-    content: "\ea40";
+  content: "\ea40";
 }
 
 .ni-money-coins::before {
-    content: "\ea41";
+  content: "\ea41";
 }
 
 .ni-note-03::before {
-    content: "\ea42";
+  content: "\ea42";
 }
 
 .ni-notification-70::before {
-    content: "\ea43";
+  content: "\ea43";
 }
 
 .ni-palette::before {
-    content: "\ea44";
+  content: "\ea44";
 }
 
 .ni-paper-diploma::before {
-    content: "\ea45";
+  content: "\ea45";
 }
 
 .ni-pin-3::before {
-    content: "\ea46";
+  content: "\ea46";
 }
 
 .ni-planet::before {
-    content: "\ea47";
+  content: "\ea47";
 }
 
 .ni-ruler-pencil::before {
-    content: "\ea48";
+  content: "\ea48";
 }
 
 .ni-satisfied::before {
-    content: "\ea49";
+  content: "\ea49";
 }
 
 .ni-scissors::before {
-    content: "\ea4a";
+  content: "\ea4a";
 }
 
 .ni-send::before {
-    content: "\ea4b";
+  content: "\ea4b";
 }
 
 .ni-settings-gear-65::before {
-    content: "\ea4c";
+  content: "\ea4c";
 }
 
 .ni-settings::before {
-    content: "\ea4d";
+  content: "\ea4d";
 }
 
 .ni-single-02::before {
-    content: "\ea4e";
+  content: "\ea4e";
 }
 
 .ni-single-copy-04::before {
-    content: "\ea4f";
+  content: "\ea4f";
 }
 
 .ni-sound-wave::before {
-    content: "\ea50";
+  content: "\ea50";
 }
 
 .ni-spaceship::before {
-    content: "\ea51";
+  content: "\ea51";
 }
 
 .ni-square-pin::before {
-    content: "\ea52";
+  content: "\ea52";
 }
 
 .ni-support-16::before {
-    content: "\ea53";
+  content: "\ea53";
 }
 
 .ni-tablet-button::before {
-    content: "\ea54";
+  content: "\ea54";
 }
 
 .ni-tag::before {
-    content: "\ea55";
+  content: "\ea55";
 }
 
 .ni-tie-bow::before {
-    content: "\ea56";
+  content: "\ea56";
 }
 
 .ni-time-alarm::before {
-    content: "\ea57";
+  content: "\ea57";
 }
 
 .ni-trophy::before {
-    content: "\ea58";
+  content: "\ea58";
 }
 
 .ni-tv-2::before {
-    content: "\ea59";
+  content: "\ea59";
 }
 
 .ni-umbrella-13::before {
-    content: "\ea5a";
+  content: "\ea5a";
 }
 
 .ni-user-run::before {
-    content: "\ea5b";
+  content: "\ea5b";
 }
 
 .ni-vector::before {
-    content: "\ea5c";
+  content: "\ea5c";
 }
 
 .ni-watch-time::before {
-    content: "\ea5d";
+  content: "\ea5d";
 }
 
 .ni-world::before {
-    content: "\ea5e";
+  content: "\ea5e";
 }
 
 .ni-zoom-split-in::before {
-    content: "\ea5f";
+  content: "\ea5f";
 }
 
 .ni-collection::before {
-    content: "\ea60";
+  content: "\ea60";
 }
 
 .ni-image::before {
-    content: "\ea61";
+  content: "\ea61";
 }
 
 .ni-shop::before {
-    content: "\ea62";
+  content: "\ea62";
 }
 
 .ni-ungroup::before {
-    content: "\ea63";
+  content: "\ea63";
 }
 
 .ni-world-2::before {
-    content: "\ea64";
+  content: "\ea64";
 }
 
 .ni-ui-04::before {
-    content: "\ea65";
+  content: "\ea65";
 }
-
 
 /* all icon font classes list here */

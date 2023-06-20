@@ -14,8 +14,8 @@ export default new Router({
       components: {
         header: Header,
         default: Starter,
-        footer: Footer
-      }
-    }
-  ]
+        footer: Footer,
+      },
+    },
+  ],
 });
