@@ -1,11 +1,11 @@
 /*!
 
 =========================================================
-* Vue Argon Design System - v1.1.0
+* Vue Argon Design System - v1.2.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/argon-design-system
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Copyright 2023 Creative Tim (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md)
 
 * Coded by www.creative-tim.com
@@ -19,11 +19,11 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import Argon from "./plugins/argon-kit";
-import './registerServiceWorker'
+import "./registerServiceWorker";
 
 Vue.config.productionTip = false;
 Vue.use(Argon);
 new Vue({
   router,
-  render: h => h(App)
+  render: (h) => h(App),
 }).$mount("#app");

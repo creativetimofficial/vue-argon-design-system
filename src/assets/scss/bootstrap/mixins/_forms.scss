@@ -25,7 +25,6 @@
   }
 }
 
-
 @mixin form-validation-state($state, $color) {
   .#{$state}-feedback {
     display: none;
@@ -42,7 +41,7 @@
     display: none;
     max-width: 100%; // Contain to parent when possible
     padding: $tooltip-padding-y $tooltip-padding-x;
-    margin-top: .1rem;
+    margin-top: 0.1rem;
     font-size: $tooltip-font-size;
     line-height: $line-height-base;
     color: color-yiq($color);
@@ -58,7 +57,7 @@
 
       &:focus {
         border-color: $color;
-        box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+        box-shadow: 0 0 0 $input-focus-width rgba($color, 0.25);
       }
 
       ~ .#{$state}-feedback,
@@ -116,7 +115,8 @@
 
       &:focus {
         ~ .custom-control-label::before {
-          box-shadow: 0 0 0 1px $body-bg, 0 0 0 $input-focus-width rgba($color, .25);
+          box-shadow: 0 0 0 1px $body-bg,
+            0 0 0 $input-focus-width rgba($color, 0.25);
         }
       }
     }
@@ -129,7 +129,9 @@
       ~ .custom-file-label {
         border-color: $color;
 
-        &::after { border-color: inherit; }
+        &::after {
+          border-color: inherit;
+        }
       }
 
       ~ .#{$state}-feedback,
@@ -139,7 +141,7 @@
 
       &:focus {
         ~ .custom-file-label {
-          box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+          box-shadow: 0 0 0 $input-focus-width rgba($color, 0.25);
         }
       }
     }

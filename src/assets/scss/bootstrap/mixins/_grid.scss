@@ -4,15 +4,17 @@
 
 @mixin make-container() {
   width: 100%;
-  padding-right: ($grid-gutter-width / 2);
-  padding-left: ($grid-gutter-width / 2);
+  padding-right: calc($grid-gutter-width / 2);
+  padding-left: calc($grid-gutter-width / 2);
   margin-right: auto;
   margin-left: auto;
 }
 
-
 // For each breakpoint, define the maximum width of the container in a media query
-@mixin make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
+@mixin make-container-max-widths(
+  $max-widths: $container-max-widths,
+  $breakpoints: $grid-breakpoints
+) {
   @each $breakpoint, $container-max-width in $max-widths {
     @include media-breakpoint-up($breakpoint, $breakpoints) {
       max-width: $container-max-width;
@@ -23,8 +25,8 @@
 @mixin make-row() {
   display: flex;
   flex-wrap: wrap;
-  margin-right: ($grid-gutter-width / -2);
-  margin-left: ($grid-gutter-width / -2);
+  margin-right: calc($grid-gutter-width / -2);
+  margin-left: calc($grid-gutter-width / -2);
 }
 
 @mixin make-col-ready() {
@@ -34,8 +36,8 @@
   // later on to override this initial width.
   width: 100%;
   min-height: 1px; // Prevent collapsing
-  padding-right: ($grid-gutter-width / 2);
-  padding-left: ($grid-gutter-width / 2);
+  padding-right: calc($grid-gutter-width / 2);
+  padding-left: calc($grid-gutter-width / 2);
 }
 
 @mixin make-col($size, $columns: $grid-columns) {
