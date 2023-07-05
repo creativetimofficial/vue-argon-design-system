@@ -20,7 +20,7 @@
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link" data-toggle="dropdown" role="button">
                         <i class="ni ni-ui-04 d-lg-none"></i>
-                        <span class="nav-link-inner--text">Components</span>
+                        <span class="nav-link-inner--text">Home</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-xl">
                         <div class="dropdown-menu-inner">
