@@ -3,7 +3,11 @@
         <input type="checkbox"
                v-model="model"
                v-bind="$attrs"
-               v-on="$listeners">
+               v-on="{
+                 ...$listeners,
+                 input: event => $emit('input', event.target.value === 'on' ? true : false)
+               }"
+        >
         <span class="custom-toggle-slider rounded-circle"></span>
     </label>
 </template>
